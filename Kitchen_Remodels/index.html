@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kitchen remodels in Kingwood and Northeast Houston by Prominent General Contractors LLC. Cabinets, countertops, tile backsplash, kitchen flooring, and full finish coordination. Call (713) 823-6513.">
+    <title>Kitchen Remodels Kingwood TX — Prominent General Contractors LLC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1682888813795-192fca4a10d9?auto=format&fit=crop&w=1400&q=85">
+    <link rel="stylesheet" href="../assets/styles.css">
+
+    <style>
+        .brand-stack { display: flex; flex-direction: column; gap: 0.4rem; }
+        .brand-stack .brand { gap: 0.85rem; }
+
+        .kitchen-hero-visual {
+            background: var(--ink);
+            isolation: isolate;
+        }
+
+        .kitchen-hero-visual img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.86;
+            filter: saturate(0.84) contrast(0.94);
+            transform: scale(1.015);
+        }
+
+        .kitchen-hero-visual::before {
+            z-index: 1;
+            background:
+                linear-gradient(180deg, rgba(28, 26, 23, 0.04) 0%, rgba(28, 26, 23, 0.54) 100%),
+                linear-gradient(90deg, rgba(28, 26, 23, 0.14) 0%, transparent 58%);
+        }
+
+        .kitchen-hero-visual .caption {
+            z-index: 2;
+            color: var(--ivory);
+            max-width: 280px;
+            text-shadow: 0 1px 18px rgba(28, 26, 23, 0.35);
+        }
+
+        .kitchen-hero-visual .caption::before { background: rgba(245, 243, 239, 0.72); }
+
+        .material-study {
+            position: relative;
+            min-height: 520px;
+            margin-top: 5rem;
+            background: var(--paper);
+            overflow: hidden;
+        }
+
+        .material-study img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.88) contrast(0.96);
+        }
+
+        .material-study::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(28, 26, 23, 0.62) 0%, rgba(28, 26, 23, 0.28) 38%, transparent 72%),
+                linear-gradient(180deg, transparent 35%, rgba(28, 26, 23, 0.18) 100%);
+        }
+
+        .material-note {
+            position: absolute;
+            left: clamp(1.5rem, 5vw, 4rem);
+            bottom: clamp(1.5rem, 4vw, 3.5rem);
+            z-index: 1;
+            max-width: 390px;
+            color: var(--ivory);
+        }
+
+        .material-note .label,
+        .image-credit {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .material-note .label { color: var(--gold); margin-bottom: 1rem; }
+
+        .material-note p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.45rem, 2.4vw, 2rem);
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.32;
+        }
+
+        .image-credit { color: rgba(245, 243, 239, 0.62); margin-top: 1.25rem; }
+
+        .service-stories { background: var(--ivory); }
+
+        .story-stack { display: grid; gap: 1.5rem; }
+
+        .service-story {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+            min-height: 430px;
+            background: var(--ivory-warm);
+            border: 1px solid var(--hairline);
+            overflow: hidden;
+        }
+
+        .service-story:nth-child(even) {
+            grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+        }
+
+        .service-story:nth-child(even) .story-media { order: 2; }
+
+        .story-media {
+            position: relative;
+            min-height: 360px;
+            background: var(--paper);
+            overflow: hidden;
+        }
+
+        .story-media img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.86) contrast(0.96);
+        }
+
+        .story-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 26, 23, 0.38) 0%, transparent 54%);
+        }
+
+        .story-credit {
+            position: absolute;
+            left: 1.5rem;
+            bottom: 1.35rem;
+            z-index: 1;
+            max-width: 300px;
+            color: rgba(245, 243, 239, 0.76);
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .story-body {
+            padding: clamp(2rem, 5vw, 4rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .story-kicker {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 1.25rem;
+        }
+
+        .story-body h3 {
+            font-size: clamp(1.9rem, 3vw, 2.7rem);
+            line-height: 1.08;
+            margin-bottom: 1.25rem;
+        }
+
+        .story-body p { color: var(--graphite); line-height: 1.75; max-width: 620px; }
+
+        .story-points {
+            list-style: none;
+            display: grid;
+            gap: 0.8rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--hairline);
+        }
+
+        .story-points li {
+            display: grid;
+            grid-template-columns: 1.5rem 1fr;
+            gap: 0.75rem;
+            color: var(--graphite);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .story-points li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            margin-top: 0.58rem;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+
+        .service-note {
+            max-width: 720px;
+            margin-top: 2rem;
+            color: var(--slate);
+            font-size: 0.82rem;
+            line-height: 1.8;
+        }
+
+        .visual-proof {
+            background: var(--paper);
+            border-top: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .selected-projects { display: grid; gap: clamp(1.5rem, 4vw, 3.5rem); }
+
+        .project-case {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+            min-height: 520px;
+            background: var(--ivory);
+            border: 1px solid var(--hairline);
+            overflow: hidden;
+        }
+
+        .project-case:nth-child(even) {
+            grid-template-columns: minmax(320px, 1.05fr) minmax(0, 0.95fr);
+        }
+
+        .project-case:nth-child(even) .project-media { order: 2; }
+
+        .project-media {
+            position: relative;
+            min-height: 520px;
+            background: var(--ink);
+            overflow: hidden;
+        }
+
+        .project-media img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.82;
+            filter: saturate(0.84) contrast(0.95);
+        }
+
+        .project-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 26, 23, 0.42) 0%, rgba(28, 26, 23, 0.12) 56%, rgba(28, 26, 23, 0.02) 100%);
+        }
+
+        .project-photo-label {
+            position: absolute;
+            left: 1.35rem;
+            bottom: 1.2rem;
+            z-index: 1;
+            color: rgba(245, 243, 239, 0.72);
+            font-size: 0.64rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .project-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(2rem, 5vw, 4.25rem);
+        }
+
+        .project-kicker {
+            display: block;
+            color: var(--slate);
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-copy h3 {
+            font-size: clamp(2rem, 3.4vw, 3.1rem);
+            line-height: 1.04;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-copy p { color: var(--graphite); line-height: 1.78; max-width: 600px; }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--hairline);
+        }
+
+        .project-meta span {
+            display: block;
+            color: var(--slate);
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 0.45rem;
+        }
+
+        .project-meta strong { color: var(--ink); font-size: 0.92rem; font-weight: 400; line-height: 1.45; }
+
+        .portfolio-note { max-width: 680px; color: var(--slate); font-size: 0.82rem; line-height: 1.8; }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .photo-grid-item {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: var(--ink);
+        }
+
+        .photo-grid-item img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.82;
+            filter: saturate(0.84) contrast(0.94);
+            transition: transform 0.7s var(--ease), opacity 0.45s var(--ease);
+        }
+
+        .photo-grid-item:hover img { transform: scale(1.035); opacity: 0.9; }
+
+        .photo-grid-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 26, 23, 0.42) 0%, transparent 60%);
+        }
+
+        .photo-grid-caption {
+            position: absolute;
+            left: 1rem;
+            bottom: 0.9rem;
+            z-index: 1;
+            color: rgba(245, 243, 239, 0.72);
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .google-reviews {
+            background: var(--ivory);
+            border-top: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .reviews-card {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+            gap: clamp(2rem, 5vw, 5rem);
+            align-items: center;
+            padding: clamp(2rem, 5vw, 4rem);
+            background: rgba(245, 243, 239, 0.68);
+            border: 1px solid var(--hairline);
+        }
+
+        .reviews-score { border-right: 1px solid var(--hairline); padding-right: clamp(1.5rem, 4vw, 3rem); }
+
+        .reviews-score .score {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4rem, 9vw, 7.5rem);
+            font-weight: 300;
+            line-height: 0.88;
+            color: var(--ink);
+            letter-spacing: -0.05em;
+        }
+
+        .reviews-score .stars { display: block; margin-top: 1.2rem; color: var(--gold); font-size: 0.95rem; letter-spacing: 0.18em; }
+        .reviews-score .count { display: block; margin-top: 0.8rem; color: var(--slate); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; }
+
+        .reviews-body p { margin: 1.25rem 0 0; color: var(--slate); line-height: 1.8; max-width: 620px; }
+
+        .reviews-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin-top: 2rem; }
+        .reviews-note { display: block; color: var(--slate); font-size: 0.76rem; line-height: 1.6; max-width: 520px; }
+
+        .reviews-live-list {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: clamp(1.8rem, 4vw, 3rem);
+        }
+
+        .reviews-live-list:empty { display: none; }
+
+        .google-review-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            padding: 1.35rem;
+            background: var(--ivory);
+            border: 1px solid var(--hairline);
+        }
+
+        .google-review-card blockquote { margin: 0; color: var(--graphite); font-size: 0.9rem; line-height: 1.7; }
+
+        .google-review-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 1.3rem;
+            color: var(--slate);
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 720px) {
+            .brand-stack .breadcrumb { font-size: 0.62rem; letter-spacing: 0.18em; }
+            .material-study { min-height: 430px; margin-top: 3rem; }
+            .kitchen-hero-visual img { opacity: 0.7; }
+            .service-story,
+            .service-story:nth-child(even) { grid-template-columns: 1fr; }
+            .service-story:nth-child(even) .story-media { order: 0; }
+            .story-media { min-height: 280px; }
+            .reviews-card { grid-template-columns: 1fr; padding: 1.5rem; }
+            .reviews-score { border-right: 0; border-bottom: 1px solid var(--hairline); padding-right: 0; padding-bottom: 1.5rem; }
+            .reviews-live-list { grid-template-columns: 1fr; }
+            .project-case,
+            .project-case:nth-child(even) { grid-template-columns: 1fr; min-height: 0; }
+            .project-case:nth-child(even) .project-media { order: 0; }
+            .project-media { min-height: 360px; }
+            .project-meta { grid-template-columns: 1fr; }
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+    <nav>
+        <div class="brand-stack">
+            <a href="../" class="breadcrumb" aria-label="Back to Prominent General Contractors">
+                <span class="arrow" aria-hidden="true">←</span>
+                Prominent General Contractors
+            </a>
+            <a href="./" class="brand" aria-label="Kitchen Remodels — Prominent General Contractors">
+                <span class="brand-mark">PGC</span>
+                <span class="brand-rule" aria-hidden="true"></span>
+                <span class="brand-tagline">Kitchen Remodels</span>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#kitchen-stories">Kitchen Scopes</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#google-reviews">Reviews</a></li>
+            <li><a href="#areas">Service Areas</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-action">
+            Begin a Project
+            <span aria-hidden="true">→</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Open menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+    <div class="container hero-grid">
+        <div class="hero-text reveal">
+            <span class="eyebrow"><span class="dash"></span>Prominent General Contractors LLC</span>
+            <h1>Kitchen remodels planned from floor to ceiling for Northeast Houston homes.</h1>
+            <p class="lead">Cabinet installation, countertops, tile backsplash, kitchen flooring, islands and finish carpentry handled as a single coordinated scope. Prominent General Contractors manages the kitchen so every trade and material works together.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="link-action">Schedule a Consultation <span class="arrow">→</span></a>
+                <a href="#kitchen-stories" class="link-action muted">Explore Kitchen Services</a>
+            </div>
+        </div>
+        <figure class="hero-aside kitchen-hero-visual reveal">
+            <img src="https://images.unsplash.com/photo-1682888813795-192fca4a10d9?auto=format&fit=crop&w=1400&q=85" alt="Large open kitchen with marble countertops, white cabinets and warm interior palette" width="1400" height="933" decoding="async">
+            <figcaption class="caption">Kitchen design and finish inspiration — material reference.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- ============ STRIP ============ -->
+<div class="strip">
+    <div class="container strip-inner">
+        <span class="strip-item"><span class="gold-dot"></span>Kitchen Remodels</span>
+        <span class="strip-item"><span class="gold-dot"></span>Cabinet Installation</span>
+        <span class="strip-item"><span class="gold-dot"></span>Countertops & Tile</span>
+        <span class="strip-item"><span class="gold-dot"></span>Northeast Houston</span>
+        <span class="strip-item"><span class="gold-dot"></span>713 · 823 · 6513</span>
+    </div>
+</div>
+
+<!-- ============ SERVICES OVERVIEW ============ -->
+<section class="services section-pad" id="services">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>01 — Kitchen Services</span>
+            <h2>A complete kitchen scope, not just one trade.</h2>
+        </div>
+
+        <div class="services-grid reveal">
+            <article class="service">
+                <span class="service-num">— 01</span>
+                <h3>Cabinet Installation</h3>
+                <p>New cabinet installation, cabinet upgrades, hardware selection and layout coordination for kitchens that need more storage, a cleaner profile or a modern refresh.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 02</span>
+                <h3>Countertops</h3>
+                <p>Countertop selection, templating coordination and installation for quartz and modern solid-surface materials that hold up to daily kitchen use without demanding constant maintenance.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 03</span>
+                <h3>Tile Backsplash</h3>
+                <p>Backsplash tile planned around cabinet lines, countertop height and grout rhythm for a kitchen that reads as composed rather than assembled piece by piece from separate decisions.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 04</span>
+                <h3>Kitchen Flooring</h3>
+                <p>Waterproof LVP and tile flooring for kitchens handled through PGC Flooring — material selections that stay durable, warm and consistent with the broader interior.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 05</span>
+                <h3>Islands & Layout</h3>
+                <p>Island placement, seating integration and layout decisions that organize the kitchen around how it actually gets used, without making the room feel smaller or overfurnished.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 06</span>
+                <h3>Trim & Finish Carpentry</h3>
+                <p>Baseboards, casing, crown moulding coordination, paint-ready trim and the finish details that bring the full kitchen scope to a clean, professional conclusion.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICE STORIES ============ -->
+<section class="service-stories section-pad" id="kitchen-stories">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>02 — Service Depth</span>
+            <h2>What a kitchen remodel actually involves, trade by trade.</h2>
+        </div>
+
+        <div class="story-stack">
+
+            <!-- CABINETRY -->
+            <article class="service-story reveal" id="cabinet-installation">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1770063817031-f3b98dff347f?auto=format&fit=crop&w=1400&q=85" alt="Modern kitchen with white cabinets, stainless appliances and pendant lighting" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Cabinet Installation · Cabinet Upgrades</span>
+                    <h3>Cabinets that organize the kitchen and set the visual tone.</h3>
+                    <p>Cabinet installation defines how the kitchen looks, stores and functions. Prominent General Contractors coordinates layout, box installation, door alignment, hardware and the small adjustments that separate a finished installation from a simple cabinet swap.</p>
+                    <ul class="story-points">
+                        <li>Full cabinet installation and targeted cabinet upgrade coordination for existing kitchens.</li>
+                        <li>Hardware selection, door alignment, trim reveal and consistent margin detail.</li>
+                        <li>Upper cabinet height, crown moulding decisions and lighting-ready upper layouts.</li>
+                        <li>Selections suited for warm, modern Northeast Houston kitchens and open plans.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- COUNTERTOPS -->
+            <article class="service-story reveal" id="countertops">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1759239572496-4ec13e7643d6?auto=format&fit=crop&w=1400&q=85" alt="Modern kitchen with light wood countertops and open island layout" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Countertops · Quartz · Solid Surface</span>
+                    <h3>Countertops that hold up to daily use and anchor the material palette.</h3>
+                    <p>Countertop work is coordinated alongside cabinet installation, sink placement, backsplash tile and edge profile decisions. We help with material direction and manage sequencing so the countertop installation lands cleanly within the broader kitchen scope.</p>
+                    <ul class="story-points">
+                        <li>Quartz and modern solid-surface selections for durability and low maintenance.</li>
+                        <li>Sink cutout, faucet knock-out and edge profile coordination.</li>
+                        <li>Island and peninsula countertops with seating overhang and clearance decisions.</li>
+                        <li>Material choices that age well in active, family-oriented kitchens.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- BACKSPLASH TILE -->
+            <article class="service-story reveal" id="backsplash-tile">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1755624222023-621f7718950b?auto=format&fit=crop&w=1400&q=85" alt="Modern kitchen with green subway tile backsplash and clean cabinet lines" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Tile Backsplash · Kitchen Tile</span>
+                    <h3>Backsplash tile planned around cabinet lines and countertop material.</h3>
+                    <p>A backsplash reads as part of the kitchen or it doesn't. We plan tile layout, pattern direction, grout selection and height in relation to what's above and below — so the finish feels purposeful rather than decorative.</p>
+                    <ul class="story-points">
+                        <li>Layout planned around cabinet uppers, outlet positions and countertop lines.</li>
+                        <li>Subway, stacked, herringbone and field tile patterns suited to the material palette.</li>
+                        <li>Grout color and joint width chosen to support the overall finish direction.</li>
+                        <li>Integration with countertop edge, trim details and adjacent surfaces.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- KITCHEN FLOORING -->
+            <article class="service-story reveal" id="kitchen-flooring">
+                <figure class="story-media">
+                    <img src="../assets/msi/kitchens/soft_gray_oak_lvp_modern_interior_01.jpg" alt="Soft gray oak LVP flooring in a modern kitchen interior" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Material shown: Soft Gray Oak LVP by MSI Surfaces</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Kitchen Flooring · Waterproof LVP · Tile</span>
+                    <h3>Kitchen flooring that holds up to daily use and connects the open plan.</h3>
+                    <p>Kitchen floors handle more traffic than almost any surface in the home. Prominent General Contractors — through PGC Flooring — installs waterproof LVP and tile that handles daily wear, moisture and the transition into living and dining areas without interruption.</p>
+                    <ul class="story-points">
+                        <li>Waterproof LVP and tile flooring selected for kitchens, open plans and high-traffic areas.</li>
+                        <li>Direction, plank rhythm and layout planned against cabinet kickplates and island bases.</li>
+                        <li>Baseboard reset, undercuts, transitions and room-to-room continuity.</li>
+                        <li>Material guidance from PGC Flooring, the specialized flooring division of PGC.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ISLANDS & LAYOUT -->
+            <article class="service-story reveal" id="islands-layout">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1682888813726-24adc990e6f7?auto=format&fit=crop&w=1400&q=85" alt="Large kitchen with center island and white cabinets" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Kitchen Islands · Layout Planning</span>
+                    <h3>Islands and layout decisions that make the kitchen more useful, not more crowded.</h3>
+                    <p>Island placement, seating integration and layout planning affect how the kitchen feels every day. We think about traffic flow, prep zones, how the island relates to adjacent cabinetry, and whether the proportions support the room rather than overwhelm it.</p>
+                    <ul class="story-points">
+                        <li>Island sizing and placement coordinated with kitchen workflow and traffic paths.</li>
+                        <li>Seating overhang, bar stool clearance and countertop edge profile decisions.</li>
+                        <li>Integration with flooring direction, lighting and cabinet door swing clearances.</li>
+                        <li>Workflow planning that reflects how the family actually uses the kitchen each day.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- TRIM & FINISH -->
+            <article class="service-story reveal" id="trim-finish">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1609280070598-e1770c80b75c?auto=format&fit=crop&w=1400&q=85" alt="White and brown kitchen island with warm finish details and natural materials" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Trim · Finish Carpentry · Interior Details</span>
+                    <h3>The finish details that make a kitchen remodel feel resolved, not assembled.</h3>
+                    <p>Crown moulding, baseboards, casing, cabinet toe-kick, transition strips and paint-ready surfaces are where a kitchen remodel either finishes cleanly or reveals gaps. We coordinate these details as part of the full scope — not as an afterthought once the main trades are done.</p>
+                    <ul class="story-points">
+                        <li>Baseboards, casing, shoe moulding and paint-ready trim around the full kitchen perimeter.</li>
+                        <li>Cabinet filler strips, toe-kick, crown moulding coordination and reveal consistency.</li>
+                        <li>Interior remodeling details that support kitchen, dining and adjacent living areas.</li>
+                        <li>Clean finish handoff for paint-ready surfaces and final room walk-through.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="service-note reveal">Kitchen imagery throughout this section is sourced as design and finish inspiration under the Unsplash free commercial license. MSI product imagery is used for material reference only. Images represent finish and layout direction, not completed PGC installations.</p>
+    </div>
+</section>
+
+<!-- ============ MATERIAL STUDY ============ -->
+<div class="material-study reveal">
+    <img src="https://images.unsplash.com/photo-1770063817031-f3b98dff347f?auto=format&fit=crop&w=1600&q=85" alt="Modern white kitchen with clean cabinet lines, pendant lighting and stainless appliances" width="1600" height="900" loading="lazy" decoding="async">
+    <div class="material-note">
+        <span class="label">Material Direction</span>
+        <p>Warm neutrals, clean cabinet profiles and continuous flooring — the finish decisions that give a Northeast Houston kitchen a calm, modern character without feeling temporary.</p>
+        <span class="image-credit">Design and finish inspiration</span>
+    </div>
+</div>
+
+<!-- ============ SELECTED PROJECTS ============ -->
+<section class="visual-proof section-pad" id="projects">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>03 — Design References</span>
+            <h2>Kitchen design and finish references for Northeast Houston remodels.</h2>
+        </div>
+
+        <div class="selected-projects reveal">
+            <article class="project-case">
+                <figure class="project-media">
+                    <img src="https://images.unsplash.com/photo-1774200981075-a728eaaa3824?auto=format&fit=crop&w=1400&q=85" alt="Modern open-concept kitchen and living area with natural wood accents and warm material palette" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="project-photo-label">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="project-copy">
+                    <span class="project-kicker">Finish Reference · Kitchen & Open Living</span>
+                    <h3>Kitchen and living spaces that read as one continuous, finished interior.</h3>
+                    <p>Open-plan kitchens work best when flooring, cabinetry, island placement and finish transitions are coordinated across the full scope — so the result reads as designed rather than assembled by separate trades working from separate decisions.</p>
+                    <div class="project-meta">
+                        <div>
+                            <span>Scope Direction</span>
+                            <strong>Kitchen remodel, cabinet coordination, flooring, countertops, trim</strong>
+                        </div>
+                        <div>
+                            <span>Approach</span>
+                            <strong>Material continuity from kitchen to living — flooring, finish and proportion coordinated</strong>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-case">
+                <figure class="project-media">
+                    <img src="https://images.unsplash.com/photo-1665507279644-67d8ed143a84?auto=format&fit=crop&w=1400&q=85" alt="Clean white kitchen cabinets with contemporary layout and neutral material palette" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="project-photo-label">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="project-copy">
+                    <span class="project-kicker">Finish Reference · Island & Cabinetry</span>
+                    <h3>How cabinet, countertop and floor coordinate at the island level.</h3>
+                    <p>Island cabinetry, countertop selection, toe-kick and surrounding LVP flooring work best as a single visual system. The coordination of reveals, profiles and materials at this scale is where a remodel either holds together or shows its gaps.</p>
+                    <div class="project-meta">
+                        <div>
+                            <span>Scope Direction</span>
+                            <strong>Island cabinetry, countertop, flooring transition and finish detail</strong>
+                        </div>
+                        <div>
+                            <span>Contractor</span>
+                            <strong>Prominent General Contractors LLC — Full scope remodeling</strong>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <p class="portfolio-note reveal">Kitchen design references shown here are sourced as inspiration imagery to illustrate finish direction, cabinet layout and material selection — not as representations of completed PGC work.</p>
+    </div>
+</section>
+
+<!-- ============ FINISH REFERENCE GALLERY ============ -->
+<section class="services section-pad" id="finish-reference">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>04 — Finish Reference</span>
+            <h2>Material and finish direction for modern Northeast Houston kitchens.</h2>
+        </div>
+
+        <div class="photo-grid reveal">
+            <div class="photo-grid-item">
+                <img src="https://images.unsplash.com/photo-1682888813726-24adc990e6f7?auto=format&fit=crop&w=800&q=80" alt="Large white island kitchen with bar stools — design reference" loading="lazy" decoding="async">
+                <span class="photo-grid-caption">Island & cabinet finish</span>
+            </div>
+            <div class="photo-grid-item">
+                <img src="https://images.unsplash.com/photo-1759239572496-4ec13e7643d6?auto=format&fit=crop&w=800&q=80" alt="Light wood countertop with open island kitchen — design reference" loading="lazy" decoding="async">
+                <span class="photo-grid-caption">Countertop & island</span>
+            </div>
+            <div class="photo-grid-item">
+                <img src="https://images.unsplash.com/photo-1609280070598-e1770c80b75c?auto=format&fit=crop&w=800&q=80" alt="White and warm wood kitchen island — design reference" loading="lazy" decoding="async">
+                <span class="photo-grid-caption">Warm finish palette</span>
+            </div>
+        </div>
+
+        <p class="service-note reveal">Finish reference images are design inspiration sourced under the Unsplash free commercial license. They represent material, color and layout direction relevant to Northeast Houston kitchens — not completed PGC projects.</p>
+    </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="approach section-pad" id="process">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>05 — Process</span>
+            <h2>A kitchen remodel process built around clear decisions and defined milestones.</h2>
+        </div>
+
+        <p class="approach-intro reveal">Kitchen remodels involve more coordinated decisions than most homeowners expect — cabinet lead times, countertop templating, tile sequencing, appliance rough-ins and flooring last. We sequence the work so each trade lands in the right order and the finish quality isn't compromised by scheduling gaps or last-minute decisions.</p>
+
+        <div class="phases reveal">
+            <div class="phase">
+                <span class="phase-num">— Phase 01</span>
+                <h4>Consultation & Scope</h4>
+                <p>An on-site visit to walk the kitchen, photograph conditions, discuss priorities and define a scope that covers what needs to change without overbuilding the space.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 02</span>
+                <h4>Selections & Proposal</h4>
+                <p>Cabinet direction, countertop material, tile, flooring, hardware and finish details organized into a clear proposal with itemized scope and sequencing notes.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 03</span>
+                <h4>Sequenced Build</h4>
+                <p>Work sequenced around cabinet delivery, countertop templating, tile prep, flooring installation and trim so no trade is waiting on another or redoing completed work.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 04</span>
+                <h4>Final Walk & Handoff</h4>
+                <p>A final kitchen walk-through, punch list, cleanup and handoff so the remodel ends cleanly rather than trailing off into small unfinished items weeks after the main work.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICE AREAS ============ -->
+<section class="areas section-pad" id="areas">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>06 — Service Areas</span>
+            <h2>Kitchen remodels across Northeast Houston.</h2>
+        </div>
+
+        <div class="areas-layout">
+            <div class="areas-intro reveal">
+                <p>"We work close to home so we can show up the same way every day — on time, prepared, and present in the project."</p>
+                <span class="meta">Primary radius: Atascocita, Kingwood, Fall Creek, Summerwood, Eagle Springs, Humble, Lake Houston and nearby Northeast Houston communities.</span>
+            </div>
+
+            <ul class="areas-list reveal">
+                <li><span class="name">Atascocita</span><span class="zip">TX 77346</span></li>
+                <li><span class="name">Kingwood</span><span class="zip">TX 77345</span></li>
+                <li><span class="name">Fall Creek</span><span class="zip">TX 77396</span></li>
+                <li><span class="name">Summerwood</span><span class="zip">TX 77044</span></li>
+                <li><span class="name">Eagle Springs</span><span class="zip">TX 77346</span></li>
+                <li><span class="name">Humble</span><span class="zip">TX 77338</span></li>
+                <li><span class="name">Lake Houston</span><span class="zip">Local Area</span></li>
+                <li><span class="name">Northeast Houston</span><span class="zip">By request</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============ GOOGLE REVIEWS ============ -->
+<section class="google-reviews section-pad" id="google-reviews">
+    <div class="container">
+        <div class="reviews-card reveal"
+             data-google-place-id="ChIJ6wq3LKzdYIgRQVXqE8ZoKxY"
+             data-google-reviews-url="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc">
+            <div class="reviews-score" aria-label="Google rating">
+                <span class="score" data-google-rating>5.0</span>
+                <span class="stars" aria-hidden="true">★★★★★</span>
+                <span class="count" data-google-review-count>12 Google reviews</span>
+            </div>
+            <div class="reviews-body">
+                <span class="eyebrow"><span class="dash"></span>Google Reviews</span>
+                <h2>Real client feedback from the verified Google profile.</h2>
+                <p>Prominent General Contractors LLC is listed on Google with the same website, phone number and business name used here. We do not publish invented testimonials. The button below opens the live Google profile where visitors can read every review directly.</p>
+                <div class="reviews-actions">
+                    <a class="link-action" data-google-reviews-link href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc" target="_blank" rel="noopener">View all Google reviews <span class="arrow">→</span></a>
+                    <span class="reviews-note">Rating and review count from the verified Google Maps listing for Prominent General Contractors LLC.</span>
+                </div>
+            </div>
+            <div class="reviews-live-list" data-google-reviews-list aria-live="polite"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+    <div class="container contact-inner">
+        <div class="reveal">
+            <span class="eyebrow"><span class="dash"></span>07 — Start a Kitchen Project</span>
+            <h2>Tell us about the kitchen — what needs to change and what's staying.</h2>
+            <p class="contact-lead">Most kitchen projects start with an on-site visit to walk the space, photograph conditions and talk through the scope. Whether the project covers cabinets only, a full kitchen remodel, countertops and tile, or everything from flooring to trim, the first step is a direct conversation.</p>
+            <a href="tel:+17138236513" class="link-action">Call or Text <span class="arrow">→</span></a>
+        </div>
+
+        <div class="contact-channels reveal">
+            <a href="tel:+17138236513" class="channel">
+                <span class="label">Phone · Text</span>
+                <span class="value">713 · 823 · 6513</span>
+            </a>
+            <a href="mailto:jordyv@prominentgcllc.com" class="channel">
+                <span class="label">Email</span>
+                <span class="value">jordyv@prominentgcllc.com</span>
+            </a>
+            <div class="channel">
+                <span class="label">Company</span>
+                <span class="value">Prominent General Contractors LLC</span>
+            </div>
+            <div class="channel">
+                <span class="label">Specialty Division</span>
+                <span class="value">PGC Flooring</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">
+                    <span class="brand-mark">PGC</span>
+                    <span class="brand-rule" aria-hidden="true"></span>
+                    <span class="brand-tagline">Prominent General Contractors</span>
+                </div>
+                <p>Prominent General Contractors LLC provides kitchen remodels, bathroom remodels, flooring installation, cabinet installation, countertops, tile and commercial improvements across Northeast Houston.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Kitchen Remodels</h5>
+                <ul>
+                    <li><a href="#cabinet-installation">Cabinet Installation</a></li>
+                    <li><a href="#countertops">Countertops</a></li>
+                    <li><a href="#backsplash-tile">Backsplash Tile</a></li>
+                    <li><a href="#kitchen-flooring">Kitchen Flooring</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>More Services</h5>
+                <ul>
+                    <li><a href="../Flooring_Division/">Flooring — PGC Division</a></li>
+                    <li><a href="../Bathroom_Remodels/">Bathroom Remodels</a></li>
+                    <li><a href="../kingwood-contractor/">Kingwood Service Area</a></li>
+                    <li><a href="../">Prominent General Contractors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
+                    <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>
+                    <li><a href="#google-reviews">Google Reviews</a></li>
+                    <li><a href="#contact">Schedule a Visit</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-meta">
+            <span>© 2026 Prominent General Contractors LLC · Kitchen Remodels · Flooring · Interior Improvements</span>
+            <div class="credentials">
+                <span>Licensed</span>
+                <span>Insured</span>
+                <span>Houston · Texas</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
+
+    const toggle = document.getElementById('menuToggle');
+    if (toggle) toggle.addEventListener('click', () => header.classList.toggle('menu-open'));
+
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => io.observe(el));
+        window.setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 1400);
+    } else {
+        revealEls.forEach(el => el.classList.add('in'));
+    }
+
+    const GOOGLE_PLACE_ID = 'ChIJ6wq3LKzdYIgRQVXqE8ZoKxY';
+    const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc';
+    const GOOGLE_REVIEWS_ENDPOINT = '/api/google-place-reviews';
+
+    document.querySelectorAll('[data-google-reviews-link]').forEach((link) => { link.href = GOOGLE_REVIEWS_URL; });
+
+    async function hydrateGoogleReviews() {
+        if (!GOOGLE_REVIEWS_ENDPOINT) return;
+        try {
+            const response = await fetch(GOOGLE_REVIEWS_ENDPOINT, { headers: { 'Accept': 'application/json' } });
+            if (!response.ok) throw new Error('Google reviews endpoint failed');
+            const place = await response.json();
+            if (typeof place.rating === 'number') {
+                document.querySelectorAll('[data-google-rating]').forEach((el) => { el.textContent = place.rating.toFixed(1); });
+            }
+            if (typeof place.userRatingCount === 'number') {
+                document.querySelectorAll('[data-google-review-count]').forEach((el) => { el.textContent = `${place.userRatingCount} Google reviews`; });
+            }
+            if (place.googleMapsUri) {
+                document.querySelectorAll('[data-google-reviews-link]').forEach((link) => { link.href = place.googleMapsUri; });
+            }
+            const reviewsList = document.querySelector('[data-google-reviews-list]');
+            if (reviewsList && Array.isArray(place.reviews) && place.reviews.length) {
+                reviewsList.innerHTML = place.reviews
+                    .filter((r) => r && r.text).slice(0, 3)
+                    .map((review) => `
+                        <article class="google-review-card">
+                            <blockquote>"${escapeHtml(review.text)}"</blockquote>
+                            <div class="google-review-meta">
+                                <span>${escapeHtml(review.author || 'Google reviewer')}</span>
+                                <span>${escapeHtml(review.relativePublishTimeDescription || `${Number(review.rating || 5).toFixed(1)} stars`)}</span>
+                            </div>
+                        </article>`).join('');
+            }
+        } catch (error) {
+            console.warn('Google reviews could not be refreshed.', error);
+        }
+    }
+
+    function escapeHtml(value) {
+        return String(value)
+            .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+    }
+
+    hydrateGoogleReviews();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bathroom and shower remodels in Kingwood and Northeast Houston. Tile, vanities, glass, waterproofing, and finish transitions done right. Prominent General Contractors LLC — (713) 823-6513.">
+    <title>Bathroom Remodels Kingwood TX — Prominent General Contractors LLC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1638799869566-b17fa794c4de?auto=format&fit=crop&w=1400&q=85">
+    <link rel="stylesheet" href="../assets/styles.css">
+
+    <style>
+        .brand-stack { display: flex; flex-direction: column; gap: 0.4rem; }
+        .brand-stack .brand { gap: 0.85rem; }
+
+        .bath-hero-visual {
+            background: var(--ink);
+            isolation: isolate;
+        }
+
+        .bath-hero-visual img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.86;
+            filter: saturate(0.84) contrast(0.94);
+            transform: scale(1.015);
+        }
+
+        .bath-hero-visual::before {
+            z-index: 1;
+            background:
+                linear-gradient(180deg, rgba(28, 26, 23, 0.04) 0%, rgba(28, 26, 23, 0.54) 100%),
+                linear-gradient(90deg, rgba(28, 26, 23, 0.14) 0%, transparent 58%);
+        }
+
+        .bath-hero-visual .caption {
+            z-index: 2;
+            color: var(--ivory);
+            max-width: 280px;
+            text-shadow: 0 1px 18px rgba(28, 26, 23, 0.35);
+        }
+
+        .bath-hero-visual .caption::before { background: rgba(245, 243, 239, 0.72); }
+
+        .material-study {
+            position: relative;
+            min-height: 520px;
+            margin-top: 5rem;
+            background: var(--paper);
+            overflow: hidden;
+        }
+
+        .material-study img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.88) contrast(0.96);
+        }
+
+        .material-study::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(28, 26, 23, 0.62) 0%, rgba(28, 26, 23, 0.28) 38%, transparent 72%),
+                linear-gradient(180deg, transparent 35%, rgba(28, 26, 23, 0.18) 100%);
+        }
+
+        .material-note {
+            position: absolute;
+            left: clamp(1.5rem, 5vw, 4rem);
+            bottom: clamp(1.5rem, 4vw, 3.5rem);
+            z-index: 1;
+            max-width: 390px;
+            color: var(--ivory);
+        }
+
+        .material-note .label,
+        .image-credit {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .material-note .label { color: var(--gold); margin-bottom: 1rem; }
+
+        .material-note p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.45rem, 2.4vw, 2rem);
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.32;
+        }
+
+        .image-credit { color: rgba(245, 243, 239, 0.62); margin-top: 1.25rem; }
+
+        .service-stories { background: var(--ivory); }
+        .story-stack { display: grid; gap: 1.5rem; }
+
+        .service-story {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+            min-height: 430px;
+            background: var(--ivory-warm);
+            border: 1px solid var(--hairline);
+            overflow: hidden;
+        }
+
+        .service-story:nth-child(even) {
+            grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+        }
+
+        .service-story:nth-child(even) .story-media { order: 2; }
+
+        .story-media {
+            position: relative;
+            min-height: 360px;
+            background: var(--paper);
+            overflow: hidden;
+        }
+
+        .story-media img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.86) contrast(0.96);
+        }
+
+        .story-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 26, 23, 0.38) 0%, transparent 54%);
+        }
+
+        .story-credit {
+            position: absolute;
+            left: 1.5rem;
+            bottom: 1.35rem;
+            z-index: 1;
+            max-width: 300px;
+            color: rgba(245, 243, 239, 0.76);
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .story-body {
+            padding: clamp(2rem, 5vw, 4rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .story-kicker {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 1.25rem;
+        }
+
+        .story-body h3 {
+            font-size: clamp(1.9rem, 3vw, 2.7rem);
+            line-height: 1.08;
+            margin-bottom: 1.25rem;
+        }
+
+        .story-body p { color: var(--graphite); line-height: 1.75; max-width: 620px; }
+
+        .story-points {
+            list-style: none;
+            display: grid;
+            gap: 0.8rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--hairline);
+        }
+
+        .story-points li {
+            display: grid;
+            grid-template-columns: 1.5rem 1fr;
+            gap: 0.75rem;
+            color: var(--graphite);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .story-points li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            margin-top: 0.58rem;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+
+        .service-note { max-width: 720px; margin-top: 2rem; color: var(--slate); font-size: 0.82rem; line-height: 1.8; }
+
+        .visual-proof {
+            background: var(--paper);
+            border-top: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .selected-projects { display: grid; gap: clamp(1.5rem, 4vw, 3.5rem); }
+
+        .project-case {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+            min-height: 520px;
+            background: var(--ivory);
+            border: 1px solid var(--hairline);
+            overflow: hidden;
+        }
+
+        .project-case:nth-child(even) {
+            grid-template-columns: minmax(320px, 1.05fr) minmax(0, 0.95fr);
+        }
+
+        .project-case:nth-child(even) .project-media { order: 2; }
+
+        .project-media {
+            position: relative;
+            min-height: 520px;
+            background: var(--ink);
+            overflow: hidden;
+        }
+
+        .project-media img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.82;
+            filter: saturate(0.84) contrast(0.95);
+        }
+
+        .project-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 26, 23, 0.42) 0%, rgba(28, 26, 23, 0.12) 56%, rgba(28, 26, 23, 0.02) 100%);
+        }
+
+        .project-photo-label {
+            position: absolute;
+            left: 1.35rem;
+            bottom: 1.2rem;
+            z-index: 1;
+            color: rgba(245, 243, 239, 0.72);
+            font-size: 0.64rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .project-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(2rem, 5vw, 4.25rem);
+        }
+
+        .project-kicker {
+            display: block;
+            color: var(--slate);
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-copy h3 {
+            font-size: clamp(2rem, 3.4vw, 3.1rem);
+            line-height: 1.04;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-copy p { color: var(--graphite); line-height: 1.78; max-width: 600px; }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--hairline);
+        }
+
+        .project-meta span {
+            display: block;
+            color: var(--slate);
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 0.45rem;
+        }
+
+        .project-meta strong { color: var(--ink); font-size: 0.92rem; font-weight: 400; line-height: 1.45; }
+        .portfolio-note { max-width: 680px; color: var(--slate); font-size: 0.82rem; line-height: 1.8; }
+
+        /* Photo grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .photo-grid-item {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: var(--ink);
+        }
+
+        .photo-grid-item img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.82;
+            filter: saturate(0.84) contrast(0.94);
+            transition: transform 0.7s var(--ease), opacity 0.45s var(--ease);
+        }
+
+        .photo-grid-item:hover img { transform: scale(1.035); opacity: 0.9; }
+
+        .photo-grid-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 26, 23, 0.42) 0%, transparent 60%);
+        }
+
+        .photo-grid-caption {
+            position: absolute;
+            left: 1rem;
+            bottom: 0.9rem;
+            z-index: 1;
+            color: rgba(245, 243, 239, 0.72);
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .google-reviews {
+            background: var(--ivory);
+            border-top: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .reviews-card {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+            gap: clamp(2rem, 5vw, 5rem);
+            align-items: center;
+            padding: clamp(2rem, 5vw, 4rem);
+            background: rgba(245, 243, 239, 0.68);
+            border: 1px solid var(--hairline);
+        }
+
+        .reviews-score { border-right: 1px solid var(--hairline); padding-right: clamp(1.5rem, 4vw, 3rem); }
+
+        .reviews-score .score {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4rem, 9vw, 7.5rem);
+            font-weight: 300;
+            line-height: 0.88;
+            color: var(--ink);
+            letter-spacing: -0.05em;
+        }
+
+        .reviews-score .stars { display: block; margin-top: 1.2rem; color: var(--gold); font-size: 0.95rem; letter-spacing: 0.18em; }
+        .reviews-score .count { display: block; margin-top: 0.8rem; color: var(--slate); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; }
+        .reviews-body p { margin: 1.25rem 0 0; color: var(--slate); line-height: 1.8; max-width: 620px; }
+        .reviews-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin-top: 2rem; }
+        .reviews-note { display: block; color: var(--slate); font-size: 0.76rem; line-height: 1.6; max-width: 520px; }
+
+        .reviews-live-list {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: clamp(1.8rem, 4vw, 3rem);
+        }
+
+        .reviews-live-list:empty { display: none; }
+
+        .google-review-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            padding: 1.35rem;
+            background: var(--ivory);
+            border: 1px solid var(--hairline);
+        }
+
+        .google-review-card blockquote { margin: 0; color: var(--graphite); font-size: 0.9rem; line-height: 1.7; }
+
+        .google-review-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 1.3rem;
+            color: var(--slate);
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 720px) {
+            .brand-stack .breadcrumb { font-size: 0.62rem; letter-spacing: 0.18em; }
+            .material-study { min-height: 430px; margin-top: 3rem; }
+            .bath-hero-visual img { opacity: 0.7; }
+            .service-story,
+            .service-story:nth-child(even) { grid-template-columns: 1fr; }
+            .service-story:nth-child(even) .story-media { order: 0; }
+            .story-media { min-height: 280px; }
+            .reviews-card { grid-template-columns: 1fr; padding: 1.5rem; }
+            .reviews-score { border-right: 0; border-bottom: 1px solid var(--hairline); padding-right: 0; padding-bottom: 1.5rem; }
+            .reviews-live-list { grid-template-columns: 1fr; }
+            .project-case,
+            .project-case:nth-child(even) { grid-template-columns: 1fr; min-height: 0; }
+            .project-case:nth-child(even) .project-media { order: 0; }
+            .project-media { min-height: 360px; }
+            .project-meta { grid-template-columns: 1fr; }
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+    <nav>
+        <div class="brand-stack">
+            <a href="../" class="breadcrumb" aria-label="Back to Prominent General Contractors">
+                <span class="arrow" aria-hidden="true">←</span>
+                Prominent General Contractors
+            </a>
+            <a href="./" class="brand" aria-label="Bathroom Remodels — Prominent General Contractors">
+                <span class="brand-mark">PGC</span>
+                <span class="brand-rule" aria-hidden="true"></span>
+                <span class="brand-tagline">Bathroom Remodels</span>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#bathroom-stories">Bathroom Scopes</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#google-reviews">Reviews</a></li>
+            <li><a href="#areas">Service Areas</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-action">
+            Begin a Project
+            <span aria-hidden="true">→</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Open menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+    <div class="container hero-grid">
+        <div class="hero-text reveal">
+            <span class="eyebrow"><span class="dash"></span>Prominent General Contractors LLC</span>
+            <h1>Bathroom and shower remodels built around waterproofing, proportion and quiet detail.</h1>
+            <p class="lead">Shower remodels, tub surrounds, vanity upgrades, tile installation and wet-area waterproofing coordinated as a single scope. Prominent General Contractors plans bathrooms that function correctly, age well and feel intentional.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="link-action">Schedule a Consultation <span class="arrow">→</span></a>
+                <a href="#bathroom-stories" class="link-action muted">Explore Bathroom Services</a>
+            </div>
+        </div>
+        <figure class="hero-aside bath-hero-visual reveal">
+            <img src="https://images.unsplash.com/photo-1638799869566-b17fa794c4de?auto=format&fit=crop&w=1400&q=85" alt="White bathtub adjacent to walk-in shower with calm neutral tile and material palette" width="1400" height="933" decoding="async">
+            <figcaption class="caption">Bathroom design and finish inspiration — material reference.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- ============ STRIP ============ -->
+<div class="strip">
+    <div class="container strip-inner">
+        <span class="strip-item"><span class="gold-dot"></span>Bathroom Remodels</span>
+        <span class="strip-item"><span class="gold-dot"></span>Shower Remodels</span>
+        <span class="strip-item"><span class="gold-dot"></span>Tile Installation</span>
+        <span class="strip-item"><span class="gold-dot"></span>Northeast Houston</span>
+        <span class="strip-item"><span class="gold-dot"></span>713 · 823 · 6513</span>
+    </div>
+</div>
+
+<!-- ============ SERVICES OVERVIEW ============ -->
+<section class="services section-pad" id="services">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>01 — Bathroom Services</span>
+            <h2>Full wet-area remodeling, not just new surfaces.</h2>
+        </div>
+
+        <div class="services-grid reveal">
+            <article class="service">
+                <span class="service-num">— 01</span>
+                <h3>Shower Remodels</h3>
+                <p>Shower remodels planned around tile layout, waterproofing, glass enclosure alignment, niches, flooring and the transitions that make the shower feel like a resolved part of the bathroom.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 02</span>
+                <h3>Tub Surrounds & Wet Areas</h3>
+                <p>Tub surrounds, deck tile, wet-area waterproofing and finish coordination for bathrooms where the tub is a major visual element as well as a functional one.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 03</span>
+                <h3>Vanity & Fixtures</h3>
+                <p>Vanity installation, countertop coordination, hardware selection, mirror framing and the finish details that make a bathroom feel current and considered without being overdone.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 04</span>
+                <h3>Bathroom Tile</h3>
+                <p>Floor tile, wall tile, shower tile and transition coordination planned around layout rhythm, grout, drain placement, glass enclosure and the way the tile meets adjacent materials.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 05</span>
+                <h3>Bathroom Flooring</h3>
+                <p>Waterproof bathroom floor tile and LVP transitions handled through PGC Flooring — selections that perform in a wet environment and connect cleanly to hallways and adjacent rooms.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 06</span>
+                <h3>Trim & Finish</h3>
+                <p>Baseboards, casing, paint-ready trim, niche framing and the finish details that complete the bathroom scope and prepare the room for final paint and fixtures.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICE STORIES ============ -->
+<section class="service-stories section-pad" id="bathroom-stories">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>02 — Service Depth</span>
+            <h2>What a bathroom remodel actually involves, from waterproofing to finish.</h2>
+        </div>
+
+        <div class="story-stack">
+
+            <!-- SHOWER REMODELS -->
+            <article class="service-story reveal" id="shower-remodels">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1722650271096-bf3af586c406?auto=format&fit=crop&w=1400&q=85" alt="Walk-in shower with clean tile surround and faucet detail" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Shower Remodels · Walk-In Showers</span>
+                    <h3>Showers planned around waterproofing, tile and the enclosure from the first decision.</h3>
+                    <p>A shower remodel involves more than new tile. We plan waterproofing, substrate prep, niche placement, drain alignment, tile layout, glass or frameless door selection and the floor-to-shower threshold detail — so the result functions correctly and looks intentional for years.</p>
+                    <ul class="story-points">
+                        <li>Waterproofing membrane, substrate preparation and surface flatness before any tile goes down.</li>
+                        <li>Tile layout planned around the drain, niche, bench and glass enclosure positions.</li>
+                        <li>Large-format, subway, stack bond and mosaic tile options for walls and floors.</li>
+                        <li>Frameless glass, pivot and sliding enclosure coordination and installation.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- TUB SURROUNDS -->
+            <article class="service-story reveal" id="tub-surrounds">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1400&q=85" alt="Clean white ceramic bathtub with surrounding tile and calm material palette" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Tub Surrounds · Deck Tile · Wet Areas</span>
+                    <h3>Tub areas that work visually and hold up to wet exposure.</h3>
+                    <p>Tub surround tile needs to handle constant moisture and look deliberate against the tub field and surrounding bathroom tile. We coordinate layout, grout lines, the deck surface, the apron detail and how the surround tile relates to floor and shower materials in the same room.</p>
+                    <ul class="story-points">
+                        <li>Tub surround tile installation with proper waterproofing at all seams and transitions.</li>
+                        <li>Deck tile, tub apron and field tile coordinated for a visually consistent wet area.</li>
+                        <li>Grout color, joint size and layout direction planned against the tub and wall tiles.</li>
+                        <li>Floor-to-tub threshold and adjacent flooring transitions handled cleanly.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- VANITY & FIXTURES -->
+            <article class="service-story reveal" id="vanity-fixtures">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1682888818696-906287d759f5?auto=format&fit=crop&w=1400&q=85" alt="Bathroom vanity with marble countertop and contemporary cabinet finish detail" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Vanity Installation · Countertops · Hardware</span>
+                    <h3>Vanity upgrades that anchor the bathroom without overcomplicating the room.</h3>
+                    <p>The vanity defines how the bathroom is used and perceived each day. We handle vanity installation, countertop coordination, sink, faucet, hardware and mirror decisions as a connected set — so the fixture selections and material finish work together rather than canceling each other out.</p>
+                    <ul class="story-points">
+                        <li>Vanity installation with countertop, sink and faucet coordination.</li>
+                        <li>Hardware selection across towel bars, robe hooks, toilet paper holders and fixtures.</li>
+                        <li>Mirror framing, medicine cabinet integration and lighting-ready above-vanity details.</li>
+                        <li>Plumbing rough-in coordination with finish trim and adjacent tile backsplash.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- BATHROOM TILE -->
+            <article class="service-story reveal" id="bathroom-tile">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1722650271096-bf3af586c406?auto=format&fit=crop&w=1400&q=85" alt="Clean walk-in shower with faucet detail and tile surround" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Bathroom Tile · Shower Tile · Floor Tile</span>
+                    <h3>Tile work planned for layout, water exposure and the long term.</h3>
+                    <p>Bathroom tile installation requires thinking ahead — about surface prep, waterproofing needs, pattern direction, grout performance, drain placement and how each tile surface meets the next. We approach tile in the context of the whole bathroom, not as a standalone scope.</p>
+                    <ul class="story-points">
+                        <li>Shower wall and floor tile with verified waterproofing at all critical junctions.</li>
+                        <li>Bathroom floor tile planned around vanity, toilet and tub positions for clean cuts.</li>
+                        <li>Backsplash tile behind vanity coordinated with countertop edge and mirror height.</li>
+                        <li>Layout planned to minimize awkward cuts at focal points, fixtures and enclosures.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- WATERPROOFING & PREP -->
+            <article class="service-story reveal" id="waterproofing">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?auto=format&fit=crop&w=1400&q=85" alt="Clean contemporary bathroom with tile work and neutral material palette" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Waterproofing · Substrate Prep · Wet-Area Planning</span>
+                    <h3>The substrate and waterproofing work that determines whether the tile holds up for ten years or ten months.</h3>
+                    <p>Surface prep and waterproofing are the least visible parts of a bathroom remodel and the most consequential. We plan substrate conditions, moisture barriers, cement board scope and curb details before tile begins — because fixing a waterproofing failure after the tile is set is far more expensive than getting it right the first time.</p>
+                    <ul class="story-points">
+                        <li>Cement board, Schluter or equivalent substrate installation for wet areas.</li>
+                        <li>Membrane waterproofing at shower pans, curbs, wall transitions and niches.</li>
+                        <li>Curb height, slope, drain alignment and floor pitch for reliable drainage.</li>
+                        <li>Surface leveling, patching and flatness checks before tile begins.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- BATHROOM FLOORING & TRIM -->
+            <article class="service-story reveal" id="bathroom-flooring">
+                <figure class="story-media">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1400&q=85" alt="Bathroom vanity with dual ceramic sinks and clean contemporary finish details" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="story-credit">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="story-body">
+                    <span class="story-kicker">Bathroom Flooring · Trim · Interior Finishes</span>
+                    <h3>Flooring and trim that complete the bathroom scope without adding visual clutter.</h3>
+                    <p>Bathroom flooring, baseboards, casing and trim are where the remodel either closes cleanly or shows the seams between trades. We coordinate these finish details as part of the full scope so the bathroom delivers on what the tile and fixtures promised when the room was being planned.</p>
+                    <ul class="story-points">
+                        <li>Bathroom floor tile and waterproof LVP transitions into hallways and adjacent rooms.</li>
+                        <li>Baseboard, casing, door transitions and paint-ready trim coordination.</li>
+                        <li>Niche framing, toilet flange trim and vent transitions finished cleanly.</li>
+                        <li>Final surface prep for paint-ready handoff and fixture installation.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="service-note reveal">Bathroom and shower imagery throughout this section is sourced as design and finish inspiration under the Unsplash free commercial license. Images represent finish and layout direction, not completed PGC installations.</p>
+    </div>
+</section>
+
+<!-- ============ MATERIAL STUDY ============ -->
+<div class="material-study reveal">
+    <img src="https://images.unsplash.com/photo-1723642610226-e4ab4626cbc2?auto=format&fit=crop&w=1600&q=85" alt="Clean white bathroom with walk-in shower enclosure and calm material palette" width="1600" height="900" loading="lazy" decoding="async">
+    <div class="material-note">
+        <span class="label">Finish Direction</span>
+        <p>Calm, neutral tile palettes, clean enclosures and consistent grout lines — the material decisions that make a bathroom feel modern without demanding constant upkeep.</p>
+        <span class="image-credit">Design and finish inspiration</span>
+    </div>
+</div>
+
+<!-- ============ SELECTED PROJECTS ============ -->
+<section class="visual-proof section-pad" id="projects">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>03 — Design References</span>
+            <h2>Bathroom and shower design and finish references.</h2>
+        </div>
+
+        <div class="selected-projects reveal">
+            <article class="project-case">
+                <figure class="project-media">
+                    <img src="https://images.unsplash.com/photo-1704428381342-ea9df943619e?auto=format&fit=crop&w=1400&q=85" alt="Bathroom with shower, clean tile work and neutral contemporary finish" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="project-photo-label">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="project-copy">
+                    <span class="project-kicker">Finish Reference · Shower & Bathroom</span>
+                    <h3>A full bathroom scope that brings together tile, glass, waterproofing and quiet finish coordination.</h3>
+                    <p>This direction shows how tile layout, glass enclosure alignment, waterproofing, tub placement, vanity and floor transitions work as a single material system — calm, durable and built for daily use without demanding constant attention.</p>
+                    <div class="project-meta">
+                        <div>
+                            <span>Scope Direction</span>
+                            <strong>Shower remodel, bathroom remodel, tile installation, glass enclosure, finish coordination</strong>
+                        </div>
+                        <div>
+                            <span>Approach</span>
+                            <strong>Material systems planned before tile begins — waterproofing, layout and enclosure as one scope</strong>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-case">
+                <figure class="project-media">
+                    <img src="https://images.unsplash.com/photo-1628602813485-4e8b09442e98?auto=format&fit=crop&w=1400&q=85" alt="Clean white bathtub with tile surround and calm contemporary bathroom palette" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="project-photo-label">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="project-copy">
+                    <span class="project-kicker">Finish Reference · Tub Area & Wet Zone</span>
+                    <h3>Tub area and wet zone planned as one cohesive material scope.</h3>
+                    <p>The tub surround, deck, apron tile and adjacent floor tile work best when planned together — so transitions are clean, grout lines align across surfaces, and the wet area reads as one deliberate material decision rather than separate choices installed at different times.</p>
+                    <div class="project-meta">
+                        <div>
+                            <span>Scope Direction</span>
+                            <strong>Tub surround tile, deck, wet-area waterproofing, floor tile, finish transitions</strong>
+                        </div>
+                        <div>
+                            <span>Focus</span>
+                            <strong>Tile layout coordination, grout rhythm and wet-area material integration</strong>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-case">
+                <figure class="project-media">
+                    <img src="https://images.unsplash.com/photo-1639751898256-e80ef909ea8d?auto=format&fit=crop&w=1400&q=85" alt="Full bathroom with mirror, clean tile detail and contemporary material palette" width="1400" height="933" loading="lazy" decoding="async">
+                    <figcaption class="project-photo-label">Design and finish inspiration</figcaption>
+                </figure>
+                <div class="project-copy">
+                    <span class="project-kicker">Finish Reference · Shower Tile & Glass</span>
+                    <h3>Shower tile and enclosure detail — where the quality of a remodel becomes visible.</h3>
+                    <p>The grout line consistency, niche detail and how the glass enclosure lands relative to the tile field — these are the details that separate a competent shower installation from one that holds up and looks intentional years later.</p>
+                    <div class="project-meta">
+                        <div>
+                            <span>Scope Direction</span>
+                            <strong>Shower tile, waterproofing, niche installation, glass enclosure</strong>
+                        </div>
+                        <div>
+                            <span>Contractor</span>
+                            <strong>Prominent General Contractors LLC — Bathroom Remodeling</strong>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <p class="portfolio-note reveal">Bathroom and shower design references shown here are sourced as inspiration imagery to illustrate finish direction, tile layout and material selection — not as representations of completed PGC work.</p>
+    </div>
+</section>
+
+<!-- ============ PHOTO GALLERY ============ -->
+<section class="services section-pad" id="finish-reference">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>04 — Finish Inspiration</span>
+            <h2>Finish and layout inspiration for bathroom and shower spaces.</h2>
+        </div>
+
+        <div class="photo-grid reveal">
+            <div class="photo-grid-item">
+                <img src="https://images.unsplash.com/photo-1603825491103-bd638b1873b0?auto=format&fit=crop&w=900&q=85" alt="Bathroom sink near mirror with clean vanity finish and tile detail" loading="lazy" decoding="async">
+                <span class="photo-grid-caption">Vanity finish reference</span>
+            </div>
+            <div class="photo-grid-item">
+                <img src="https://images.unsplash.com/photo-1600488999585-e4364713b90a?auto=format&fit=crop&w=900&q=85" alt="White ceramic sink with contemporary faucet and tile surround" loading="lazy" decoding="async">
+                <span class="photo-grid-caption">Fixture & tile reference</span>
+            </div>
+            <div class="photo-grid-item">
+                <img src="https://images.unsplash.com/photo-1643949719317-4342d8d4031e?auto=format&fit=crop&w=900&q=85" alt="Bathroom with clean layout, neutral tile and contemporary fixtures" loading="lazy" decoding="async">
+                <span class="photo-grid-caption">Bathroom layout reference</span>
+            </div>
+        </div>
+
+        <p class="service-note reveal">Images in this section are bathroom and shower design references sourced as finish and layout inspiration under the Unsplash free commercial license.</p>
+    </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="approach section-pad" id="process">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>05 — Process</span>
+            <h2>A bathroom remodel process that gets the substrate and waterproofing right before tile begins.</h2>
+        </div>
+
+        <p class="approach-intro reveal">Bathroom remodels have a natural sequence that can't be compressed without cost. Demolition, substrate preparation and waterproofing must be done and verified before tile begins. Tile must be set and cured before glass enclosures are measured. Vanity and fixtures follow tile and floors. We organize work in this order — not around convenience or speed — because the finished quality depends on it.</p>
+
+        <div class="phases reveal">
+            <div class="phase">
+                <span class="phase-num">— Phase 01</span>
+                <h4>Consultation & Scope</h4>
+                <p>An on-site visit to assess existing conditions, photograph the bathroom, discuss priorities and define a scope that covers shower, tub, vanity, tile, flooring and finish in a clear written proposal.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 02</span>
+                <h4>Selections & Sequencing</h4>
+                <p>Tile, vanity, hardware, glass and flooring selections organized before demolition begins so material lead times don't delay each subsequent trade in the sequence.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 03</span>
+                <h4>Demolition & Substrate</h4>
+                <p>Careful removal of existing surfaces, substrate preparation, waterproofing installation and surface leveling — verified before any tile is ordered to the wall.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 04</span>
+                <h4>Tile, Fixtures & Handoff</h4>
+                <p>Tile installation, glass enclosure, vanity, fixtures, trim and a final walk-through with punch list so the bathroom is handed over cleanly, not still in process.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICE AREAS ============ -->
+<section class="areas section-pad" id="areas">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>06 — Service Areas</span>
+            <h2>Bathroom and shower remodels across Northeast Houston.</h2>
+        </div>
+
+        <div class="areas-layout">
+            <div class="areas-intro reveal">
+                <p>"We work close to home so we can show up the same way every day — on time, prepared, and present in the project."</p>
+                <span class="meta">Primary radius: Atascocita, Kingwood, Fall Creek, Summerwood, Eagle Springs, Humble, Lake Houston and nearby Northeast Houston communities.</span>
+            </div>
+
+            <ul class="areas-list reveal">
+                <li><span class="name">Atascocita</span><span class="zip">TX 77346</span></li>
+                <li><span class="name">Kingwood</span><span class="zip">TX 77345</span></li>
+                <li><span class="name">Fall Creek</span><span class="zip">TX 77396</span></li>
+                <li><span class="name">Summerwood</span><span class="zip">TX 77044</span></li>
+                <li><span class="name">Eagle Springs</span><span class="zip">TX 77346</span></li>
+                <li><span class="name">Humble</span><span class="zip">TX 77338</span></li>
+                <li><span class="name">Lake Houston</span><span class="zip">Local Area</span></li>
+                <li><span class="name">Northeast Houston</span><span class="zip">By request</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============ GOOGLE REVIEWS ============ -->
+<section class="google-reviews section-pad" id="google-reviews">
+    <div class="container">
+        <div class="reviews-card reveal"
+             data-google-place-id="ChIJ6wq3LKzdYIgRQVXqE8ZoKxY"
+             data-google-reviews-url="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc">
+            <div class="reviews-score" aria-label="Google rating">
+                <span class="score" data-google-rating>5.0</span>
+                <span class="stars" aria-hidden="true">★★★★★</span>
+                <span class="count" data-google-review-count>12 Google reviews</span>
+            </div>
+            <div class="reviews-body">
+                <span class="eyebrow"><span class="dash"></span>Google Reviews</span>
+                <h2>Real client feedback from the verified Google profile.</h2>
+                <p>Prominent General Contractors LLC is listed on Google with the same website, phone number and business name used here. We do not publish invented testimonials. The button below opens the live Google profile where every review can be read directly.</p>
+                <div class="reviews-actions">
+                    <a class="link-action" data-google-reviews-link href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc" target="_blank" rel="noopener">View all Google reviews <span class="arrow">→</span></a>
+                    <span class="reviews-note">Rating and review count from the verified Google Maps listing for Prominent General Contractors LLC.</span>
+                </div>
+            </div>
+            <div class="reviews-live-list" data-google-reviews-list aria-live="polite"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+    <div class="container contact-inner">
+        <div class="reveal">
+            <span class="eyebrow"><span class="dash"></span>07 — Start a Bathroom Project</span>
+            <h2>Tell us about the bathroom — what's failing, what's dated and what matters most.</h2>
+            <p class="contact-lead">Most bathroom projects start with an on-site visit to photograph the existing conditions and walk through the scope. Whether the project is a shower remodel only, a full bathroom overhaul, vanity and tile, or the entire wet area, the first step is a direct conversation about what needs to happen and in what order.</p>
+            <a href="tel:+17138236513" class="link-action">Call or Text <span class="arrow">→</span></a>
+        </div>
+
+        <div class="contact-channels reveal">
+            <a href="tel:+17138236513" class="channel">
+                <span class="label">Phone · Text</span>
+                <span class="value">713 · 823 · 6513</span>
+            </a>
+            <a href="mailto:jordyv@prominentgcllc.com" class="channel">
+                <span class="label">Email</span>
+                <span class="value">jordyv@prominentgcllc.com</span>
+            </a>
+            <div class="channel">
+                <span class="label">Company</span>
+                <span class="value">Prominent General Contractors LLC</span>
+            </div>
+            <div class="channel">
+                <span class="label">Specialty Division</span>
+                <span class="value">PGC Flooring</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">
+                    <span class="brand-mark">PGC</span>
+                    <span class="brand-rule" aria-hidden="true"></span>
+                    <span class="brand-tagline">Prominent General Contractors</span>
+                </div>
+                <p>Prominent General Contractors LLC provides bathroom remodels, shower remodels, tile installation, flooring, cabinet installation, countertops and commercial improvements across Northeast Houston.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Bathroom Remodels</h5>
+                <ul>
+                    <li><a href="#shower-remodels">Shower Remodels</a></li>
+                    <li><a href="#tub-surrounds">Tub Surrounds</a></li>
+                    <li><a href="#vanity-fixtures">Vanity & Fixtures</a></li>
+                    <li><a href="#bathroom-tile">Bathroom Tile</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>More Services</h5>
+                <ul>
+                    <li><a href="../Kitchen_Remodels/">Kitchen Remodels</a></li>
+                    <li><a href="../Flooring_Division/">Flooring — PGC Division</a></li>
+                    <li><a href="../kingwood-contractor/">Kingwood Service Area</a></li>
+                    <li><a href="../">Prominent General Contractors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
+                    <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>
+                    <li><a href="#google-reviews">Google Reviews</a></li>
+                    <li><a href="#contact">Schedule a Visit</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-meta">
+            <span>© 2026 Prominent General Contractors LLC · Bathroom Remodels · Shower Remodels · Interior Improvements</span>
+            <div class="credentials">
+                <span>Licensed</span>
+                <span>Insured</span>
+                <span>Houston · Texas</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
+
+    const toggle = document.getElementById('menuToggle');
+    if (toggle) toggle.addEventListener('click', () => header.classList.toggle('menu-open'));
+
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => io.observe(el));
+        window.setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 1400);
+    } else {
+        revealEls.forEach(el => el.classList.add('in'));
+    }
+
+    const GOOGLE_PLACE_ID = 'ChIJ6wq3LKzdYIgRQVXqE8ZoKxY';
+    const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc';
+    const GOOGLE_REVIEWS_ENDPOINT = '/api/google-place-reviews';
+
+    document.querySelectorAll('[data-google-reviews-link]').forEach((link) => { link.href = GOOGLE_REVIEWS_URL; });
+
+    async function hydrateGoogleReviews() {
+        if (!GOOGLE_REVIEWS_ENDPOINT) return;
+        try {
+            const response = await fetch(GOOGLE_REVIEWS_ENDPOINT, { headers: { 'Accept': 'application/json' } });
+            if (!response.ok) throw new Error('Google reviews endpoint failed');
+            const place = await response.json();
+            if (typeof place.rating === 'number') {
+                document.querySelectorAll('[data-google-rating]').forEach((el) => { el.textContent = place.rating.toFixed(1); });
+            }
+            if (typeof place.userRatingCount === 'number') {
+                document.querySelectorAll('[data-google-review-count]').forEach((el) => { el.textContent = `${place.userRatingCount} Google reviews`; });
+            }
+            if (place.googleMapsUri) {
+                document.querySelectorAll('[data-google-reviews-link]').forEach((link) => { link.href = place.googleMapsUri; });
+            }
+            const reviewsList = document.querySelector('[data-google-reviews-list]');
+            if (reviewsList && Array.isArray(place.reviews) && place.reviews.length) {
+                reviewsList.innerHTML = place.reviews
+                    .filter((r) => r && r.text).slice(0, 3)
+                    .map((review) => `
+                        <article class="google-review-card">
+                            <blockquote>"${escapeHtml(review.text)}"</blockquote>
+                            <div class="google-review-meta">
+                                <span>${escapeHtml(review.author || 'Google reviewer')}</span>
+                                <span>${escapeHtml(review.relativePublishTimeDescription || `${Number(review.rating || 5).toFixed(1)} stars`)}</span>
+                            </div>
+                        </article>`).join('');
+            }
+        } catch (error) {
+            console.warn('Google reviews could not be refreshed.', error);
+        }
+    }
+
+    function escapeHtml(value) {
+        return String(value)
+            .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+    }
+
+    hydrateGoogleReviews();
+</script>
+
+</body>
+</html>

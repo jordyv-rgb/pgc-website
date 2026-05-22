@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium general contractor serving Kingwood TX. Kitchen remodels, bathroom remodels, flooring, roofing, carpentry and structural work for Kingwood homeowners. Call (713) 823-6513.">
+    <title>General Contractor Kingwood TX — Prominent General Contractors LLC</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://prominentgcllc.com/kingwood-contractor/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="General Contractor Kingwood TX — Prominent General Contractors LLC">
+    <meta property="og:description" content="Premium contractor for Kingwood TX. Kitchen remodels, bathroom remodels, flooring, roofing, carpentry — quality-first, contractor-led.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prominentgcllc.com/kingwood-contractor/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+
+    <style>
+        /* ── Breadcrumb nav ── */
+        .brand-stack { display: flex; flex-direction: column; gap: 0.4rem; }
+        .brand-stack .brand { gap: 0.85rem; }
+
+        /* ── Market data block ── */
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--hairline);
+            border-left: 1px solid var(--hairline);
+            margin-top: 4rem;
+        }
+
+        .market-stat {
+            padding: 2.5rem 2.25rem;
+            border-right: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+            background: var(--ivory-warm);
+        }
+
+        .market-stat .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            font-weight: 300;
+            line-height: 0.9;
+            color: var(--ink);
+            letter-spacing: -0.04em;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .market-stat .stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--slate);
+            display: block;
+        }
+
+        .market-stat .stat-note {
+            font-size: 0.88rem;
+            color: var(--graphite);
+            line-height: 1.6;
+            margin-top: 0.75rem;
+        }
+
+        /* ── Neighborhood list ── */
+        .neighborhoods-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--hairline);
+            border: 1px solid var(--hairline);
+            margin-top: 3rem;
+        }
+
+        .neighborhood-item {
+            background: var(--ivory);
+            padding: 1.6rem 1.75rem;
+            transition: background 0.35s var(--ease);
+        }
+
+        .neighborhood-item:hover { background: var(--ivory-warm); }
+
+        .neighborhood-item .nb-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            color: var(--ink);
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .neighborhood-item .nb-note {
+            font-size: 0.78rem;
+            color: var(--slate);
+            letter-spacing: 0.08em;
+        }
+
+        /* ── Why Kingwood needs work ── */
+        .kingwood-context {
+            background: var(--paper);
+            color: var(--ink);
+        }
+
+        .kingwood-context .section-head { border-bottom-color: var(--hairline); }
+        .kingwood-context .eyebrow { color: var(--slate); }
+        .kingwood-context .eyebrow .dash { background: var(--greige); }
+        .kingwood-context h2 { color: var(--ink); font-weight: 300; }
+        .kingwood-context h2 em { color: var(--gold-warm); font-style: italic; }
+
+        .context-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .context-item {
+            padding-top: 2rem;
+            border-top: 1px solid var(--hairline);
+            position: relative;
+        }
+
+        .context-item::before {
+            content: '';
+            position: absolute;
+            top: -1px; left: 0;
+            width: 36px; height: 1px;
+            background: var(--gold);
+        }
+
+        .context-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.45rem;
+            font-weight: 400;
+            color: var(--ink);
+            margin-bottom: 0.85rem;
+        }
+
+        .context-item p {
+            font-size: 0.92rem;
+            line-height: 1.75;
+            color: var(--graphite);
+        }
+
+        /* ── Services for Kingwood ── */
+        .kingwood-services { background: var(--ivory-warm); }
+
+        /* ── Process section light override ── */
+        #process { background: var(--ivory-warm) !important; }
+        #process .section-head { border-bottom-color: var(--hairline); }
+        #process .eyebrow { color: var(--slate); }
+        #process .eyebrow .dash { background: var(--greige); }
+        #process h2 { color: var(--ink); }
+        #process h2 em { color: var(--gold-warm); font-style: italic; }
+        #process .approach-intro { color: var(--graphite); }
+        #process .phase { border-top-color: var(--hairline); }
+        #process .phase::before { background: var(--gold); }
+        #process .phase-num { color: var(--gold-warm); font-style: italic; }
+        #process .phase h4 { color: var(--ink); }
+        #process .phase p { color: var(--graphite); }
+
+        /* ── Google reviews ── */
+        .google-reviews {
+            background: var(--ivory);
+            border-top: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .reviews-card {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+            gap: clamp(2rem, 5vw, 5rem);
+            align-items: center;
+            padding: clamp(2rem, 5vw, 4rem);
+            background: rgba(245, 243, 239, 0.68);
+            border: 1px solid var(--hairline);
+        }
+
+        .reviews-score { border-right: 1px solid var(--hairline); padding-right: clamp(1.5rem, 4vw, 3rem); }
+
+        .reviews-score .score {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4rem, 9vw, 7.5rem);
+            font-weight: 300;
+            line-height: 0.88;
+            color: var(--ink);
+            letter-spacing: -0.05em;
+        }
+
+        .reviews-score .stars { display: block; margin-top: 1.2rem; color: var(--gold); font-size: 0.95rem; letter-spacing: 0.18em; }
+        .reviews-score .count { display: block; margin-top: 0.8rem; color: var(--slate); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; }
+
+        .reviews-body p { margin: 1.25rem 0 0; color: var(--slate); line-height: 1.8; max-width: 620px; }
+        .reviews-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin-top: 2rem; }
+        .reviews-note { display: block; color: var(--slate); font-size: 0.76rem; line-height: 1.6; max-width: 520px; }
+
+        .reviews-live-list {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: clamp(1.8rem, 4vw, 3rem);
+        }
+
+        .reviews-live-list:empty { display: none; }
+
+        .google-review-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            padding: 1.35rem;
+            background: var(--ivory);
+            border: 1px solid var(--hairline);
+        }
+
+        .google-review-card blockquote { margin: 0; color: var(--graphite); font-size: 0.9rem; line-height: 1.7; }
+
+        .google-review-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 1.3rem;
+            color: var(--slate);
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* ── CTA banner ── */
+        .cta-banner {
+            background: var(--gold);
+            padding: clamp(3rem, 6vw, 5rem) 0;
+        }
+
+        .cta-banner-inner {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .cta-banner h2 {
+            color: var(--ink);
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-weight: 300;
+            line-height: 1.15;
+        }
+
+        .cta-banner .cta-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 1rem 2rem;
+            background: var(--ink);
+            color: var(--ivory);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: background 0.3s var(--ease), gap 0.3s var(--ease);
+        }
+
+        .btn-cta:hover { background: var(--ink-soft); gap: 0.9rem; }
+
+        .btn-cta-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 1rem 2rem;
+            border: 1px solid var(--ink);
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: background 0.3s var(--ease);
+        }
+
+        .btn-cta-ghost:hover { background: rgba(28,26,23,0.08); }
+
+        @media (max-width: 1024px) {
+            .market-grid { grid-template-columns: repeat(2, 1fr); }
+            .neighborhoods-grid { grid-template-columns: repeat(2, 1fr); }
+            .context-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .cta-banner-inner { grid-template-columns: 1fr; }
+            .cta-banner .cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+        }
+
+        @media (max-width: 720px) {
+            .market-grid { grid-template-columns: 1fr; }
+            .neighborhoods-grid { grid-template-columns: 1fr 1fr; }
+            .reviews-card { grid-template-columns: 1fr; padding: 1.5rem; }
+            .reviews-score { border-right: 0; border-bottom: 1px solid var(--hairline); padding-right: 0; padding-bottom: 1.5rem; }
+            .reviews-live-list { grid-template-columns: 1fr; }
+            .brand-stack .breadcrumb { font-size: 0.62rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+    <nav>
+        <div class="brand-stack">
+            <a href="../" class="breadcrumb" aria-label="Back to Prominent General Contractors">
+                <span class="arrow" aria-hidden="true">←</span>
+                Prominent General Contractors
+            </a>
+            <a href="./" class="brand" aria-label="Kingwood TX — Prominent General Contractors">
+                <span class="brand-mark">PGC</span>
+                <span class="brand-rule" aria-hidden="true"></span>
+                <span class="brand-tagline">Kingwood TX</span>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#neighborhoods">Neighborhoods</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#google-reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-action">
+            Begin a Project
+            <span aria-hidden="true">→</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Open menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+    <div class="container hero-grid">
+        <div class="hero-text reveal">
+            <span class="eyebrow"><span class="dash"></span>Prominent General Contractors LLC · Kingwood TX</span>
+            <h1>Premium home improvement for Kingwood homeowners — the right contractor for homes built to last.</h1>
+            <p class="lead">Most Kingwood homes were built between 1970 and 1999. They were well-constructed and are worth improving the right way. We bring the same contractor-led accountability, clear scope and quality-first execution to every project in Kingwood.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="link-action">Schedule a Consultation <span class="arrow">→</span></a>
+                <a href="#services" class="link-action muted">View Services</a>
+            </div>
+        </div>
+        <aside class="hero-aside has-image reveal" aria-hidden="true">
+            <img src="../assets/projects/residential/residential-remodel-2022-04-09/kitchen-open-living/residential-remodel-2022-04-09_kitchen-open-living-01.jpg"
+                 alt="Completed PGC kitchen and open-concept living remodel — Northeast Houston"
+                 width="1400" height="933" loading="eager" decoding="async">
+            <p class="caption">Quality-first remodeling for the homes of Kingwood — planned carefully, built to last.</p>
+        </aside>
+    </div>
+</section>
+
+<!-- ============ STRIP ============ -->
+<div class="strip">
+    <div class="container strip-inner">
+        <span class="strip-item"><span class="gold-dot"></span>Kingwood TX · 77345 · 77339 · 77346</span>
+        <span class="strip-item"><span class="gold-dot"></span>Licensed & Insured</span>
+        <span class="strip-item"><span class="gold-dot"></span>Homes Built 1970 – 1999</span>
+        <span class="strip-item"><span class="gold-dot"></span>713 · 823 · 6513</span>
+    </div>
+</div>
+
+<!-- ============ ABOUT / WHY KINGWOOD ============ -->
+<section class="practice section-pad" id="about">
+    <div class="container">
+        <div class="practice-grid">
+            <span class="eyebrow reveal"><span class="dash"></span>Serving Kingwood</span>
+            <div class="practice-body reveal">
+                <p>Kingwood homes deserve a contractor who understands them — their age, their character, and what they actually need to be better. Most of the homes here were built between the early 1970s and late 1990s. They're solid, well-built houses in established neighborhoods, and they're ready for careful, quality improvements that will last.</p>
+                <p>We've spent enough time working in this area to know what these homes need and how to approach it correctly: kitchen layouts ready for their next era, original bathrooms due for proper remodeling, flooring that's served well and deserves an upgrade, roofs reaching their service limit, and structural conditions that only a contractor with real experience in this housing stock can assess and handle right.</p>
+                <p>Prominent General Contractors LLC brings organized project management, a written scope before any deposit, milestone-based payments, and contractor-led accountability to every Kingwood project — because the homes here deserve that level of care, and so do the people living in them.</p>
+            </div>
+        </div>
+
+        <!-- Contractor expertise for Kingwood homes -->
+        <div class="market-grid reveal">
+            <div class="market-stat">
+                <span class="stat-number">25–55</span>
+                <span class="stat-label">Year Age Range</span>
+                <p class="stat-note">Kingwood homes built 1970–1999 are at the perfect age for major improvements. We understand foundation movement, roof life expectancy, and the specific challenges of this housing stock.</p>
+            </div>
+            <div class="market-stat">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Service Specialties</span>
+                <p class="stat-note">Kitchen remodels, bathroom/shower work, flooring installation, roofing, structural repairs, and interior finishing — all coordinated under one contractor with consistent quality standards.</p>
+            </div>
+            <div class="market-stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Contractor-Led</span>
+                <p class="stat-note">Every Kingwood project is overseen by the contractor personally. You get direct accountability, clear communication, and work that reflects our reputation in the community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHY KINGWOOD HOMES NEED WORK ============ -->
+<section class="kingwood-context section-pad">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>Why Kingwood</span>
+            <h2>Homes built in the 1970s to 1990s are reaching <em>the right age for quality improvement work.</em></h2>
+        </div>
+
+        <div class="context-grid reveal">
+            <div class="context-item">
+                <h3>Kitchens from the 1980s and 90s</h3>
+                <p>Cabinet boxes built 30–40 years ago are still structurally sound, but layouts, hardware, countertop materials and finishes reflect a different era. A kitchen remodel in a Kingwood home isn't starting from scratch — it's bringing a well-built room forward with updated materials and a clearer scope.</p>
+            </div>
+            <div class="context-item">
+                <h3>Original bathrooms and shower surrounds</h3>
+                <p>Fiberglass shower pans, one-piece surrounds and tile from the 1990s are at or past the point where they can be patched. A proper shower remodel — substrate, waterproofing, new tile — handles the problem correctly instead of masking it for another few years.</p>
+            </div>
+            <div class="context-item">
+                <h3>Flooring through multiple families</h3>
+                <p>Many Kingwood homes have seen two or three owners. The carpet is long overdue and the original tile or laminate reflects decades of use. Waterproof LVP and tile flooring are the right answer — durable, moisture-resistant and appropriate for the scale and style of these homes.</p>
+            </div>
+            <div class="context-item">
+                <h3>Roofs approaching end of service life</h3>
+                <p>Asphalt shingle roofs typically have a 20–30 year service life. Homes built in the late 1980s and 1990s are right at or past that window. Add in Houston's weather history and many Kingwood roofs need a serious look — not just a patch.</p>
+            </div>
+            <div class="context-item">
+                <h3>Structural and foundation work</h3>
+                <p>Houston's soil and climate conditions create foundation movement in homes across this age range. We identify, scope and execute structural repairs with the same organized contractor approach we bring to finish work — because foundation issues caught early are significantly less expensive to address.</p>
+            </div>
+            <div class="context-item">
+                <h3>Interior work: paint, sheetrock, carpentry</h3>
+                <p>Interior trim, sheetrock repairs, painted surfaces and custom carpentry details age alongside the home. These are the improvements that make a house feel current and cared for — and they're often what homeowners notice most after everything else is done.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="kingwood-services section-pad" id="services">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>01 — Services in Kingwood</span>
+            <h2>A full range of home improvement services for the homes and homeowners of Kingwood.</h2>
+        </div>
+
+        <div class="services-grid three-col reveal">
+            <article class="service">
+                <span class="service-num">— 01</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18"/><path d="M3 10h18M10 3v18"/></svg>
+                <h3>Kitchen Remodels</h3>
+                <p>Cabinets, countertops, tile backsplash, kitchen flooring, islands and finish carpentry coordinated as a single scope for Kingwood kitchens ready for their next era.</p>
+                <a href="../Kitchen_Remodels/" class="link-action" style="margin-top:1.5rem;">Kitchen remodel details <span class="arrow">→</span></a>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 02</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg>
+                <h3>Bathroom &amp; Shower Remodels</h3>
+                <p>Shower remodels, tub surrounds, vanity upgrades, tile, waterproofing and wet-area work done right — from substrate to finished glass enclosure.</p>
+                <a href="../Bathroom_Remodels/" class="link-action" style="margin-top:1.5rem;">Bathroom remodel details <span class="arrow">→</span></a>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 03</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14.7 6.3a4 4 0 1 1-3 6.7L4 21l-1-1 7-7.7a4 4 0 0 1 4.7-6Z"/></svg>
+                <h3>Flooring Installation</h3>
+                <p>Waterproof LVP, tile, hardwood and laminate installed throughout Kingwood homes — proper prep, clean transitions, and workmanship warranty on LVP installations.</p>
+                <a href="../Flooring_Division/" class="link-action" style="margin-top:1.5rem;">Flooring division details <span class="arrow">→</span></a>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 04</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <h3>Roofing</h3>
+                <p>Residential and light commercial roofing for Kingwood homes — many of which are at or past the 25–30 year mark for asphalt shingles. Same quality-first approach as interior work.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 05</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <h3>Painting &amp; Sheetrock</h3>
+                <p>Clean interior finishing — sheetrock repairs, texture matching, paint-ready surfaces and full interior painting for Kingwood homes getting a refresh or coming out of a remodel.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 06</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                <h3>Foundation &amp; Structural</h3>
+                <p>Structural and exterior work for homes in the age range where foundation movement, wood rot and drainage issues typically surface. Handled with contractor-level planning and accountability.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ NEIGHBORHOODS ============ -->
+<section class="areas section-pad" id="neighborhoods">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>02 — Kingwood Neighborhoods</span>
+            <h2>We work throughout the Kingwood master-planned community and surrounding areas.</h2>
+        </div>
+
+        <div class="areas-layout">
+            <div class="areas-intro reveal">
+                <p>"Kingwood is a community that was built to be permanent. The homes deserve a contractor who treats them that way."</p>
+                <span class="meta">We're active throughout Kingwood's 14,000-acre master-planned community — the largest in Harris County. If you're in Kingwood or nearby and need a contractor who actually shows up, call or text us directly.</span>
+            </div>
+            <div class="reveal">
+                <div class="neighborhoods-grid">
+                    <div class="neighborhood-item">
+                        <span class="nb-name">Elm Grove</span>
+                        <span class="nb-note">77345 · Active service area</span>
+                    </div>
+                    <div class="neighborhood-item">
+                        <span class="nb-name">Kings Forest</span>
+                        <span class="nb-note">77339 · Active service area</span>
+                    </div>
+                    <div class="neighborhood-item">
+                        <span class="nb-name">Greentrace</span>
+                        <span class="nb-note">77345 · Active service area</span>
+                    </div>
+                    <div class="neighborhood-item">
+                        <span class="nb-name">Forest Cove</span>
+                        <span class="nb-note">77339 · Active service area</span>
+                    </div>
+                    <div class="neighborhood-item">
+                        <span class="nb-name">Fosters Mill Village</span>
+                        <span class="nb-note">77345 · Active service area</span>
+                    </div>
+                    <div class="neighborhood-item">
+                        <span class="nb-name">Kings River Village</span>
+                        <span class="nb-note">77339 · Active service area</span>
+                    </div>
+                    <div class="neighborhood-item">
+                        <span class="nb-name">Sherwood Trails</span>
+                        <span class="nb-note">77345 · Active service area</span>
+                    </div>
+                    <div class="neighborhood-item">
+                        <span class="nb-name">Woodland Hills</span>
+                        <span class="nb-note">77339 · Active service area</span>
+                    </div>
+                    <div class="neighborhood-item">
+                        <span class="nb-name">All of Kingwood</span>
+                        <span class="nb-note">Full community coverage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PROJECT PHOTOS ============ -->
+<section class="work section-pad">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>Recent Work</span>
+            <h2>Completed project photography from homes in Northeast Houston.</h2>
+        </div>
+
+        <div class="work-grid reveal">
+            <a href="#contact" class="work-tile has-image">
+                <img src="../assets/projects/residential/residential-remodel-2022-04-09/kitchen-open-living/residential-remodel-2022-04-09_kitchen-island-01.jpg"
+                     alt="Kitchen island and open-concept living — completed PGC residential remodel"
+                     width="1400" height="933" loading="lazy" decoding="async">
+                <div class="work-meta">
+                    <span class="place">Kitchen · Northeast Houston</span>
+                    <span class="title">Kitchen island, countertops and open-concept coordination</span>
+                </div>
+            </a>
+            <a href="#contact" class="work-tile has-image">
+                <img src="../assets/projects/residential/residential-remodel-2022-04-09/bathroom-shower/residential-remodel-2022-04-09_bathroom-shower-01.jpg"
+                     alt="Shower remodel — tile surround and finish detail, PGC project"
+                     width="900" height="600" loading="lazy" decoding="async">
+                <div class="work-meta">
+                    <span class="place">Bathroom · Shower Remodel</span>
+                    <span class="title">Shower tile, waterproofing and glass enclosure detail</span>
+                </div>
+            </a>
+            <a href="#contact" class="work-tile has-image">
+                <img src="../assets/projects/residential/residential-remodel-2022-04-09/flooring-lvp/residential-remodel-2022-04-09_lvp-hallway-01.jpg"
+                     alt="Waterproof LVP flooring through main-level hallway — PGC installation"
+                     width="900" height="600" loading="lazy" decoding="async">
+                <div class="work-meta">
+                    <span class="place">Flooring · LVP Installation</span>
+                    <span class="title">Waterproof LVP through main level and hallways</span>
+                </div>
+            </a>
+        </div>
+
+        <p style="margin-top:1.5rem; max-width:680px; color:var(--slate); font-size:0.82rem; line-height:1.8;" class="reveal">Photography from a completed PGC residential project — kitchen, bathroom and flooring work delivered as a coordinated scope in one engagement.</p>
+    </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<div class="cta-banner">
+    <div class="container cta-banner-inner">
+        <h2>Ready to talk about your Kingwood project? We start with a real conversation — no quote pressure, no guesswork.</h2>
+        <div class="cta-actions">
+            <a href="tel:+17138236513" class="btn-cta">Call or Text (713) 823-6513 <span>→</span></a>
+            <a href="#contact" class="btn-cta-ghost">Schedule a visit</a>
+        </div>
+    </div>
+</div>
+
+<!-- ============ PROCESS ============ -->
+<section class="approach section-pad" id="process" style="background:var(--ivory-warm); color:var(--ink);">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>03 — How We Work</span>
+            <h2>A clear, phased process — <em>and a payment structure that follows the work.</em></h2>
+        </div>
+
+        <p class="approach-intro reveal">Every Kingwood project follows the same organized process. You see exactly what is happening, when it's happening, and what is being paid for at each step. Payments via Zelle, ACH, or Stripe — never a large deposit before a single board is touched.</p>
+
+        <div class="phases reveal">
+            <div class="phase">
+                <span class="phase-num">— Phase 01</span>
+                <h4>On-Site Consultation</h4>
+                <p>We come to your Kingwood home, walk the space, photograph existing conditions and talk through what the project actually involves — before any scope is written or money changes hands.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 02</span>
+                <h4>Written Scope & Deposit</h4>
+                <p>A clear written proposal — what's included, what's not, material direction and timeline. A modest deposit reserves your project window. Nothing starts without a document you've read and agreed to.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 03</span>
+                <h4>Build Phase</h4>
+                <p>Work begins. Materials arrive, crews show up on schedule, progress payments are tied to milestones — not to calendar dates. You always know what stage the project is in.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 04</span>
+                <h4>Final Walk &amp; Handoff</h4>
+                <p>We walk the completed work with you, close out the punch list, clean up the site and hand the home back in better condition than we found it. Final payment follows the walk — not a timer.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TRUST SECTION ============ -->
+<section class="section-pad" style="background:var(--paper); border-top:1px solid var(--hairline); border-bottom:1px solid var(--hairline);">
+    <div class="container">
+        <div style="display:grid; grid-template-columns: minmax(0,0.9fr) minmax(0,1.1fr); gap:clamp(2rem,5vw,5rem); align-items:start;">
+            <div class="reveal">
+                <span class="eyebrow"><span class="dash"></span>Why PGC for Kingwood</span>
+                <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3.35rem); font-weight:300; line-height:1.05; letter-spacing:-0.04em; color:var(--graphite); margin:1.4rem 0 0;">Kingwood homeowners deserve a contractor they can actually reach — and trust to finish what they start.</p>
+            </div>
+            <div style="display:grid; gap:1px; background:var(--hairline); border:1px solid var(--hairline);" class="reveal">
+                <article style="display:grid; grid-template-columns:5.5rem 1fr; gap:1.5rem; padding:clamp(1.25rem,2.4vw,2rem); background:var(--ivory);">
+                    <span style="color:var(--gold); font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase;">Insured</span>
+                    <div>
+                        <h3 style="font-size:clamp(1.25rem,2vw,1.55rem); margin-bottom:0.55rem;">Fully insured on every Kingwood project.</h3>
+                        <p style="color:var(--slate); line-height:1.7;">Liability and workmanship coverage on every job — no exceptions and no workarounds for projects of any size.</p>
+                    </div>
+                </article>
+                <article style="display:grid; grid-template-columns:5.5rem 1fr; gap:1.5rem; padding:clamp(1.25rem,2.4vw,2rem); background:var(--ivory);">
+                    <span style="color:var(--gold); font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase;">Scope</span>
+                    <div>
+                        <h3 style="font-size:clamp(1.25rem,2vw,1.55rem); margin-bottom:0.55rem;">Written scope before any money changes hands.</h3>
+                        <p style="color:var(--slate); line-height:1.7;">You get a written document defining exactly what is and is not included — before a deposit is requested and before work begins.</p>
+                    </div>
+                </article>
+                <article style="display:grid; grid-template-columns:5.5rem 1fr; gap:1.5rem; padding:clamp(1.25rem,2.4vw,2rem); background:var(--ivory);">
+                    <span style="color:var(--gold); font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase;">Warranty</span>
+                    <div>
+                        <h3 style="font-size:clamp(1.25rem,2vw,1.55rem); margin-bottom:0.55rem;">Workmanship warranty on flooring installations.</h3>
+                        <p style="color:var(--slate); line-height:1.7;">PGC Flooring installations in Kingwood homes are backed by a workmanship warranty — because we stand behind the work after it's done.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ GOOGLE REVIEWS ============ -->
+<section class="google-reviews section-pad" id="google-reviews">
+    <div class="container">
+        <div class="reviews-card reveal"
+             data-google-place-id="ChIJ6wq3LKzdYIgRQVXqE8ZoKxY"
+             data-google-reviews-url="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc">
+            <div class="reviews-score" aria-label="Google rating">
+                <span class="score" data-google-rating>5.0</span>
+                <span class="stars" aria-hidden="true">★★★★★</span>
+                <span class="count" data-google-review-count>12 Google reviews</span>
+            </div>
+            <div class="reviews-body">
+                <span class="eyebrow"><span class="dash"></span>Google Reviews</span>
+                <h2>Real client feedback from the verified Google profile.</h2>
+                <p>Prominent General Contractors LLC is verified on Google with the same website, phone number and business name you see here. We don't publish invented testimonials. Click below to read every review directly on Google Maps.</p>
+                <div class="reviews-actions">
+                    <a class="link-action" data-google-reviews-link href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC" target="_blank" rel="noopener">View all Google reviews <span class="arrow">→</span></a>
+                    <span class="reviews-note">Ratings and review count from the verified Google Maps listing for Prominent General Contractors LLC.</span>
+                </div>
+            </div>
+            <div class="reviews-live-list" data-google-reviews-list aria-live="polite"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+    <div class="container contact-inner">
+        <div class="reveal">
+            <span class="eyebrow"><span class="dash"></span>04 — Start a Kingwood Project</span>
+            <h2>Tell us about your Kingwood home, your timeline, <em>and what you're hoping to build.</em></h2>
+            <p class="contact-lead">Most Kingwood projects start with a phone call or text, followed by an on-site visit at a time that works for your household. There's no quote-pressure — just a clear conversation about scope, timing and the right way to approach the work.</p>
+            <a href="tel:+17138236513" class="link-action">Call or Text (713) 823-6513 <span class="arrow">→</span></a>
+        </div>
+
+        <div class="contact-channels reveal">
+            <a href="tel:+17138236513" class="channel">
+                <span class="label">Phone · Text</span>
+                <span class="value">713 · 823 · 6513</span>
+            </a>
+            <a href="mailto:jordyv@prominentgcllc.com" class="channel">
+                <span class="label">Email</span>
+                <span class="value">jordyv@prominentgcllc.com</span>
+            </a>
+            <div class="channel">
+                <span class="label">Service Area</span>
+                <span class="value">Kingwood, TX · All Neighborhoods</span>
+            </div>
+            <div class="channel">
+                <span class="label">Hours</span>
+                <span class="value">Mon — Sat · 8a — 6p</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">
+                    <span class="brand-mark">PGC</span>
+                    <span class="brand-rule" aria-hidden="true"></span>
+                    <span class="brand-tagline">General Contractors</span>
+                </div>
+                <p>Prominent General Contractors LLC — premium contractor serving Kingwood, Atascocita, Humble, Fall Creek and Northeast Houston with kitchen remodels, bathroom remodels, flooring, roofing, carpentry and structural work.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Kingwood Services</h5>
+                <ul>
+                    <li><a href="../Kitchen_Remodels/">Kitchen Remodels</a></li>
+                    <li><a href="../Bathroom_Remodels/">Bathroom Remodels</a></li>
+                    <li><a href="../Flooring_Division/">Flooring Installation</a></li>
+                    <li><a href="#services">All Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Service Areas</h5>
+                <ul>
+                    <li><a href="./">Kingwood TX</a></li>
+                    <li><a href="../">Atascocita</a></li>
+                    <li><a href="../">Humble</a></li>
+                    <li><a href="../">Northeast Houston</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
+                    <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>
+                    <li><a href="#google-reviews">Google Reviews</a></li>
+                    <li><a href="../">Prominent GC Home</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-meta">
+            <span>© 2026 Prominent General Contractors LLC · Kingwood TX · General Contractor</span>
+            <div class="credentials">
+                <span>Licensed</span>
+                <span>Insured</span>
+                <span>Kingwood · Houston · Texas</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
+
+    const toggle = document.getElementById('menuToggle');
+    if (toggle) toggle.addEventListener('click', () => header.classList.toggle('menu-open'));
+
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => io.observe(el));
+        window.setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 1400);
+    } else {
+        revealEls.forEach(el => el.classList.add('in'));
+    }
+
+    // Google Reviews — powered by Netlify Function
+    const GOOGLE_REVIEWS_ENDPOINT = '/api/google-place-reviews';
+    const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc';
+
+    document.querySelectorAll('[data-google-reviews-link]').forEach(link => { link.href = GOOGLE_REVIEWS_URL; });
+
+    async function hydrateGoogleReviews() {
+        try {
+            const res = await fetch(GOOGLE_REVIEWS_ENDPOINT, { headers: { 'Accept': 'application/json' } });
+            if (!res.ok) throw new Error('reviews endpoint failed');
+            const place = await res.json();
+            if (typeof place.rating === 'number') {
+                document.querySelectorAll('[data-google-rating]').forEach(el => { el.textContent = place.rating.toFixed(1); });
+            }
+            if (typeof place.userRatingCount === 'number') {
+                document.querySelectorAll('[data-google-review-count]').forEach(el => { el.textContent = `${place.userRatingCount} Google reviews`; });
+            }
+            if (place.googleMapsUri) {
+                document.querySelectorAll('[data-google-reviews-link]').forEach(link => { link.href = place.googleMapsUri; });
+            }
+            const list = document.querySelector('[data-google-reviews-list]');
+            if (list && Array.isArray(place.reviews) && place.reviews.length) {
+                list.innerHTML = place.reviews.filter(r => r && r.text).slice(0, 3).map(r => `
+                    <article class="google-review-card">
+                        <blockquote>"${esc(r.text)}"</blockquote>
+                        <div class="google-review-meta">
+                            <span>${esc(r.author || 'Google reviewer')}</span>
+                            <span>${esc(r.relativePublishTimeDescription || `${Number(r.rating || 5).toFixed(1)} stars`)}</span>
+                        </div>
+                    </article>`).join('');
+            }
+        } catch (e) {
+            console.warn('Google reviews unavailable.', e);
+        }
+    }
+
+    function esc(v) {
+        return String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;");
+    }
+
+    hydrateGoogleReviews();
+</script>
+
+</body>
+</html>

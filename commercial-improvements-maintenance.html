@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Commercial improvements and maintenance contractor in Houston — Prominent General Contractors serves offices, retail, salons, restaurants, clinics and property managers with tenant improvements, TPO roof replacements, polyiso insulation systems, finish carpentry, flooring, make-ready and property turnover work.">
+    <title>Commercial Improvements & Maintenance — Prominent General Contractors LLC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+
+    <style>
+        /* ============================================================
+           COMMERCIAL PAGE — Page-specific styles
+           ============================================================ */
+
+        /* --- Trust band (Google Reviews) --- */
+        .trust-band {
+            background: var(--ink);
+            border-bottom: 1px solid rgba(245, 243, 239, 0.08);
+        }
+
+        .trust-band-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            padding-top: 1.75rem;
+            padding-bottom: 1.75rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-rating {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .trust-rating .rating-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--ivory);
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .trust-rating .rating-stars {
+            color: var(--gold);
+            font-size: 1.05rem;
+            letter-spacing: 0.14em;
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .trust-rating .rating-count {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: rgba(245, 243, 239, 0.75);
+            letter-spacing: 0.04em;
+        }
+
+        .trust-rating .rating-source {
+            display: block;
+            font-size: 0.67rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(245, 243, 239, 0.35);
+            margin-top: 0.2rem;
+        }
+
+        .trust-band .link-action {
+            color: var(--ivory);
+            border-bottom-color: rgba(245, 243, 239, 0.22);
+            flex-shrink: 0;
+        }
+
+        .trust-band .link-action:hover {
+            border-bottom-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* --- Overview --- */
+        .comm-overview { background: var(--paper); }
+
+        /* --- Who We Help section --- */
+        .who-section {
+            background: var(--ivory);
+            border-top: 1px solid var(--hairline);
+        }
+
+        .who-intro {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 4rem;
+            align-items: end;
+            margin-bottom: 3rem;
+        }
+
+        .who-intro h2 {
+            font-size: clamp(1.75rem, 2.6vw, 2.45rem);
+            line-height: 1.14;
+        }
+
+        .who-intro p {
+            color: var(--graphite);
+            line-height: 1.78;
+            font-size: 0.97rem;
+            max-width: 560px;
+        }
+
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--hairline);
+            border: 1px solid var(--hairline);
+        }
+
+        .who-card {
+            background: var(--ivory);
+            padding: 2rem 1.75rem;
+            transition: background 0.3s var(--ease);
+        }
+
+        .who-card:hover { background: var(--paper); }
+
+        .who-label {
+            display: block;
+            font-size: 0.67rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.85rem;
+        }
+
+        .who-card h4 {
+            font-size: 1.12rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .who-card p {
+            font-size: 0.86rem;
+            color: var(--slate);
+            line-height: 1.72;
+        }
+
+        /* --- Service text section (no image) --- */
+        .service-text { border-top: 1px solid var(--hairline); }
+        .service-text.on-warm { background: var(--ivory-warm); }
+
+        .service-text-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.9fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .service-text-eyebrow { padding-top: 0.5rem; }
+
+        .service-text-body h2 {
+            font-size: clamp(1.75rem, 2.6vw, 2.45rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.14;
+        }
+
+        .service-text-body p {
+            color: var(--graphite);
+            line-height: 1.78;
+            margin-bottom: 1.2rem;
+            max-width: 640px;
+            font-size: 0.97rem;
+        }
+
+        .scope-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.45rem 3rem;
+            margin-top: 1.75rem;
+            max-width: 580px;
+        }
+
+        .scope-list li {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: var(--graphite);
+            line-height: 1.5;
+        }
+
+        .scope-list li::before {
+            content: '—';
+            color: var(--gold);
+            flex-shrink: 0;
+            font-size: 0.78rem;
+        }
+
+        /* --- Service pair (half image, half text) --- */
+        .service-pair-section { border-top: 1px solid var(--hairline); }
+
+        .service-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 560px;
+        }
+
+        .service-pair.reverse { direction: rtl; }
+        .service-pair.reverse > * { direction: ltr; }
+
+        .pair-image {
+            position: relative;
+            background: var(--ink);
+            overflow: hidden;
+        }
+
+        .pair-image img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.82;
+            filter: saturate(0.78) contrast(0.93);
+            transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                        opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .service-pair-section:hover .pair-image img {
+            transform: scale(1.03);
+            opacity: 0.88;
+        }
+
+        .pair-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to right,
+                rgba(28, 26, 23, 0.28) 0%,
+                rgba(28, 26, 23, 0.04) 68%,
+                transparent 100%
+            );
+        }
+
+        .service-pair.reverse .pair-image::after {
+            background: linear-gradient(
+                to left,
+                rgba(28, 26, 23, 0.28) 0%,
+                rgba(28, 26, 23, 0.04) 68%,
+                transparent 100%
+            );
+        }
+
+        .pair-image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            z-index: 1;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.88rem;
+            color: rgba(245, 243, 239, 0.62);
+            line-height: 1.5;
+        }
+
+        .pair-body {
+            padding: clamp(3.5rem, 6vw, 6rem) clamp(2.75rem, 5vw, 5.5rem);
+            background: var(--ivory);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .pair-body.on-warm { background: var(--ivory-warm); }
+
+        .pair-body .eyebrow { margin-bottom: 1.5rem; }
+
+        .pair-body h2 {
+            font-size: clamp(1.75rem, 2.6vw, 2.45rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.14;
+        }
+
+        .pair-body p {
+            color: var(--graphite);
+            line-height: 1.78;
+            font-size: 0.97rem;
+            margin-bottom: 1.15rem;
+            max-width: 500px;
+        }
+
+        .pair-body .scope-list { max-width: 500px; }
+
+        /* --- Maintenance scope grid --- */
+        .maintenance-section {
+            background: var(--ivory);
+            border-top: 1px solid var(--hairline);
+        }
+
+        .maintenance-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.65fr;
+            gap: 5.5rem;
+            align-items: start;
+        }
+
+        .maintenance-sidebar {
+            position: sticky;
+            top: 7rem;
+        }
+
+        .maintenance-sidebar .eyebrow { display: block; margin-bottom: 1.5rem; }
+
+        .maintenance-sidebar h2 {
+            font-size: clamp(1.75rem, 2.6vw, 2.45rem);
+            line-height: 1.14;
+            margin-bottom: 1.5rem;
+        }
+
+        .maintenance-sidebar p {
+            color: var(--graphite);
+            line-height: 1.78;
+            font-size: 0.97rem;
+        }
+
+        .maintenance-sidebar .contact-note {
+            margin-top: 2rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid var(--hairline);
+            font-size: 0.84rem;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        .maintenance-sidebar .contact-note a {
+            color: var(--gold-warm);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .maintenance-scopes {
+            display: grid;
+            gap: 1px;
+            background: var(--hairline);
+            border: 1px solid var(--hairline);
+        }
+
+        .mscope {
+            background: var(--ivory);
+            padding: 1.65rem 2rem 1.65rem 1.75rem;
+            display: grid;
+            grid-template-columns: 5.5rem 1fr;
+            gap: 1.25rem;
+            transition: background 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .mscope:hover { background: var(--paper); }
+
+        .mscope-label {
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            padding-top: 0.2rem;
+            line-height: 1.4;
+        }
+
+        .mscope h4 {
+            font-size: 1.18rem;
+            margin-bottom: 0.4rem;
+            line-height: 1.25;
+        }
+
+        .mscope p {
+            font-size: 0.875rem;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        /* --- References band (replaces portfolio placeholder) --- */
+        .refs-band {
+            background: var(--ink);
+            padding: clamp(3rem, 5vw, 4.5rem) 0;
+        }
+
+        .refs-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .refs-text { max-width: 620px; }
+
+        .refs-text .eyebrow {
+            display: block;
+            margin-bottom: 1.25rem;
+            color: var(--greige);
+        }
+
+        .refs-text .eyebrow .dash { background: var(--greige); }
+
+        .refs-text p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            line-height: 1.55;
+            color: rgba(245, 243, 239, 0.75);
+        }
+
+        .refs-credentials {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .refs-cred {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            color: rgba(245, 243, 239, 0.65);
+        }
+
+        .refs-cred::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* --- Contact section spacing --- */
+        .contact .eyebrow + h2 { margin-top: 1.75rem; }
+
+        /* --- Pair body division link --- */
+        .pair-body .link-action { margin-top: 1.75rem; }
+
+        /* --- Process note (dark section footer text) --- */
+        .process-note {
+            margin-top: 3.5rem;
+            padding-top: 2.25rem;
+            border-top: 1px solid rgba(245, 243, 239, 0.1);
+            font-size: 0.86rem;
+            color: rgba(245, 243, 239, 0.42);
+            max-width: 680px;
+            line-height: 1.75;
+        }
+
+        /* --- Editorial panel (dark pair-image without photo) --- */
+        .pair-image-editorial {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--ink);
+        }
+
+        .editorial-panel {
+            padding: clamp(3rem, 5vw, 5rem);
+            max-width: 400px;
+        }
+
+        .editorial-label {
+            display: block;
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.75rem;
+        }
+
+        .editorial-statement {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.35rem, 2vw, 1.75rem);
+            font-style: italic;
+            line-height: 1.5;
+            color: rgba(245, 243, 239, 0.85);
+            margin-bottom: 2rem;
+        }
+
+        .editorial-details {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .editorial-details li {
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.07em;
+            color: rgba(245, 243, 239, 0.48);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .editorial-details li::before {
+            content: '';
+            width: 16px;
+            height: 1px;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .editorial-caption {
+            margin-top: 2.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.84rem;
+            color: rgba(245, 243, 239, 0.32);
+            line-height: 1.5;
+        }
+
+        /* --- CTA buttons (Contact) --- */
+        .contact-cta-buttons {
+            display: flex;
+            gap: 1.1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.9rem 1.75rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transition: background 0.3s var(--ease), border-color 0.3s var(--ease), color 0.3s var(--ease);
+        }
+
+        .cta-btn.primary {
+            background: var(--ink);
+            color: var(--ivory);
+            border: 1px solid var(--ink);
+        }
+
+        .cta-btn.primary:hover {
+            background: var(--gold-warm);
+            border-color: var(--gold-warm);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid rgba(28, 26, 23, 0.22);
+        }
+
+        .cta-btn.secondary:hover {
+            border-color: var(--ink);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 1024px) {
+            .who-intro {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .who-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .service-text-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-pair {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .service-pair.reverse { direction: ltr; }
+            .pair-image { min-height: 340px; }
+
+            .maintenance-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .maintenance-sidebar { position: static; }
+
+            .trust-band-inner {
+                gap: 1.5rem;
+            }
+
+            .refs-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .who-grid { grid-template-columns: 1fr; }
+            .pair-image { min-height: 260px; }
+            .pair-body { padding: 2.75rem 1.75rem; }
+            .pair-body p { max-width: 100%; }
+
+            .scope-list {
+                grid-template-columns: 1fr;
+                gap: 0.45rem;
+            }
+
+            .mscope {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .contact-cta-buttons { flex-direction: column; }
+        }
+
+        /* --- Commercial imagery strip --- */
+        .comm-imagery-strip {
+            overflow: hidden;
+            background: var(--ink);
+            border-top: 1px solid rgba(245,243,239,0.06);
+            border-bottom: 1px solid rgba(245,243,239,0.06);
+        }
+
+        .imagery-strip-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 310px;
+        }
+
+        .imagery-tile {
+            position: relative;
+            overflow: hidden;
+            background: #18160f;
+        }
+
+        .imagery-tile img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.62) brightness(0.76);
+            transition: transform 0.95s cubic-bezier(0.22,1,0.36,1),
+                        filter 0.55s ease;
+        }
+
+        .imagery-tile:hover img {
+            transform: scale(1.07);
+            filter: saturate(0.84) brightness(0.9);
+        }
+
+        .imagery-tile::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(28,26,23,0.85) 0%,
+                rgba(28,26,23,0.12) 55%,
+                transparent 100%
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .imagery-tile-divider {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: rgba(245,243,239,0.07);
+            z-index: 2;
+        }
+
+        .imagery-tile-label {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.6rem;
+            z-index: 3;
+        }
+
+        .imagery-tile-label .label-dash {
+            display: block;
+            width: 16px;
+            height: 1px;
+            background: var(--gold);
+            margin-bottom: 0.55rem;
+        }
+
+        .imagery-tile-label .label-text {
+            display: block;
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(245,243,239,0.82);
+        }
+
+        /* --- Roofing section — real photo with overlay --- */
+        .pair-image-roof-photo {
+            position: relative;
+        }
+
+        .pair-image-roof-photo img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            filter: saturate(0.65) contrast(0.92);
+            transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                        opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .service-pair-section:hover .pair-image-roof-photo img {
+            transform: scale(1.03);
+            opacity: 0.78;
+        }
+
+        .pair-image-roof-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(28,26,23,0.86) 0%,
+                rgba(28,26,23,0.6) 50%,
+                rgba(28,26,23,0.22) 100%
+            );
+            z-index: 1;
+        }
+
+        .roof-content-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(2.5rem, 4vw, 4.5rem);
+        }
+
+        /* --- Responsive for imagery strip --- */
+        @media (max-width: 900px) {
+            .imagery-strip-grid {
+                grid-template-columns: repeat(2, 1fr);
+                height: 420px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .imagery-strip-grid {
+                grid-template-columns: repeat(2, 1fr);
+                height: 360px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+    <nav>
+        <a href="index.html" class="brand" aria-label="Prominent General Contractors — home">
+            <span class="brand-mark">PGC</span>
+            <span class="brand-rule" aria-hidden="true"></span>
+            <span class="brand-tagline">General Contractors</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">← PGC Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#roofing">Roofing</a></li>
+            <li><a href="#makeready">Make-Ready</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-action">
+            Begin a Project
+            <span aria-hidden="true">→</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Open menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+    <div class="container hero-grid">
+        <div class="hero-text reveal">
+            <span class="eyebrow"><span class="dash"></span>Commercial Improvements & Maintenance · Houston, TX</span>
+            <h1>Commercial improvements — <em>scoped in writing, finished clean, and scheduled around your business.</em></h1>
+            <p class="lead">PGC serves offices, retail, salons, restaurants, clinics and property managers across Northeast Houston. Tenant improvements, framing modifications, finish carpentry, flooring, TPO roof replacements with insulation systems, exterior envelope work, make-ready and property turnover — handled by one organized contractor.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="link-action">Discuss a Project <span class="arrow">→</span></a>
+                <a href="#services" class="link-action muted">View Services</a>
+            </div>
+        </div>
+
+        <figure class="hero-aside has-image reveal">
+            <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85"
+                alt="Modern open-plan commercial office interior — tenant improvement and buildout reference"
+                width="1400" height="933"
+                decoding="async">
+            <figcaption class="caption">Commercial office reference — tenant improvement and interior buildout.</figcaption>
+        </figure>
+    </div>
+</section>
+
+
+<!-- ============ STRIP ============ -->
+<div class="strip">
+    <div class="container strip-inner">
+        <span class="strip-item"><span class="gold-dot"></span>Licensed & Insured</span>
+        <span class="strip-item"><span class="gold-dot"></span>Commercial Improvements</span>
+        <span class="strip-item"><span class="gold-dot"></span>5.0 on Google</span>
+        <span class="strip-item"><span class="gold-dot"></span>TPO Roof Replacements</span>
+        <span class="strip-item"><span class="gold-dot"></span>Make-Ready & Property Turnover</span>
+        <span class="strip-item"><span class="gold-dot"></span>713 · 823 · 6513</span>
+    </div>
+</div>
+
+
+<!-- ============ TRUST BAND (Google Reviews) ============ -->
+<div class="trust-band">
+    <div class="container trust-band-inner">
+        <div class="trust-rating reveal">
+            <span class="rating-number" aria-label="5.0 star rating">5.0</span>
+            <div>
+                <span class="rating-stars" aria-hidden="true">★★★★★</span>
+                <span class="rating-count">12 reviews on Google</span>
+                <span class="rating-source">Verified Google Business Profile</span>
+            </div>
+        </div>
+        <a class="link-action reveal"
+           href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc"
+           target="_blank"
+           rel="noopener noreferrer">
+            View Google profile <span class="arrow">→</span>
+        </a>
+    </div>
+</div>
+
+
+<!-- ============ OVERVIEW ============ -->
+<section class="practice section-pad comm-overview" id="overview">
+    <div class="container">
+        <div class="practice-grid">
+            <span class="eyebrow reveal"><span class="dash"></span>About PGC Commercial</span>
+            <div class="practice-body reveal">
+                <p>Commercial improvements without the overhead of a large general contractor — and without the limitations of a handyman.</p>
+                <p>Prominent General Contractors works with small businesses, commercial tenants and property managers who need organized, professional improvements done on a schedule that respects their operations. Our commercial scope covers the full practical range: tenant build-outs, space refreshes, framing modifications, finish carpentry, flooring replacement, paint and surface work, door and hardware installation, exterior and building envelope improvements, TPO roof replacements with polyiso insulation systems, make-ready and property turnover work, and ongoing maintenance support.</p>
+                <p>Every project begins with a written scope and a realistic schedule. One point of contact, defined milestones, and honest communication when decisions need to be made. We keep jobsites clean, show up when we say we will, and close out with a walk-through before the final invoice.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ WHO WE HELP ============ -->
+<section class="who-section section-pad" id="who">
+    <div class="container">
+        <div class="who-intro reveal">
+            <h2>The businesses and properties PGC Commercial serves.</h2>
+            <p>Our commercial improvement work is built for businesses that need a contractor who shows up prepared, works within their operating constraints, and does not require hand-holding through a straightforward project scope. If you need a licensed, insured contractor who communicates clearly and finishes what they start — that is what we do.</p>
+        </div>
+
+        <div class="who-grid reveal">
+            <div class="who-card">
+                <span class="who-label">Offices</span>
+                <h4>Professional office spaces</h4>
+                <p>Suite refreshes, reception buildouts, partition walls, conference room updates and ongoing maintenance for professional offices and co-working environments.</p>
+            </div>
+            <div class="who-card">
+                <span class="who-label">Retail</span>
+                <h4>Retail and storefront tenants</h4>
+                <p>Interior refreshes, display and fixture changes, flooring replacement and exterior facade work — scheduled around operating hours and coordinated with landlord requirements.</p>
+            </div>
+            <div class="who-card">
+                <span class="who-label">Salons & Studios</span>
+                <h4>Service business environments</h4>
+                <p>Salon and studio buildouts, shampoo bowl areas, cabinetry, surface work and finish details for service businesses that need a polished, professional-looking space to open in.</p>
+            </div>
+            <div class="who-card">
+                <span class="who-label">Restaurants & Cafés</span>
+                <h4>Food and hospitality spaces</h4>
+                <p>Interior refreshes, flooring, surface repair, booth carpentry and exterior improvements for restaurants and cafés — work phased around service hours and kitchen access.</p>
+            </div>
+            <div class="who-card">
+                <span class="who-label">Medical Clinics</span>
+                <h4>Small clinics and care practices</h4>
+                <p>Organized improvements for small medical offices, dental suites and allied health practices. Work is phased to avoid disrupting active patient schedules.</p>
+            </div>
+            <div class="who-card">
+                <span class="who-label">Property Managers</span>
+                <h4>Multi-suite and multi-property</h4>
+                <p>Make-ready, tenant turnover prep, repairs and recurring maintenance for property managers who need a reliable, documented contractor they can call without re-qualifying each time.</p>
+            </div>
+            <div class="who-card">
+                <span class="who-label">Small Business</span>
+                <h4>Owner-operated properties</h4>
+                <p>Practical improvements for business owners who need work done correctly the first time — without the overhead of managing multiple subcontractors independently.</p>
+            </div>
+            <div class="who-card">
+                <span class="who-label">Hospitality</span>
+                <h4>Hotels, inns and event spaces</h4>
+                <p>Interior updates, flooring, carpentry and surface work for hospitality properties — coordinated around guest occupancy and scheduled during low-occupancy windows where possible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ COMMERCIAL IMAGERY STRIP ============ -->
+<div class="comm-imagery-strip" aria-hidden="true">
+    <div class="imagery-strip-grid">
+
+        <div class="imagery-tile">
+            <img
+                src="https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?auto=format&fit=crop&w=800&q=80"
+                alt="Commercial flat roof TPO membrane system — roofing installation scope"
+                loading="lazy"
+                decoding="async">
+            <span class="imagery-tile-divider"></span>
+            <div class="imagery-tile-label">
+                <span class="label-dash"></span>
+                <span class="label-text">TPO Roofing</span>
+            </div>
+        </div>
+
+        <div class="imagery-tile">
+            <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+                alt="Professional commercial office interior — tenant improvement buildout"
+                loading="lazy"
+                decoding="async">
+            <span class="imagery-tile-divider"></span>
+            <div class="imagery-tile-label">
+                <span class="label-dash"></span>
+                <span class="label-text">Office Interiors</span>
+            </div>
+        </div>
+
+        <div class="imagery-tile">
+            <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+                alt="Commercial hallway with hard surface flooring installation"
+                loading="lazy"
+                decoding="async">
+            <span class="imagery-tile-divider"></span>
+            <div class="imagery-tile-label">
+                <span class="label-dash"></span>
+                <span class="label-text">Commercial Flooring</span>
+            </div>
+        </div>
+
+        <div class="imagery-tile">
+            <img
+                src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=800&q=80"
+                alt="Commercial office building exterior — building envelope and property improvements"
+                loading="lazy"
+                decoding="async">
+            <div class="imagery-tile-label">
+                <span class="label-dash"></span>
+                <span class="label-text">Building Exteriors</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ============ TENANT IMPROVEMENTS ============ -->
+<section class="service-pair-section" id="services">
+    <div class="service-pair reverse reveal">
+        <div class="pair-image">
+            <img
+                src="https://images.unsplash.com/photo-1758193017781-e3aee6c3e359?auto=format&fit=crop&w=1400&q=85"
+                alt="Modern commercial elevator lobby with marble tile floor, frosted glass doors and linear accent lighting"
+                width="1400" height="933"
+                loading="lazy"
+                decoding="async">
+            <p class="pair-image-caption">Commercial lobby and tenant space reference — finish and material direction.</p>
+        </div>
+        <div class="pair-body">
+            <span class="eyebrow"><span class="dash"></span>01 — Tenant Improvements</span>
+            <h2>Space improvements planned around your lease, your timeline, and your operations.</h2>
+            <p>Whether you are moving into a new space, refreshing an existing one, or preparing a suite for a new tenant, PGC provides tenant improvements that are properly scoped and realistically scheduled. We coordinate materials, trades and timelines so that construction activity has minimal impact on your business.</p>
+            <p>Tenant improvement work begins with a site walk, a written scope of work, and a clear understanding of what the landlord allows. Coordination with property management and building rules is part of the process from the start.</p>
+            <ul class="scope-list">
+                <li>New office build-outs</li>
+                <li>Suite refreshes</li>
+                <li>Reception and lobby improvements</li>
+                <li>Conference room updates</li>
+                <li>Retail interior refreshes</li>
+                <li>Salon and studio buildouts</li>
+                <li>Clinic and care office work</li>
+                <li>Multi-suite coordination</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ FRAMING & LAYOUT CHANGES ============ -->
+<section class="service-pair-section" id="framing">
+    <div class="service-pair reveal">
+        <div class="pair-image">
+            <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=85"
+                alt="Commercial interior construction in progress — framing, layout modifications and structural work"
+                width="1400" height="933"
+                loading="lazy"
+                decoding="async">
+            <p class="pair-image-caption">Commercial framing reference — interior partition and layout modification scope.</p>
+        </div>
+        <div class="pair-body on-warm">
+            <span class="eyebrow"><span class="dash"></span>02 — Framing & Layout Changes</span>
+            <h2>Layout changes that rebalance a space — framed cleanly, finished with intention.</h2>
+            <p>Room layout changes, pony walls, partition framing, new openings and structural modifications are common in commercial improvement work. PGC handles framing modifications as part of a broader scope — so finish work, drywall, electrical coordination and surface prep stay aligned with the framing from the start, not corrected afterward.</p>
+            <p>We work on commercial spaces that need practical rebalancing: offices dividing open floor plans into defined rooms, retail layouts adjusted for traffic flow, or service businesses reorganizing their floor plan for operational efficiency.</p>
+            <ul class="scope-list">
+                <li>Partition and pony walls</li>
+                <li>New room framing</li>
+                <li>Open plan reconfiguration</li>
+                <li>Doorway modifications</li>
+                <li>Pass-through openings</li>
+                <li>Structural prep coordination</li>
+                <li>Drywall finish and texture match</li>
+                <li>Paint to match or full refresh</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ DOORS, TRIM & FINISH CARPENTRY ============ -->
+<section class="service-pair-section" id="carpentry">
+    <div class="service-pair reverse reveal">
+        <div class="pair-image">
+            <img
+                src="https://images.unsplash.com/photo-1483008536848-ab0f7f3b42e2?auto=format&fit=crop&w=1400&q=85"
+                alt="Commercial office building exterior with glass entrance door and geometric facade — architectural detail"
+                width="1400" height="933"
+                loading="lazy"
+                decoding="async">
+            <p class="pair-image-caption">Commercial entrance and facade reference — doors, glass and trim coordination.</p>
+        </div>
+        <div class="pair-body">
+            <span class="eyebrow"><span class="dash"></span>03 — Doors, Trim & Finish Carpentry</span>
+            <h2>The details that make a commercial space feel settled and well built.</h2>
+            <p>Commercial interiors need doors that operate correctly, trim that transitions surfaces cleanly, and finish carpentry that holds up to daily use. PGC provides the finish work that ties together framing, flooring and painted surfaces — so improvements look intentional rather than patched together.</p>
+            <p>Door installation, hardware, casing, base trim, built-in shelving, reception counters and specialty millwork are part of our regular commercial scope — coordinated with flooring and paint so finish sequences stay logical from start to close. For commercial glass entrance systems, interior glass partitions and storefront glazing, PGC works with <a href="https://www.a3glassfabricator.com" target="_blank" rel="noopener noreferrer" class="link-action" style="font-size:inherit">A3 Glass Fabricator</a> out of Houston for product and installation coordination.</p>
+            <ul class="scope-list">
+                <li>Commercial door installation</li>
+                <li>Hardware and door closers</li>
+                <li>Casing and base trim</li>
+                <li>Built-in shelving and storage</li>
+                <li>Reception counter carpentry</li>
+                <li>Wainscoting and paneling</li>
+                <li>Crown and accent molding</li>
+                <li>Surface transitions and details</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ FLOORING & FINISH WORK ============ -->
+<section class="service-pair-section" id="flooring">
+    <div class="service-pair reveal">
+        <div class="pair-image">
+            <img
+                src="https://images.unsplash.com/photo-1565363887-deace85adf27?auto=format&fit=crop&w=1400&q=85"
+                alt="Commercial space with professional hard surface LVP flooring installation — clean transitions and modern finish"
+                width="1400" height="933"
+                loading="lazy"
+                decoding="async">
+            <p class="pair-image-caption">Commercial LVP flooring reference — durable hard-surface installation with proper prep and transitions.</p>
+        </div>
+        <div class="pair-body on-warm">
+            <span class="eyebrow"><span class="dash"></span>04 — Flooring & Finish Work</span>
+            <h2>Durable commercial flooring installed with proper prep and clean transitions.</h2>
+            <p>Commercial flooring takes more daily abuse than residential — and needs proper subfloor preparation, appropriate product selection and experienced installation to perform over time. PGC's commercial flooring work is delivered through the PGC Flooring division, with the same preparation and installation standards applied to commercial spaces as residential ones.</p>
+            <p>LVP is the most practical choice for most commercial applications: durable, waterproof, fast to install and available in finishes that read professional and well-considered. Paint and surface finishing are typically scoped alongside flooring to close out an improvement cleanly.</p>
+            <ul class="scope-list">
+                <li>Waterproof LVP installation</li>
+                <li>Commercial tile flooring</li>
+                <li>Subfloor prep and leveling</li>
+                <li>Room-to-room transitions</li>
+                <li>Paint and wall finish work</li>
+                <li>Surface repair and refinish</li>
+                <li>Epoxy and specialty floor prep</li>
+                <li>Full flooring replacement scopes</li>
+            </ul>
+            <a href="Flooring_Division/index.html" class="link-action">PGC Flooring Division <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ EXTERIOR IMPROVEMENTS & BUILDING ENVELOPE ============ -->
+<section class="service-pair-section" id="exterior">
+    <div class="service-pair reverse reveal">
+        <div class="pair-image">
+            <img
+                src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1400&q=85"
+                alt="Commercial office and retail building exterior — facade, entry and building envelope improvements"
+                width="1400" height="933"
+                loading="lazy"
+                decoding="async">
+            <p class="pair-image-caption">Commercial exterior reference — building facade, entry improvements and envelope work.</p>
+        </div>
+        <div class="pair-body">
+            <span class="eyebrow"><span class="dash"></span>05 — Exterior Improvements & Building Envelope</span>
+            <h2>Exterior work that keeps the building presentable, protected, and properly maintained.</h2>
+            <p>A building's exterior communicates property quality before anyone crosses the threshold. PGC handles commercial exterior improvement work — entry and facade refresh, paint and surface work, signage coordination, fascia and trim replacement, soffit repair and exterior waterproofing preparation — as part of a broader scope or as a focused exterior project.</p>
+            <p>We approach exterior work as building maintenance, not surface cosmetics. Damaged fascia, failing soffit and deteriorating trim are often early indicators of envelope or drainage problems. We address the visible work while flagging what needs coordination at the structural level before minor issues compound.</p>
+            <ul class="scope-list">
+                <li>Entry and facade refresh</li>
+                <li>Exterior paint and surface work</li>
+                <li>Fascia & exterior trim replacement</li>
+                <li>Soffit repair & replacement</li>
+                <li>Exterior waterproofing prep</li>
+                <li>Drainage correction coordination</li>
+                <li>Signage mounting and installation</li>
+                <li>Awning and canopy coordination</li>
+                <li>Exterior door and hardware upgrades</li>
+                <li>Pressure washing and surface prep</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ ROOF REPAIRS & EXTERIOR ENVELOPE ============ -->
+<section class="service-pair-section" id="roofing">
+    <div class="service-pair reveal">
+        <div class="pair-image pair-image-roof-photo">
+            <img
+                src="https://images.unsplash.com/photo-1584463699058-c3b3c8b75cb3?auto=format&fit=crop&w=1400&q=85"
+                alt="Commercial flat roof — TPO membrane and rooftop mechanical systems on an active commercial property"
+                width="1400" height="933"
+                loading="lazy"
+                decoding="async">
+            <div class="roof-content-overlay">
+                <div class="editorial-panel">
+                    <span class="editorial-label">TPO Roofing & Insulation</span>
+                    <p class="editorial-statement">Full TPO roof replacements with polyiso insulation systems — installed as a complete commercial scope, not subbed out and handed off.</p>
+                    <ul class="editorial-details">
+                        <li>Full TPO membrane replacement</li>
+                        <li>Polyiso &amp; tapered insulation systems</li>
+                        <li>Tear-off, deck assessment &amp; prep</li>
+                        <li>Seam welding &amp; flashing work</li>
+                        <li>Fascia, soffit &amp; trim replacement</li>
+                    </ul>
+                    <p class="editorial-caption">PGC Commercial — TPO roofing and insulation as part of the same organized commercial improvement scope.</p>
+                </div>
+            </div>
+            <p class="pair-image-caption">Commercial flat roofing reference — TPO membrane system on an active Houston-area property.</p>
+        </div>
+        <div class="pair-body on-warm">
+            <span class="eyebrow"><span class="dash"></span>06 — TPO Roof Replacements & Insulation Systems</span>
+            <h2>Full TPO roof replacements with polyiso insulation — installed as a complete commercial scope.</h2>
+            <p>PGC installs TPO single-ply membrane roofing systems on commercial flat and low-slope roofs — full replacements, not just patch coordination. A complete TPO scope includes tear-off of the existing system, deck assessment and preparation, installation of a polyiso or tapered insulation system for thermal performance and drainage correction, TPO membrane installation (mechanically attached or fully adhered), hot-air seam welding, flashing at all penetrations and perimeters, and final inspection.</p>
+            <p>The insulation system is where a lot of commercial roofing value is won or lost. Polyisocyanurate (polyiso) delivers the highest R-value per inch of any rigid foam insulation used in commercial roofing and is the standard for flat roof energy performance. Tapered insulation systems — typically EPS as the base with polyiso above the membrane — correct drainage slope on large flat decks, eliminating ponding water that shortens membrane life. PGC scopes insulation and membrane together so the assembly performs as a system.</p>
+            <ul class="scope-list">
+                <li>Full TPO membrane replacement</li>
+                <li>Polyiso insulation systems</li>
+                <li>Tapered insulation for drainage correction</li>
+                <li>Tear-off and deck assessment</li>
+                <li>Mechanically attached &amp; fully adhered installs</li>
+                <li>Hot-air seam welding</li>
+                <li>Flashing — penetrations &amp; perimeter</li>
+                <li>Roof penetration curbs</li>
+                <li>TPO membrane repairs &amp; patch scopes</li>
+                <li>Leak remediation &amp; water intrusion</li>
+                <li>Rooftop access improvements</li>
+                <li>Interior water damage repair</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ MAKE-READY & TURNOVER ============ -->
+<section class="service-text on-warm section-pad" id="makeready">
+    <div class="container">
+        <div class="service-text-inner reveal">
+            <div class="service-text-eyebrow">
+                <span class="eyebrow"><span class="dash"></span>07 — Make-Ready & Property Turnover</span>
+            </div>
+            <div class="service-text-body">
+                <h2>Vacant spaces assessed, corrected, and returned to market — on schedule and properly documented.</h2>
+                <p>Make-ready and property turnover work is one of the most consistent commercial needs for property managers, building owners and institutional landlords. Between tenant cycles, suites need to be assessed against the prior scope, repaired, refreshed and re-presented — on a timeline that minimizes vacancy duration and protects long-term lease value.</p>
+                <p>PGC handles property turnover as a complete, managed scope: walk the space with the property manager, document conditions against the move-out record, define what needs to be corrected versus upgraded, and deliver a turnover-ready space on schedule. We provide written punch-list completion, documented final walkthroughs, and scope summaries for property records — so the next lease cycle begins with a clean baseline.</p>
+                <p>For property management firms handling multiple units, PGC offers recurring turnover programs with consistent standards, preferred scheduling windows and documented scope history per property.</p>
+                <ul class="scope-list">
+                    <li>Tenant damage assessment</li>
+                    <li>Drywall patch and paint</li>
+                    <li>Flooring repair or replacement</li>
+                    <li>Door and hardware correction</li>
+                    <li>Trim and baseboard repair</li>
+                    <li>Fixture and surface clean-up</li>
+                    <li>Occupancy-ready improvements</li>
+                    <li>Deferred maintenance correction</li>
+                    <li>Property refresh scopes</li>
+                    <li>Punch-list completion</li>
+                    <li>Final turnover walkthroughs</li>
+                    <li>Recurring turnover programs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ MAINTENANCE & ONGOING SUPPORT ============ -->
+<section class="maintenance-section section-pad" id="maintenance">
+    <div class="container">
+        <div class="maintenance-inner">
+            <div class="maintenance-sidebar reveal">
+                <span class="eyebrow"><span class="dash"></span>08 — Maintenance & Ongoing Support</span>
+                <h2>Ongoing improvements and maintenance for properties that need a reliable contractor.</h2>
+                <p>Many property managers and business owners need a contractor who understands the property, responds consistently, and handles work without being managed. PGC offers ongoing maintenance relationships for commercial properties — scoped as recurring agreements or as individual work orders called in as needed.</p>
+                <div class="contact-note">
+                    To discuss a recurring maintenance scope or establish an on-call relationship:<br>
+                    <a href="tel:+17138236513">713-823-6513</a> &nbsp;·&nbsp;
+                    <a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a>
+                </div>
+            </div>
+            <div class="maintenance-scopes reveal">
+                <article class="mscope">
+                    <span class="mscope-label">Make-Ready</span>
+                    <div>
+                        <h4>Suite and space turnover preparation.</h4>
+                        <p>Refreshing commercial suites between tenants — paint, patch, flooring assessment, hardware check and final walk before re-lease. Documented on every scope.</p>
+                    </div>
+                </article>
+                <article class="mscope">
+                    <span class="mscope-label">Repairs</span>
+                    <div>
+                        <h4>Surface repairs, patch work and finish corrections.</h4>
+                        <p>Drywall repairs, flooring damage, trim replacement, door adjustments and surface defect correction that keep a property looking maintained between major improvement cycles.</p>
+                    </div>
+                </article>
+                <article class="mscope">
+                    <span class="mscope-label">Paint</span>
+                    <div>
+                        <h4>Scheduled paint refresh and touch-up programs.</h4>
+                        <p>Periodic painting for high-traffic commercial spaces that show wear — coordinated around business hours and scoped to minimize disruption to tenants or customers.</p>
+                    </div>
+                </article>
+                <article class="mscope">
+                    <span class="mscope-label">Flooring</span>
+                    <div>
+                        <h4>Commercial flooring assessment and replacement.</h4>
+                        <p>Identifying worn or damaged flooring early and replacing it on schedule — before it becomes a liability issue or a reflection on the property.</p>
+                    </div>
+                </article>
+                <article class="mscope">
+                    <span class="mscope-label">Upgrades</span>
+                    <div>
+                        <h4>Planned property upgrades between tenant cycles.</h4>
+                        <p>Using vacancy windows to upgrade surfaces, hardware, lighting and finish details that improve the lease value of a suite and reduce wear in the next cycle.</p>
+                    </div>
+                </article>
+                <article class="mscope">
+                    <span class="mscope-label">Roofing</span>
+                    <div>
+                        <h4>TPO roof replacements and ongoing membrane maintenance.</h4>
+                        <p>Full TPO replacement scopes with polyiso insulation, plus recurring membrane inspection and maintenance programs for property managers who need roof issues identified and resolved before they escalate.</p>
+                    </div>
+                </article>
+                <article class="mscope">
+                    <span class="mscope-label">Turnover</span>
+                    <div>
+                        <h4>Property turnover and make-ready on a managed schedule.</h4>
+                        <p>Recurring property turnover scopes for multi-unit and multi-property managers — consistent standards, documented punch-list completion and preferred scheduling windows for each property in the portfolio.</p>
+                    </div>
+                </article>
+                <article class="mscope">
+                    <span class="mscope-label">On-Call</span>
+                    <div>
+                        <h4>Responsive contractor support for property managers.</h4>
+                        <p>A consistent contractor relationship — one call, one point of contact, consistent quality standards and written documentation on every completed scope.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ REFERENCES BAND ============ -->
+<div class="refs-band">
+    <div class="container">
+        <div class="refs-inner reveal">
+            <div class="refs-text">
+                <span class="eyebrow"><span class="dash"></span>Commercial Portfolio</span>
+                <p>"Commercial project photography and scope references are available to qualified prospects on request. We do not publish invented testimonials or placeholder project cards."</p>
+            </div>
+            <div class="refs-credentials">
+                <span class="refs-cred">Licensed · State of Texas</span>
+                <span class="refs-cred">Insured · General Liability</span>
+                <span class="refs-cred">5.0 Rating · 12 Google Reviews</span>
+                <span class="refs-cred">Northeast Houston · Since 2018</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============ PROCESS & SCHEDULING ============ -->
+<section class="approach section-pad" id="process">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>09 — Process & Scheduling</span>
+            <h2>A clear project process — <em>built around how your business actually operates.</em></h2>
+        </div>
+
+        <p class="approach-intro reveal">Commercial projects are scheduled with your operating hours in mind. Work that requires closure, noise or disruption is planned for off-hours, evenings or weekends where needed — documented in the written scope before the project begins, not negotiated mid-project when it becomes inconvenient.</p>
+
+        <div class="phases reveal">
+            <div class="phase">
+                <span class="phase-num">— Phase 01</span>
+                <h4>Site Walk & Written Scope</h4>
+                <p>An on-site walk-through with you or your property manager, a conversation about operating constraints and access requirements, and a written proposal defining scope, materials, timeline and total cost — before any commitment is made.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 02</span>
+                <h4>Scheduling & Deposit</h4>
+                <p>A modest deposit reserves your project window. Schedule, phasing around your operations, material lead times and any permit or landlord coordination are confirmed in writing before work begins.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 03</span>
+                <h4>Active Work</h4>
+                <p>Work progresses per the defined schedule. Daily cleanup, organized materials staging and regular progress updates keep the site professional and the project predictable for your team and your customers.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 04</span>
+                <h4>Punch List & Closeout</h4>
+                <p>A final walk-through against the original scope, punch list completion, complete cleanup and final invoice. Scope documentation is provided for property records and future reference.</p>
+            </div>
+        </div>
+
+        <p class="process-note reveal">Payments accepted via Zelle, ACH, and credit or debit card through Stripe. For ongoing maintenance relationships, monthly invoicing is available. Urgent work orders are handled on a case-by-case basis for established clients.</p>
+    </div>
+</section>
+
+
+<!-- ============ SERVICE AREAS ============ -->
+<section class="areas section-pad" id="areas">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>10 — Service Areas</span>
+            <h2>Commercial work concentrated across Northeast Houston and nearby corridors.</h2>
+        </div>
+
+        <div class="areas-layout">
+            <div class="areas-intro reveal">
+                <p>"We keep our commercial work close enough that we can stay on schedule, respond when needed, and maintain the same quality standards we hold ourselves to on residential projects."</p>
+                <span class="meta">Primary commercial radius: Northeast Harris County, the FM 1960 corridor, the Hardy Toll Road corridor, Beltway 8 East, and the downtown and Midtown areas on request. Travel for appropriate project scopes is considered.</span>
+            </div>
+
+            <ul class="areas-list reveal">
+                <li><span class="name">Atascocita</span><span class="zip">TX 77346</span></li>
+                <li><span class="name">Kingwood</span><span class="zip">TX 77345</span></li>
+                <li><span class="name">Humble</span><span class="zip">TX 77338</span></li>
+                <li><span class="name">Fall Creek</span><span class="zip">TX 77396</span></li>
+                <li><span class="name">Summerwood</span><span class="zip">TX 77044</span></li>
+                <li><span class="name">Lake Houston Area</span><span class="zip">Local</span></li>
+                <li><span class="name">FM 1960 Corridor</span><span class="zip">NE Houston</span></li>
+                <li><span class="name">Greater Houston</span><span class="zip">By request</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+    <div class="container contact-inner">
+        <div class="reveal">
+            <span class="eyebrow"><span class="dash"></span>11 — Begin a Project</span>
+            <h2>Tell us about your <em>space, your timeline, and what you need done.</em></h2>
+            <p class="contact-lead">Most commercial conversations start with a short call and a site visit. We ask the right questions up front, provide a written scope before any deposit, and schedule around your business — not around our convenience.</p>
+            <div class="contact-cta-buttons">
+                <a href="tel:+17138236513" class="cta-btn primary">Call or Text 713-823-6513</a>
+                <a href="mailto:jordyv@prominentgcllc.com" class="cta-btn secondary">Email a Project Inquiry</a>
+            </div>
+        </div>
+
+        <div class="contact-channels reveal">
+            <a href="tel:+17138236513" class="channel">
+                <span class="label">Phone · Text</span>
+                <span class="value">713 · 823 · 6513</span>
+            </a>
+            <a href="mailto:jordyv@prominentgcllc.com" class="channel">
+                <span class="label">Email</span>
+                <span class="value">jordyv@prominentgcllc.com</span>
+            </a>
+            <div class="channel">
+                <span class="label">Hours</span>
+                <span class="value">Mon — Sat · 8a — 6p</span>
+            </div>
+            <div class="channel">
+                <span class="label">Service Area</span>
+                <span class="value">Northeast Houston, TX</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">
+                    <span class="brand-mark">PGC</span>
+                    <span class="brand-rule" aria-hidden="true"></span>
+                    <span class="brand-tagline">General Contractors</span>
+                </div>
+                <p>Prominent General Contractors LLC — a Houston remodeling and commercial improvements contractor. Licensed, insured, and serving Northeast Houston.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Remodeling</h5>
+                <ul>
+                    <li><a href="Flooring_Division/index.html">Flooring & Remodeling</a></li>
+                    <li><a href="Kitchen_Remodels/index.html">Kitchen Remodels</a></li>
+                    <li><a href="Bathroom_Remodels/index.html">Bathroom Remodels</a></li>
+                    <li><a href="index.html">Prominent General Contractors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Commercial Services</h5>
+                <ul>
+                    <li><a href="#services">Tenant Improvements</a></li>
+                    <li><a href="#framing">Framing & Layout</a></li>
+                    <li><a href="#carpentry">Doors & Carpentry</a></li>
+                    <li><a href="#flooring">Flooring</a></li>
+                    <li><a href="#exterior">Exterior & Building Envelope</a></li>
+                    <li><a href="#roofing">TPO Roof Replacements</a></li>
+                    <li><a href="#makeready">Make-Ready & Property Turnover</a></li>
+                    <li><a href="#maintenance">Ongoing Maintenance</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
+                    <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>
+                    <li><a href="#contact">Begin a project</a></li>
+                    <li><a href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc" target="_blank" rel="noopener">Google Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-meta">
+            <span>© 2026 Prominent General Contractors LLC</span>
+            <div class="credentials">
+                <span>Licensed</span>
+                <span>Insured</span>
+                <span>5.0 · Google</span>
+                <span>Houston · Texas</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    /* Header scroll state */
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 24);
+    }, { passive: true });
+
+    /* Mobile menu */
+    const toggle = document.getElementById('menuToggle');
+    if (toggle) toggle.addEventListener('click', () => header.classList.toggle('menu-open'));
+
+    /* Reveal on scroll */
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => io.observe(el));
+        window.setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 1400);
+    } else {
+        revealEls.forEach(el => el.classList.add('in'));
+    }
+</script>
+
+</body>
+</html>
