@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Unsorted / staging assets — kept locally, not tracked in git
+assets/_to_sort/
+
+# Backup files
+*_backup*
+*.bak
+
+# Business / internal docs
+*.docx
+*.xlsx
+*.pdf
+
+# Editor
+.vscode/
+.idea/
+
+# Netlify local dev
+.netlify/
+
+# Node (if added later)
+node_modules/
+npm-debug.log*
