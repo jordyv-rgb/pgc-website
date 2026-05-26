@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium general contractor serving Kingwood, Atascocita, Humble, and Northeast Houston. Kitchen remodels, bathroom remodels, flooring, roofing, carpentry, and structural work — quality-first, contractor-led.">
-    <title>General Contractor Kingwood &amp; Houston TX — Prominent General Contractors LLC</title>
+    <meta name="description" content="Prominent General Contractors LLC — Houston's premium commercial and residential construction firm. Tenant improvements, office build-outs, structural repairs, kitchen & bathroom remodels, flooring, roofing. Licensed & insured. Serving Kingwood, The Woodlands, Katy, Sugar Land and the Houston metro.">
+    <title>Premium Commercial & Residential Contractor Houston TX — Prominent General Contractors LLC</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
     <style>
+        /* ===== Homeowner / Client Trust ===== */
         .trust-section {
             background: var(--paper);
             border-top: 1px solid var(--hairline);
             border-bottom: 1px solid var(--hairline);
         }
-
         .trust-grid {
             display: grid;
             grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
             gap: clamp(2rem, 5vw, 5rem);
             align-items: start;
         }
-
         .trust-lead {
             color: var(--graphite);
             font-family: 'Cormorant Garamond', serif;
@@ -33,14 +32,12 @@
             letter-spacing: -0.04em;
             margin: 1.4rem 0 0;
         }
-
         .trust-list {
             display: grid;
             gap: 1px;
             background: var(--hairline);
             border: 1px solid var(--hairline);
         }
-
         .trust-item {
             display: grid;
             grid-template-columns: 5.5rem 1fr;
@@ -48,135 +45,192 @@
             padding: clamp(1.25rem, 2.4vw, 2rem);
             background: var(--ivory);
         }
+        .trust-item span { color: var(--gold); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+        .trust-item h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); margin-bottom: 0.55rem; }
+        .trust-item p { color: var(--slate); line-height: 1.7; }
 
-        .trust-item span {
-            color: var(--gold);
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-        }
-
-        .trust-item h3 {
-            font-size: clamp(1.25rem, 2vw, 1.55rem);
-            margin-bottom: 0.55rem;
-        }
-
-        .trust-item p {
-            color: var(--slate);
-            line-height: 1.7;
-        }
-
-        .remodeling-story {
-            background: var(--ivory);
-        }
-
+        /* ===== Remodeling Story ===== */
+        .remodeling-story { background: var(--ivory); }
         .story-layout {
             display: grid;
             grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
             gap: clamp(1.25rem, 3vw, 2rem);
             align-items: stretch;
         }
-
-        .story-feature,
-        .story-detail {
-            position: relative;
-            overflow: hidden;
+        .story-feature, .story-detail {
+            position: relative; overflow: hidden;
             border: 1px solid var(--hairline);
             background: var(--ink);
         }
-
-        .story-feature {
-            min-height: 620px;
-        }
-
-        .story-stack {
-            display: grid;
-            gap: clamp(1.25rem, 3vw, 2rem);
-        }
-
-        .story-detail {
-            min-height: 294px;
-        }
-
-        .story-feature img,
-        .story-detail img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
+        .story-feature { min-height: 620px; }
+        .story-stack { display: grid; gap: clamp(1.25rem, 3vw, 2rem); }
+        .story-detail { min-height: 294px; }
+        .story-feature img, .story-detail img {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
             object-fit: cover;
             opacity: 0.95;
             filter: saturate(1) contrast(1.02);
         }
-
-        .story-feature::after,
-        .story-detail::after {
+        .story-feature::after, .story-detail::after {
             content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(28, 26, 23, 0.58), rgba(28, 26, 23, 0.12) 62%, transparent);
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(28,26,23,0.58), rgba(28,26,23,0.12) 62%, transparent);
         }
-
         .story-caption {
             position: absolute;
-            left: clamp(1.3rem, 3vw, 2.4rem);
-            right: clamp(1.3rem, 3vw, 2.4rem);
-            bottom: clamp(1.3rem, 3vw, 2.4rem);
-            z-index: 1;
-            color: var(--ivory);
+            left: clamp(1.3rem,3vw,2.4rem); right: clamp(1.3rem,3vw,2.4rem); bottom: clamp(1.3rem,3vw,2.4rem);
+            z-index: 1; color: var(--ivory);
         }
-
         .story-caption span {
-            display: block;
-            color: rgba(245, 243, 239, 0.72);
-            font-size: 0.66rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            margin-bottom: 0.8rem;
+            display: block; color: rgba(245,243,239,0.72);
+            font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.8rem;
         }
+        .story-caption h3 { color: var(--ivory); font-size: clamp(1.45rem,3vw,2.4rem); line-height: 1.08; max-width: 620px; }
+        .story-detail .story-caption h3 { font-size: clamp(1.25rem,2vw,1.65rem); }
+        .story-note { margin-top: 1.5rem; max-width: 680px; color: var(--slate); font-size: 0.82rem; line-height: 1.8; }
 
-        .story-caption h3 {
+        /* ===== Stats row ===== */
+        .stats-row {
+            background: var(--ink);
+            border-top: 1px solid rgba(245,243,239,0.06);
+            padding: clamp(3rem, 5vw, 4.5rem) 0;
+        }
+        .stats-inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+        .stat-item {
+            padding: 2rem 2.5rem;
+            border-right: 1px solid rgba(245,243,239,0.1);
+        }
+        .stat-item:last-child { border-right: 0; }
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            font-weight: 300;
             color: var(--ivory);
-            font-size: clamp(1.45rem, 3vw, 2.4rem);
-            line-height: 1.08;
-            max-width: 620px;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            display: block;
+        }
+        .stat-number em { font-style: normal; color: var(--gold); }
+        .stat-label {
+            display: block;
+            margin-top: 0.85rem;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(245,243,239,0.45);
         }
 
-        .story-detail .story-caption h3 {
-            font-size: clamp(1.25rem, 2vw, 1.65rem);
+        /* ===== Commercial Section ===== */
+        .commercial-section { background: var(--ivory-warm); }
+        .comm-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(1.5rem, 3vw, 2.5rem);
+            align-items: stretch;
+            margin-bottom: 4rem;
+        }
+        .comm-intro-image {
+            position: relative;
+            min-height: 480px;
+            overflow: hidden;
+            background: var(--ink);
+        }
+        .comm-intro-image img {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.88;
+            filter: saturate(0.9) contrast(1.02);
+        }
+        .comm-intro-image::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(28,26,23,0.62) 0%, rgba(28,26,23,0.18) 55%, transparent 100%);
+        }
+        .comm-intro-overlay {
+            position: absolute;
+            bottom: clamp(1.5rem,3vw,2.5rem); left: clamp(1.5rem,3vw,2.5rem); right: clamp(1.5rem,3vw,2.5rem);
+            z-index: 1;
+        }
+        .comm-intro-overlay span {
+            display: block;
+            font-size: 0.66rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+            color: rgba(245,243,239,0.65); margin-bottom: 0.85rem;
+        }
+        .comm-intro-overlay p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.35rem,2.2vw,1.75rem);
+            font-style: italic; line-height: 1.3; color: var(--ivory);
+        }
+        .comm-intro-body {
+            padding: clamp(2rem, 4vw, 3.5rem);
+            background: var(--ivory);
+            border: 1px solid var(--hairline);
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .comm-intro-lead {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.35rem,2.2vw,1.75rem);
+            font-weight: 300; font-style: italic; line-height: 1.4;
+            color: var(--ink); margin-bottom: 1.5rem;
+        }
+        .comm-intro-body > p {
+            color: var(--graphite); line-height: 1.78; font-size: 0.97rem; margin-bottom: 1.15rem;
+        }
+        .comm-services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--hairline);
+            border-left: 1px solid var(--hairline);
+        }
+        .comm-service {
+            padding: 2.5rem 2.25rem;
+            border-right: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+            background: var(--ivory-warm);
+            transition: background 0.4s var(--ease);
+        }
+        .comm-service:hover { background: var(--ivory); }
+        .comm-service .service-num {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em;
+            color: var(--slate); margin-bottom: 1.25rem; display: block;
+        }
+        .comm-service h3 { font-size: 1.35rem; margin-bottom: 0.85rem; line-height: 1.25; transition: color 0.3s var(--ease); }
+        .comm-service:hover h3 { color: var(--gold-warm); }
+        .comm-service p { color: var(--graphite); line-height: 1.7; font-size: 0.88rem; }
+        .comm-cta {
+            margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--hairline);
+            display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
+        }
+        .comm-cta-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem; font-style: italic; color: var(--graphite); max-width: 480px;
         }
 
-        .story-note {
-            margin-top: 1.5rem;
-            max-width: 680px;
-            color: var(--slate);
-            font-size: 0.82rem;
-            line-height: 1.8;
-        }
-
+        /* ===== Responsive ===== */
         @media (max-width: 1024px) {
-            .trust-grid,
-            .story-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .story-feature {
-                min-height: 500px;
-            }
+            .trust-grid, .story-layout { grid-template-columns: 1fr; }
+            .story-feature { min-height: 500px; }
+            .comm-intro-grid { grid-template-columns: 1fr; }
+            .comm-intro-image { min-height: 360px; }
+            .comm-services-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { border-bottom: 1px solid rgba(245,243,239,0.1); }
         }
-
         @media (max-width: 720px) {
-            .trust-item {
-                grid-template-columns: 1fr;
-                gap: 0.8rem;
-            }
-
-            .story-feature,
-            .story-detail {
-                min-height: 340px;
-            }
+            .trust-item { grid-template-columns: 1fr; gap: 0.8rem; }
+            .story-feature, .story-detail { min-height: 340px; }
+            .comm-services-grid { grid-template-columns: 1fr; }
+            .comm-intro-body { padding: 2rem 1.5rem; }
+            .stats-inner { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
@@ -193,10 +247,10 @@
 
         <ul class="nav-links">
             <li><a href="#practice">About</a></li>
-            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#commercial">Commercial</a></li>
+            <li><a href="#capabilities">Residential</a></li>
             <li><a href="kingwood-contractor/">Kingwood</a></li>
-            <li><a href="#divisions">Divisions</a></li>
-            <li><a href="#approach">Approach</a></li>
+            <li><a href="#approach">Process</a></li>
             <li><a href="#areas">Service Areas</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -216,16 +270,19 @@
 <section class="hero" id="top">
     <div class="container hero-grid">
         <div class="hero-text reveal">
-            <span class="eyebrow"><span class="dash"></span>Prominent General Contractors LLC · Houston</span>
-            <h1>Premium remodeling for Kingwood and Houston homeowners — planned clearly, built carefully, and finished with respect for the home.</h1>
-            <p class="lead">Prominent General Contractors LLC is a residential and light commercial remodeling contractor serving Kingwood, Atascocita, Humble, and Northeast Houston. We work across kitchens, bathrooms, showers, cabinetry, countertops, tile, carpentry, interiors and flooring — with PGC Flooring operating as our specialized flooring division.</p>
+            <span class="eyebrow"><span class="dash"></span>Prominent General Contractors LLC · Houston, TX</span>
+            <h1>Premium construction & renovation — commercial build-outs, structural work, and residential remodeling across Houston.</h1>
+            <p class="lead">PGC is a Houston-area general contractor serving commercial property owners, business operators, and homeowners who expect organized execution, honest communication, and work that reflects a real standard of quality.</p>
             <div class="hero-actions">
-                <a href="#contact" class="link-action">Schedule a Consultation <span class="arrow">→</span></a>
-                <a href="#capabilities" class="link-action muted">View Services</a>
+                <a href="#contact" class="link-action">Request a Consultation <span class="arrow">→</span></a>
+                <a href="#commercial" class="link-action muted">View Services</a>
             </div>
         </div>
-        <aside class="hero-aside reveal" aria-hidden="true">
-            <p class="caption">Premium remodeling for the homes of Northeast Houston — planned carefully, built to last.</p>
+        <aside class="hero-aside has-image reveal" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85"
+                 alt="Modern commercial office interior — tenant improvement and renovation reference"
+                 width="1400" height="933" loading="eager" decoding="async">
+            <p class="caption">Commercial + Residential · Houston Area · Licensed & Insured</p>
         </aside>
     </div>
 </section>
@@ -234,8 +291,9 @@
 <div class="strip">
     <div class="container strip-inner">
         <span class="strip-item"><span class="gold-dot"></span>Licensed & Insured</span>
-        <span class="strip-item"><span class="gold-dot"></span>Serving Kingwood &amp; Northeast Houston</span>
-        <span class="strip-item"><span class="gold-dot"></span>Residential & Commercial</span>
+        <span class="strip-item"><span class="gold-dot"></span>Commercial & Residential</span>
+        <span class="strip-item"><span class="gold-dot"></span>5.0 on Google</span>
+        <span class="strip-item"><span class="gold-dot"></span>Houston · Kingwood · The Woodlands</span>
         <span class="strip-item"><span class="gold-dot"></span>713 · 823 · 6513</span>
     </div>
 </div>
@@ -246,43 +304,143 @@
         <div class="practice-grid">
             <span class="eyebrow reveal"><span class="dash"></span>About PGC</span>
             <div class="practice-body reveal">
-                <p>Prominent General Contractors LLC is a Houston remodeling firm with a deliberate scope of work — kitchens, bathrooms, showers, cabinetry, countertops, interiors, finish carpentry, tile, and specialty flooring through our PGC Flooring division.</p>
-                <p>We work with homeowners and property owners who value organized communication over speed-of-sale, and craftsmanship over the cheapest available bid. Each engagement is led directly by ownership, with one point of contact and a written scope before any deposit is taken.</p>
-                <p>Our reputation in the neighborhoods we serve — Kingwood, Atascocita, Humble, Fall Creek, Summerwood, Eagle Springs and Lake Houston — is built on three habits: showing up on time, leaving the home cleaner than we found it, and being honest about what a project will actually take.</p>
+                <p>Prominent General Contractors LLC is a Houston general contracting firm built for clients who need real construction done right — commercial improvements, structural work, and residential remodeling handled under one organized contractor.</p>
+                <p>We work with commercial property owners, business operators, property managers, and homeowners who value clear scopes, accountable scheduling, and professional execution over the cheapest available bid. Every engagement is contractor-led, with a written scope before any deposit is taken.</p>
+                <p>Our commercial scope covers tenant improvements, office build-outs, commercial painting and drywall, demolition, door installation, TPO roofing, structural repairs, restroom renovations, ADA improvements, and property maintenance. Our residential work spans kitchens, bathrooms, flooring, cabinetry, tile, carpentry, and full interior remodels — delivered through the same organized process we bring to every commercial project.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ HOMEOWNER TRUST ============ -->
-<section class="trust-section section-pad" id="homeowner-trust">
+<!-- ============ STATS ============ -->
+<div class="stats-row">
+    <div class="container">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-number">5.<em>0</em></span>
+                <span class="stat-label">Google Rating</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">8<em>+</em></span>
+                <span class="stat-label">Years Serving Houston</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2<em>×</em></span>
+                <span class="stat-label">Commercial + Residential</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Point of Contact, Always</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ COMMERCIAL ============ -->
+<section class="commercial-section section-pad" id="commercial">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>01 — Commercial Services</span>
+            <h2>A serious commercial contractor for Houston property owners, operators, and growing businesses.</h2>
+        </div>
+
+        <div class="comm-intro-grid reveal">
+            <div class="comm-intro-image">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85"
+                     alt="Modern commercial office interior — PGC tenant improvement and buildout reference"
+                     width="1400" height="933" loading="lazy" decoding="async">
+                <div class="comm-intro-overlay">
+                    <span>Commercial Construction · Houston, TX</span>
+                    <p>Professional construction solutions without the chaos — built for businesses and property managers who need organized execution.</p>
+                </div>
+            </div>
+            <div class="comm-intro-body">
+                <p class="comm-intro-lead">"Commercial renovations executed with planning, communication, and accountability."</p>
+                <p>PGC handles commercial construction that requires a real contractor — not a handyman and not an oversized firm that doesn't return calls. We work with tenants, landlords, property managers, and business owners who need commercial improvements done on schedule and done correctly.</p>
+                <p>From a single office refresh to a full TPO roof replacement with polyiso insulation, every commercial scope begins with a written proposal, realistic schedule, and clear definition of what the work includes — before any deposit is taken.</p>
+                <a href="commercial-improvements-maintenance.html" class="link-action" style="margin-top: 1.75rem; display: inline-flex;">View all commercial services <span class="arrow">→</span></a>
+            </div>
+        </div>
+
+        <div class="comm-services-grid reveal">
+            <article class="comm-service">
+                <span class="service-num">— 01</span>
+                <h3>Tenant Improvements</h3>
+                <p>Office build-outs, suite expansions, and retail improvements planned around your lease and your operations. Scoped in writing from the first site walk.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 02</span>
+                <h3>Commercial Painting & Drywall</h3>
+                <p>Interior and exterior commercial painting, framing modifications, sheetrock, texture matching and surface refinishing for commercial properties across Houston.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 03</span>
+                <h3>Demolition Services</h3>
+                <p>Selective interior demolition, framing tear-out and site prep for commercial renovation scopes — clean, safely staged and logistically coordinated.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 04</span>
+                <h3>Door Installation & Hardware</h3>
+                <p>Commercial door installation, hardware, door closers, ADA-compliant configurations and storefront coordination across Houston commercial properties.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 05</span>
+                <h3>Commercial Roofing</h3>
+                <p>Full TPO roof replacements with polyiso insulation systems, membrane repairs, seam welding, flashing and leak remediation for flat and low-slope commercial roofs.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 06</span>
+                <h3>Structural Repairs</h3>
+                <p>Structural and exterior repairs handled with the same organized process as finish work — inspected, scoped in writing, and executed with proper coordination.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 07</span>
+                <h3>Restroom & ADA Renovations</h3>
+                <p>Commercial restroom renovations, ADA-related improvements and accessible design upgrades for offices, retail, medical suites and hospitality properties.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 08</span>
+                <h3>Make-Ready & Property Turnover</h3>
+                <p>Suite assessments, damage documentation, punch-list corrections and re-lease readiness programs for property managers and commercial landlords.</p>
+            </article>
+        </div>
+
+        <div class="comm-cta reveal">
+            <p class="comm-cta-text">Commercial project photography and scope references available to qualified prospects on request.</p>
+            <a href="commercial-improvements-maintenance.html" class="link-action">Full commercial services page <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HOW WE WORK ============ -->
+<section class="trust-section section-pad" id="how-we-work">
     <div class="container">
         <div class="trust-grid">
             <div class="reveal">
-                <span class="eyebrow"><span class="dash"></span>Homeowner Trust</span>
-                <p class="trust-lead">A premium remodel should still feel practical, organized, and easy to understand.</p>
+                <span class="eyebrow"><span class="dash"></span>How We Work</span>
+                <p class="trust-lead">Every project — commercial or residential — starts with a clear scope and ends with a clean handover.</p>
             </div>
 
             <div class="trust-list reveal">
                 <article class="trust-item">
                     <span>Scope</span>
                     <div>
-                        <h3>Clear work before clear pricing.</h3>
-                        <p>We define what is included, what is not, and what decisions need to be made before the project moves forward.</p>
+                        <h3>Written scope before any deposit.</h3>
+                        <p>We define what is included, what is not, and what decisions need to be made — in writing — before you commit to anything.</p>
                     </div>
                 </article>
                 <article class="trust-item">
                     <span>Schedule</span>
                     <div>
                         <h3>Realistic timelines and steady communication.</h3>
-                        <p>Homeowners should know when crews are expected, when materials are arriving, and what milestone comes next.</p>
+                        <p>Clients know when crews are expected, when materials arrive, and what milestone comes next. No surprises, no chasing the contractor.</p>
                     </div>
                 </article>
                 <article class="trust-item">
-                    <span>Home</span>
+                    <span>Closeout</span>
                     <div>
-                        <h3>Respectful jobsites and clean handoffs.</h3>
-                        <p>We treat occupied homes like occupied homes: organized access, contained work areas, and a final walk-through before closeout.</p>
+                        <h3>Clean sites and documented final walkthroughs.</h3>
+                        <p>We close every project with a walk-through, a punch list, and documentation — residential or commercial, small scope or large.</p>
                     </div>
                 </article>
             </div>
@@ -290,12 +448,12 @@
     </div>
 </section>
 
-<!-- ============ CAPABILITIES ============ -->
+<!-- ============ RESIDENTIAL CAPABILITIES ============ -->
 <section class="services section-pad" id="capabilities">
     <div class="container">
         <div class="section-head reveal">
-            <span class="eyebrow"><span class="dash"></span>01 — Capabilities</span>
-            <h2>A focused range of remodeling services for the rooms homeowners use every day.</h2>
+            <span class="eyebrow"><span class="dash"></span>02 — Residential Remodeling</span>
+            <h2>Premium residential remodeling for the rooms Kingwood and Houston homeowners use every day.</h2>
         </div>
 
         <div class="services-grid three-col reveal">
@@ -310,14 +468,14 @@
                 <span class="service-num">— 02</span>
                 <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg>
                 <h3>Shower & Bathroom Remodels</h3>
-                <p>Shower remodels, bathroom updates, tile, vanities, tubs, glass, waterproofing coordination and clean transitions built around daily use.</p>
+                <p>Shower remodels, bathroom updates, tile, vanities, tubs, glass, waterproofing and clean transitions built around daily use.</p>
             </article>
 
             <article class="service">
                 <span class="service-num">— 03</span>
                 <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
                 <h3>Cabinets & Countertops</h3>
-                <p>Cabinet installation, cabinet upgrades, hardware, countertop coordination and finish details that make kitchens and baths feel resolved.</p>
+                <p>Cabinet installation, upgrades, hardware, countertop coordination and the finish details that make kitchens and baths feel resolved.</p>
             </article>
 
             <article class="service">
@@ -331,14 +489,15 @@
                 <span class="service-num">— 05</span>
                 <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14.7 6.3a4 4 0 1 1-3 6.7L4 21l-1-1 7-7.7a4 4 0 0 1 4.7-6Z"/></svg>
                 <h3>Specialty Flooring</h3>
-                <p>Waterproof LVP, tile flooring and adjacent flooring scopes delivered through PGC Flooring with proper prep and clean finish transitions.</p>
+                <p>Waterproof LVP, tile flooring and flooring scopes delivered through PGC Flooring with proper subfloor prep and clean finish transitions.</p>
             </article>
 
             <article class="service" style="background: rgba(201,165,97,0.04);">
                 <span class="service-num">— 06</span>
-                <h3>Commercial Improvements</h3>
-                <p>Light commercial improvements for offices, retail and service businesses that need durable surfaces, clean finishes and organized scheduling.</p>
-                <a href="#contact" class="link-action" style="margin-top: 1.5rem;">Tell us about it <span class="arrow">→</span></a>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 20h20M4 20V10l8-6 8 6v10"/></svg>
+                <h3>Roofing & Exterior</h3>
+                <p>Residential and commercial roofing repairs, roof coatings, exterior structural work and building envelope improvements across Houston.</p>
+                <a href="commercial-improvements-maintenance.html#roofing" class="link-action" style="margin-top: 1.5rem;">Commercial roofing <span class="arrow">→</span></a>
             </article>
         </div>
     </div>
@@ -348,8 +507,8 @@
 <section class="remodeling-story section-pad" id="remodeling-story">
     <div class="container">
         <div class="section-head reveal">
-            <span class="eyebrow"><span class="dash"></span>02 — Remodeling Story</span>
-            <h2>Kitchens, baths, cabinetry, tile and finish carpentry should feel balanced with the flooring beneath them.</h2>
+            <span class="eyebrow"><span class="dash"></span>03 — Project Work</span>
+            <h2>Kitchens, bathrooms, cabinetry, tile and finish carpentry — delivered as one organized project.</h2>
         </div>
 
         <div class="story-layout reveal">
@@ -374,7 +533,7 @@
                     <img src="assets/projects/residential/residential-remodel-2022-04-09/interior-details/residential-remodel-2022-04-09_interior-hall-detail-01.jpg" alt="Interior hall detail and finish carpentry — PGC residential remodel project" width="1400" height="933" loading="lazy" decoding="async">
                     <div class="story-caption">
                         <span>Carpentry · Trim · Interior Finish</span>
-                        <h3>The smaller finish details are what make the remodel feel settled.</h3>
+                        <h3>The finish details are what make the remodel feel settled and well built.</h3>
                     </div>
                 </article>
             </div>
@@ -388,14 +547,47 @@
 <section class="divisions section-pad" id="divisions">
     <div class="container">
         <div class="section-head reveal">
-            <span class="eyebrow"><span class="dash"></span>03 — Divisions</span>
-            <h2>Specialty divisions operating under the Prominent General Contractors name.</h2>
+            <span class="eyebrow"><span class="dash"></span>04 — Divisions & Service Areas</span>
+            <h2>Specialty divisions and dedicated service pages operating under the Prominent General Contractors name.</h2>
         </div>
 
         <div class="divisions-list reveal">
+            <a href="commercial-improvements-maintenance.html" class="division-card">
+                <div class="division-image has-image">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+                         alt="Professional commercial office interior — PGC commercial improvements Houston"
+                         width="1400" height="933" loading="lazy" decoding="async">
+                    <div class="division-mark">
+                        <span class="mark">PGC</span>
+                        <span class="rule" aria-hidden="true"></span>
+                        <span class="label">Commercial</span>
+                    </div>
+                </div>
+                <div class="division-body">
+                    <span class="eyebrow"><span class="dash"></span>Commercial Services — Houston TX</span>
+                    <h3>Commercial improvements and renovations for Houston property owners and business operators.</h3>
+                    <p>Tenant improvements, office build-outs, commercial painting, drywall, demolition, door installation, structural repairs, TPO roofing, ADA improvements, and property maintenance programs — handled as a complete, organized commercial scope.</p>
+                    <div class="division-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span class="meta-value">Commercial GC</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Clients</span>
+                            <span class="meta-value">Tenants · Landlords · PM Firms</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Coverage</span>
+                            <span class="meta-value">Houston Metro</span>
+                        </div>
+                    </div>
+                    <span class="link-action">Commercial services page <span class="arrow">→</span></span>
+                </div>
+            </a>
+
             <a href="Flooring_Division/" class="division-card">
                 <div class="division-image has-image">
-                    <img src="assets/msi/textures/light_natural_oak_lvp_texture_detail_01.jpg" alt="Light natural oak LVP texture detail — MSI Surfaces material reference" width="1400" height="933" loading="lazy" decoding="async">
+                    <img src="assets/msi/textures/light_natural_oak_lvp_texture_detail_01.jpg" alt="Light natural oak LVP texture detail — PGC Flooring Division" width="1400" height="933" loading="lazy" decoding="async">
                     <div class="division-mark">
                         <span class="mark">PGC</span>
                         <span class="rule" aria-hidden="true"></span>
@@ -405,7 +597,7 @@
                 <div class="division-body">
                     <span class="eyebrow"><span class="dash"></span>Division — Flooring</span>
                     <h3>PGC Flooring — premium waterproof LVP, residential and commercial.</h3>
-                    <p>Our specialty division for clients with focused flooring projects. Premium waterproof luxury vinyl plank, proper subfloor preparation, and clean installation across kitchens, baths, mudrooms and high-traffic living spaces.</p>
+                    <p>Our specialty division for focused flooring projects. Premium waterproof luxury vinyl plank, proper subfloor preparation, and clean installation across kitchens, baths, mudrooms and commercial spaces throughout Greater Houston.</p>
                     <div class="division-meta">
                         <div class="meta-item">
                             <span class="meta-label">Focus</span>
@@ -417,7 +609,7 @@
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Coverage</span>
-                            <span class="meta-value">Northeast Houston</span>
+                            <span class="meta-value">Greater Houston</span>
                         </div>
                     </div>
                     <span class="link-action">Visit the Flooring Division <span class="arrow">→</span></span>
@@ -427,7 +619,7 @@
             <a href="kingwood-contractor/" class="division-card">
                 <div class="division-image has-image">
                     <img src="assets/projects/residential/residential-remodel-2022-04-09/kitchen-open-living/residential-remodel-2022-04-09_kitchen-open-living-01.jpg"
-                         alt="Completed PGC kitchen and open-concept living remodel — Northeast Houston homeowner"
+                         alt="Completed PGC kitchen and open-concept living remodel — Kingwood TX"
                          width="1400" height="933" loading="lazy" decoding="async">
                     <div class="division-mark">
                         <span class="mark">PGC</span>
@@ -437,13 +629,9 @@
                 </div>
                 <div class="division-body">
                     <span class="eyebrow"><span class="dash"></span>Service Area — Kingwood TX</span>
-                    <h3>Dedicated contractor service for Kingwood homeowners and the homes they've invested in.</h3>
-                    <p>97.8% of Kingwood homes were built between 1970 and 1999. We understand the age, scale and needs of these homes — and we bring the same contractor-led accountability to every Kingwood project we take on.</p>
+                    <h3>Kingwood homeowners and businesses trust PGC for quality renovations, repairs, and flooring done right.</h3>
+                    <p>We know these homes. The character of the neighborhoods, the age of the construction, and what it takes to do this work correctly in Kingwood — from kitchen and bathroom remodels to flooring, roofing and commercial renovations in the Kingwood business corridor.</p>
                     <div class="division-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Focus</span>
-                            <span class="meta-value">Older Homes</span>
-                        </div>
                         <div class="meta-item">
                             <span class="meta-label">Zip Codes</span>
                             <span class="meta-value">77345 · 77339 · 77346</span>
@@ -452,14 +640,14 @@
                             <span class="meta-label">Services</span>
                             <span class="meta-value">Full Scope</span>
                         </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Homes Built</span>
+                            <span class="meta-value">1970 — 1999</span>
+                        </div>
                     </div>
-                    <span class="link-action">Learn about Kingwood service <span class="arrow">→</span></span>
+                    <span class="link-action">Kingwood service page <span class="arrow">→</span></span>
                 </div>
             </a>
-
-            <div class="division-future">
-                Additional service lines planned — in-house millwork and commercial improvements. Available on request through the parent firm.
-            </div>
         </div>
     </div>
 </section>
@@ -468,32 +656,32 @@
 <section class="approach section-pad" id="approach">
     <div class="container">
         <div class="section-head reveal">
-            <span class="eyebrow"><span class="dash"></span>04 — Approach</span>
+            <span class="eyebrow"><span class="dash"></span>05 — Process</span>
             <h2>A clear, phased process — <em>and a payment structure that follows the work.</em></h2>
         </div>
 
-        <p class="approach-intro reveal">Projects are organized around defined milestones rather than open-ended billing. You see exactly what is happening, when it's happening, and what is being paid for at each step. Payments are accepted via Zelle, ACH, and credit or debit card through Stripe.</p>
+        <p class="approach-intro reveal">Commercial or residential — every project is organized around defined milestones rather than open-ended billing. You see exactly what is happening, when it is happening, and what is being paid for at each step. Payments accepted via Zelle, ACH, and credit or debit card through Stripe.</p>
 
         <div class="phases reveal">
             <div class="phase">
                 <span class="phase-num">— Phase 01</span>
-                <h4>Consultation & Scope</h4>
-                <p>An on-site visit, measured drawings where useful, material direction, and a written proposal that defines the scope before anything is signed.</p>
+                <h4>Site Walk & Scope</h4>
+                <p>An on-site visit, a clear conversation about scope, materials and timeline, and a written proposal before anything is signed or paid.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 02</span>
                 <h4>Initial Deposit</h4>
-                <p>A modest deposit reserves your project window and begins material specification. Schedule, lead times and prep work are confirmed in writing.</p>
+                <p>A modest deposit reserves your project window and begins material specification. Schedule and prep work are confirmed in writing.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 03</span>
-                <h4>Material Delivery & Progress</h4>
-                <p>Materials arrive, the workspace is prepared, and installation begins. Progress payment is tied to a clear milestone in the work — never to a calendar.</p>
+                <h4>Active Work</h4>
+                <p>Materials arrive, the workspace is prepared, and work begins per the schedule. Progress payments are tied to clear milestones — never to a calendar date.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 04</span>
-                <h4>Completion & Final Walk</h4>
-                <p>A walk-through, punch list, clean handover and final payment. Warranty terms are documented and the relationship continues for any future work.</p>
+                <h4>Final Walk & Closeout</h4>
+                <p>A walk-through, punch list, clean handover and final invoice. Documentation is provided and the relationship continues for future work.</p>
             </div>
         </div>
     </div>
@@ -503,30 +691,30 @@
 <section class="work section-pad" id="work">
     <div class="container">
         <div class="section-head reveal">
-            <span class="eyebrow"><span class="dash"></span>05 — Service Inspiration</span>
-            <h2>Material and finish references for the services we provide.</h2>
+            <span class="eyebrow"><span class="dash"></span>06 — Project Reference</span>
+            <h2>Material and finish references from completed PGC projects.</h2>
         </div>
 
         <div class="work-grid reveal">
             <a href="Flooring_Division/" class="work-tile has-image">
-                <img src="assets/msi/lvp/warm_natural_oak_lvp_open_concept_01.jpg" alt="Warm natural oak LVP flooring in an open-concept interior — MSI Surfaces material reference" width="1400" height="933" loading="lazy" decoding="async">
+                <img src="assets/msi/lvp/warm_natural_oak_lvp_open_concept_01.jpg" alt="Warm natural oak LVP flooring in an open-concept interior — PGC Flooring" width="1400" height="933" loading="lazy" decoding="async">
                 <div class="work-meta">
-                    <span class="place">Flooring Reference · MSI Surfaces</span>
-                    <span class="title">Warm natural oak LVP — open plan continuity, warm modern material</span>
+                    <span class="place">Flooring · LVP Installation</span>
+                    <span class="title">Warm natural oak LVP — open plan continuity, premium material</span>
                 </div>
             </a>
             <a href="Bathroom_Remodels/" class="work-tile has-image">
-                <img src="assets/projects/residential/residential-remodel-2022-04-09/bathroom-vanity/residential-remodel-2022-04-09_bathroom-vanity-01.jpg" alt="Bathroom vanity and tile finish — PGC residential remodel" width="900" height="600" loading="lazy" decoding="async">
+                <img src="assets/projects/residential/residential-remodel-2022-04-09/bathroom-vanity/residential-remodel-2022-04-09_bathroom-vanity-01.jpg" alt="Bathroom vanity and tile finish — completed PGC remodel" width="900" height="600" loading="lazy" decoding="async">
                 <div class="work-meta">
                     <span class="place">Bathroom · Vanity & Tile</span>
-                    <span class="title">Vanity, countertop and tile finish — completed PGC project</span>
+                    <span class="title">Vanity, countertop and tile finish — completed project</span>
                 </div>
             </a>
             <a href="Bathroom_Remodels/" class="work-tile has-image">
-                <img src="assets/projects/residential/residential-remodel-2022-04-09/bathroom-tub/residential-remodel-2022-04-09_bathroom-tub-01.jpg" alt="Bathtub and wet-area tile finish — PGC residential remodel" width="900" height="600" loading="lazy" decoding="async">
+                <img src="assets/projects/residential/residential-remodel-2022-04-09/bathroom-tub/residential-remodel-2022-04-09_bathroom-tub-01.jpg" alt="Bathtub and wet-area tile finish — completed PGC remodel" width="900" height="600" loading="lazy" decoding="async">
                 <div class="work-meta">
                     <span class="place">Bathroom · Tub & Wet Area</span>
-                    <span class="title">Tub surround, tile and wet-area finish — completed PGC project</span>
+                    <span class="title">Tub surround, tile and wet-area finish — completed project</span>
                 </div>
             </a>
         </div>
@@ -537,25 +725,25 @@
 <section class="areas section-pad" id="areas">
     <div class="container">
         <div class="section-head reveal">
-            <span class="eyebrow"><span class="dash"></span>06 — Service Areas</span>
-            <h2>A focused service radius across Northeast Houston.</h2>
+            <span class="eyebrow"><span class="dash"></span>07 — Service Areas</span>
+            <h2>Commercial and residential service across the Houston metro.</h2>
         </div>
 
         <div class="areas-layout">
             <div class="areas-intro reveal">
-                <p>"We work close to home so we can show up the same way every day — on time, prepared, and present in the project."</p>
-                <span class="meta">Primary radius: northeast Harris County and the surrounding master-planned communities. Travel for larger commercial work considered on request.</span>
+                <p>"We work where we can show up consistently — and travel for commercial projects of the right scope."</p>
+                <span class="meta">Primary radius: Northeast Harris County, Kingwood, Atascocita, Humble and the surrounding communities. Commercial work extends across the Houston metro on request — including The Woodlands, Katy, Sugar Land and Missouri City.</span>
             </div>
 
             <ul class="areas-list reveal">
                 <li><span class="name">Kingwood</span><span class="zip">TX 77345</span></li>
+                <li><span class="name">The Woodlands</span><span class="zip">TX 77380</span></li>
                 <li><span class="name">Atascocita</span><span class="zip">TX 77346</span></li>
+                <li><span class="name">Katy</span><span class="zip">TX 77450</span></li>
                 <li><span class="name">Humble</span><span class="zip">TX 77338</span></li>
-                <li><span class="name">Eagle Springs</span><span class="zip">TX 77346</span></li>
-                <li><span class="name">Fall Creek</span><span class="zip">TX 77396</span></li>
-                <li><span class="name">Summerwood</span><span class="zip">TX 77044</span></li>
-                <li><span class="name">Lake Houston</span><span class="zip">Local Area</span></li>
-                <li><span class="name">Greater Houston</span><span class="zip">By request</span></li>
+                <li><span class="name">Sugar Land</span><span class="zip">TX 77479</span></li>
+                <li><span class="name">Northeast Houston</span><span class="zip">Harris County</span></li>
+                <li><span class="name">Missouri City</span><span class="zip">TX 77459</span></li>
             </ul>
         </div>
     </div>
@@ -565,10 +753,13 @@
 <section class="contact" id="contact">
     <div class="container contact-inner">
         <div class="reveal">
-            <span class="eyebrow"><span class="dash"></span>07 — Begin a Project</span>
-            <h2 style="margin-top: 1.75rem;">Tell us about your <em>home, your timeline, and what you're hoping to build.</em></h2>
-            <p class="contact-lead">Most conversations start with a short phone call or text, followed by an on-site visit at a time that works for the household. There's no quote-pressure — just a clear conversation about scope, timing and approach.</p>
-            <a href="tel:+17138236513" class="link-action">Call or Text <span class="arrow">→</span></a>
+            <span class="eyebrow"><span class="dash"></span>08 — Begin a Project</span>
+            <h2>Tell us about your <em>project, your timeline, and what you need built.</em></h2>
+            <p class="contact-lead">Commercial or residential — most conversations start with a short call or text, followed by an on-site visit. There is no quote pressure and no sales call. Just a clear conversation about scope, timeline and what the work actually involves.</p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                <a href="tel:+17138236513" class="link-action">Call or Text <span class="arrow">→</span></a>
+                <a href="commercial-improvements-maintenance.html" class="link-action muted">Commercial Services <span class="arrow">→</span></a>
+            </div>
         </div>
 
         <div class="contact-channels reveal">
@@ -586,7 +777,7 @@
             </div>
             <div class="channel">
                 <span class="label">Service Area</span>
-                <span class="value">Northeast Houston, TX</span>
+                <span class="value">Houston Metro · TX</span>
             </div>
         </div>
     </div>
@@ -602,26 +793,27 @@
                     <span class="brand-rule" aria-hidden="true"></span>
                     <span class="brand-tagline">General Contractors</span>
                 </div>
-                <p>Prominent General Contractors LLC — a Houston remodeling contractor serving Northeast Houston. Home of the PGC Flooring division.</p>
+                <p>Prominent General Contractors LLC — a Houston commercial and residential general contracting firm. Licensed, insured, and serving the Houston metro area.</p>
             </div>
 
             <div class="footer-col">
                 <h5>Company</h5>
                 <ul>
-                    <li><a href="#practice">About</a></li>
-                    <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#approach">Approach</a></li>
-                    <li><a href="#work">Service Inspiration</a></li>
+                    <li><a href="#practice">About PGC</a></li>
+                    <li><a href="#commercial">Commercial Services</a></li>
+                    <li><a href="#capabilities">Residential</a></li>
+                    <li><a href="#approach">Process</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h5>Divisions & Areas</h5>
                 <ul>
+                    <li><a href="commercial-improvements-maintenance.html">PGC Commercial</a></li>
                     <li><a href="Flooring_Division/">PGC Flooring</a></li>
                     <li><a href="Kitchen_Remodels/">Kitchen Remodels</a></li>
                     <li><a href="Bathroom_Remodels/">Bathroom Remodels</a></li>
-                    <li><a href="kingwood-contractor/">Kingwood Service Area</a></li>
+                    <li><a href="kingwood-contractor/">Kingwood TX</a></li>
                 </ul>
             </div>
 
@@ -631,6 +823,7 @@
                     <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
                     <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>
                     <li><a href="#contact">Schedule a visit</a></li>
+                    <li><a href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc" target="_blank" rel="noopener">Google Reviews</a></li>
                 </ul>
             </div>
         </div>
@@ -640,6 +833,7 @@
             <div class="credentials">
                 <span>Licensed</span>
                 <span>Insured</span>
+                <span>5.0 · Google</span>
                 <span>Houston · Texas</span>
             </div>
         </div>
