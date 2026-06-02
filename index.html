@@ -215,7 +215,16 @@
             font-size: 1.25rem; font-style: italic; color: var(--graphite); max-width: 480px;
         }
 
-        /* ===== Responsive ===== */
+        /* ===== Desktop: hide mobile-only elements ===== */
+        .mobile-trust-bar,
+        .mobile-comm-intro,
+        .mobile-why-pgc,
+        .mobile-final-cta { display: none; }
+        /* Headline swap helpers */
+        .headline-mobile, .subhead-mobile { display: none; }
+        .headline-desktop, .subhead-desktop { display: inline; }
+
+        /* ===== Responsive — Tablet ===== */
         @media (max-width: 1024px) {
             .trust-grid, .story-layout { grid-template-columns: 1fr; }
             .story-feature { min-height: 500px; }
@@ -231,6 +240,532 @@
             .comm-services-grid { grid-template-columns: 1fr; }
             .comm-intro-body { padding: 2rem 1.5rem; }
             .stats-inner { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* ============================================================
+           MOBILE-FIRST REDESIGN — max-width: 640px
+           Think: homeowner on phone, 15 seconds to decide.
+           Premium · Fast · Lead-focused
+        ============================================================ */
+        @media (max-width: 640px) {
+
+            /* --- Headline swap --- */
+            .headline-desktop, .subhead-desktop { display: none; }
+            .headline-mobile, .subhead-mobile { display: inline; }
+
+            /* --- Global spacing --- */
+            .container { padding: 0 1.25rem; }
+            .section-pad { padding: clamp(2.5rem, 8vw, 3.5rem) 0; }
+
+            /* --- Header --- */
+            nav { padding: 1rem 1.25rem; gap: 0; }
+            .nav-links { display: none; }
+            .nav-action { display: none; }
+            .brand-tagline { display: none; }
+            .brand-rule { display: none; }
+            .brand-mark { font-size: 1.35rem; }
+
+            /* --- Hero — stripped to essence --- */
+            .hero { padding: 0; }
+            .hero-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+            /* Image first on mobile */
+            .hero-aside {
+                order: -1;
+                height: 52vw;
+                min-height: 220px;
+                max-height: 300px;
+                position: relative;
+                overflow: hidden;
+            }
+            .hero-aside img {
+                position: absolute; inset: 0;
+                width: 100%; height: 100%;
+                object-fit: cover;
+                object-position: center 30%;
+            }
+            .hero-aside .caption { display: none; }
+            .hero-aside::after {
+                content: '';
+                position: absolute; inset: 0;
+                background: linear-gradient(to bottom, transparent 50%, rgba(28,26,23,0.45));
+            }
+            .hero-text {
+                padding: 2rem 1.25rem 2.25rem;
+                background: var(--ivory);
+            }
+            .hero-text .eyebrow { display: none; }
+            .hero-text h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+                line-height: 1.08;
+                margin-bottom: 0.75rem;
+            }
+            /* Replace h1 content on mobile via a wrapping div approach —
+               we keep h1 but override with a shorter display via CSS */
+            .hero-text h1 { letter-spacing: -0.03em; }
+            .hero-text .lead {
+                font-size: 1rem;
+                line-height: 1.55;
+                margin-bottom: 1.5rem;
+                color: var(--slate);
+            }
+            .hero-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .hero-actions .link-action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem 1.5rem;
+                font-size: 0.8rem;
+                letter-spacing: 0.14em;
+                font-weight: 500;
+                text-transform: uppercase;
+                background: var(--ink);
+                color: var(--ivory);
+                border: none;
+                text-align: center;
+            }
+            .hero-actions .link-action.muted {
+                background: transparent;
+                border: 1px solid var(--hairline);
+                color: var(--graphite);
+            }
+            .hero-actions .arrow { margin-left: 0.5rem; }
+
+            /* --- Mobile trust bar --- */
+            .strip { overflow: hidden; }
+            .strip-inner {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                padding: 0;
+            }
+            .strip-item {
+                padding: 0.85rem 1rem;
+                font-size: 0.7rem;
+                letter-spacing: 0.1em;
+                border-bottom: 1px solid var(--hairline);
+                border-right: 1px solid var(--hairline);
+            }
+            .strip-item:nth-child(even) { border-right: none; }
+            .strip-item:nth-last-child(-n+2) { border-bottom: none; }
+
+            /* --- Mobile trust badges (inline, new element) --- */
+            .mobile-trust-bar {
+                display: flex;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                gap: 0;
+                border-top: 1px solid var(--hairline);
+                border-bottom: 1px solid var(--hairline);
+                background: var(--paper);
+            }
+            .mobile-trust-bar::-webkit-scrollbar { display: none; }
+            .mobile-trust-bar span {
+                flex: 0 0 auto;
+                padding: 0.9rem 1.1rem;
+                font-size: 0.68rem;
+                font-weight: 500;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--graphite);
+                border-right: 1px solid var(--hairline);
+                white-space: nowrap;
+            }
+            .mobile-trust-bar span::before {
+                content: '✓  ';
+                color: var(--gold);
+                font-weight: 700;
+            }
+
+            /* --- About section — hide on mobile (covered by hero) --- */
+            .practice { display: none; }
+
+            /* --- Stats — 2×2 compact grid --- */
+            .stats-row { padding: 0; }
+            .stats-inner { grid-template-columns: 1fr 1fr; }
+            .stat-item {
+                padding: 1.5rem 1.25rem;
+                border-bottom: 1px solid rgba(245,243,239,0.1);
+                border-right: 1px solid rgba(245,243,239,0.1);
+            }
+            .stat-item:nth-child(even) { border-right: none; }
+            .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
+            .stat-number { font-size: 2.6rem; }
+            .stat-label { font-size: 0.62rem; margin-top: 0.4rem; letter-spacing: 0.16em; }
+
+            /* --- Commercial section — 60% shorter on mobile --- */
+            .commercial-section .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            /* Hide the big intro grid */
+            .comm-intro-grid { display: none; }
+            /* Show a compact mobile commercial intro instead */
+            .mobile-comm-intro {
+                display: block;
+                margin-bottom: 1.75rem;
+            }
+            .mobile-comm-intro p {
+                color: var(--graphite);
+                line-height: 1.7;
+                margin-bottom: 1.25rem;
+                font-size: 0.95rem;
+            }
+            .mobile-comm-intro ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+                margin-bottom: 1.25rem;
+            }
+            .mobile-comm-intro ul li {
+                font-size: 0.88rem;
+                color: var(--graphite);
+                padding-left: 1.25rem;
+                position: relative;
+            }
+            .mobile-comm-intro ul li::before {
+                content: '—';
+                position: absolute;
+                left: 0;
+                color: var(--gold);
+            }
+            /* Commercial service cards — show only 4 on mobile */
+            .comm-services-grid {
+                grid-template-columns: 1fr;
+                border: none;
+                gap: 1px;
+                background: var(--hairline);
+            }
+            .comm-service {
+                padding: 1.5rem 1.25rem;
+                display: flex;
+                align-items: baseline;
+                gap: 1rem;
+            }
+            .comm-service .service-num { display: none; }
+            .comm-service h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.2rem;
+                flex: 0 0 auto;
+                min-width: 140px;
+            }
+            .comm-service p {
+                font-size: 0.82rem;
+                line-height: 1.55;
+                color: var(--slate);
+            }
+            /* Hide services 5-8 on mobile */
+            .comm-service:nth-child(n+5) { display: none; }
+            .comm-cta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                padding-top: 1.5rem;
+                margin-top: 1.5rem;
+            }
+            .comm-cta-text { font-size: 1rem; }
+
+            /* --- How We Work — compact on mobile --- */
+            .trust-section .trust-lead {
+                font-size: 1.65rem;
+                margin-top: 0.75rem;
+                margin-bottom: 1.5rem;
+            }
+            .trust-grid { gap: 1.5rem; }
+            .trust-list { gap: 0; }
+            .trust-item {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
+                padding: 1.25rem;
+            }
+            .trust-item span { font-size: 0.62rem; }
+            .trust-item h3 { font-size: 1.1rem; }
+            .trust-item p { font-size: 0.85rem; line-height: 1.6; }
+
+            /* --- Mobile services grid — clean cards --- */
+            .services .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .services-grid.three-col {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--hairline);
+                border: 1px solid var(--hairline);
+            }
+            .service {
+                padding: 1.4rem 1.1rem;
+                gap: 0.6rem;
+            }
+            .service .service-num { display: none; }
+            .service-icon { width: 22px; height: 22px; margin-bottom: 0.5rem; }
+            .service h3 { font-size: 1rem; line-height: 1.2; margin-bottom: 0.3rem; }
+            .service p { font-size: 0.78rem; line-height: 1.55; color: var(--slate); }
+            .service .link-action { font-size: 0.72rem; margin-top: 0.75rem; }
+
+            /* --- Project section — full-width images --- */
+            .remodeling-story .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .story-layout { gap: 0.75rem; }
+            .story-stack { gap: 0.75rem; }
+            .story-feature { min-height: 260px; }
+            .story-detail { min-height: 200px; }
+            .story-caption h3 { font-size: 1.1rem; }
+            .story-caption span { font-size: 0.6rem; letter-spacing: 0.15em; }
+            .story-note { display: none; }
+
+            /* --- Divisions — stack single column, compact --- */
+            .divisions .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .divisions-list { gap: 1.5rem; }
+            .division-card {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid var(--hairline);
+            }
+            .division-image {
+                height: 200px;
+                flex: none;
+            }
+            .division-body {
+                padding: 1.5rem 1.25rem;
+            }
+            .division-body h3 { font-size: 1.25rem; }
+            .division-body > p { font-size: 0.85rem; line-height: 1.65; }
+            .division-meta { display: none; }
+
+            /* --- Process — compact --- */
+            .approach .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .approach-intro { display: none; }
+            .phases {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--hairline);
+                border: 1px solid var(--hairline);
+            }
+            .phase {
+                padding: 1.35rem 1.1rem;
+                background: var(--ivory);
+            }
+            .phase-num { font-size: 0.62rem; letter-spacing: 0.16em; margin-bottom: 0.5rem; }
+            .phase h4 { font-size: 1rem; margin-bottom: 0.4rem; }
+            .phase p { font-size: 0.78rem; line-height: 1.55; color: var(--slate); }
+
+            /* --- Work tiles --- */
+            .work .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .work-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            .work-tile {
+                height: 240px;
+            }
+            .work-meta { padding: 1rem 1.1rem; }
+            .work-meta .title { font-size: 0.85rem; }
+
+            /* --- Service areas — ultra compact --- */
+            .areas .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .areas-layout {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .areas-intro p {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.25rem;
+                font-style: italic;
+                color: var(--ink);
+                line-height: 1.4;
+                margin-bottom: 0.6rem;
+            }
+            .areas-intro .meta { font-size: 0.82rem; line-height: 1.65; }
+            .areas-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                border: 1px solid var(--hairline);
+                background: var(--hairline);
+            }
+            .areas-list li {
+                background: var(--ivory);
+                padding: 0.9rem 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.15rem;
+            }
+            .areas-list .name { font-size: 0.88rem; font-weight: 500; color: var(--ink); }
+            .areas-list .zip { font-size: 0.7rem; color: var(--slate); letter-spacing: 0.08em; }
+
+            /* --- Contact section --- */
+            .contact .section-head, .contact h2 {
+                font-size: clamp(1.7rem, 7vw, 2.4rem);
+            }
+            .contact-inner {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: clamp(2.5rem, 8vw, 4rem) 1.25rem;
+            }
+            .contact-lead { font-size: 0.9rem; line-height: 1.7; }
+            .contact-inner > div > div {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .contact-channels {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--hairline);
+                border: 1px solid var(--hairline);
+            }
+            .channel {
+                padding: 1.1rem 1rem;
+                background: var(--ivory);
+            }
+            .channel .label { font-size: 0.62rem; letter-spacing: 0.16em; }
+            .channel .value { font-size: 0.88rem; }
+
+            /* --- Contact CTA buttons --- */
+            .contact-inner > div > div a.link-action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                font-size: 0.78rem;
+                letter-spacing: 0.14em;
+                font-weight: 500;
+                text-transform: uppercase;
+                background: var(--ink);
+                color: var(--ivory);
+                text-align: center;
+            }
+            .contact-inner > div > div a.link-action.muted {
+                background: transparent;
+                border: 1px solid var(--hairline);
+                color: var(--graphite);
+            }
+
+            /* --- Section heads --- */
+            .section-head { margin-bottom: 1.75rem; }
+            .section-head h2 em { font-size: inherit; }
+
+            /* --- Mobile-only Why PGC section --- */
+            .mobile-why-pgc {
+                display: block;
+                background: var(--paper);
+                border-top: 1px solid var(--hairline);
+                border-bottom: 1px solid var(--hairline);
+            }
+            .mobile-why-pgc .container {
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+            .mobile-why-pgc h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.1;
+            }
+            .mobile-why-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--hairline);
+                border: 1px solid var(--hairline);
+            }
+            .mobile-why-item {
+                background: var(--ivory);
+                padding: 1.25rem 1.1rem;
+            }
+            .mobile-why-item .why-num {
+                display: block;
+                font-size: 0.62rem;
+                font-weight: 500;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--gold);
+                margin-bottom: 0.5rem;
+            }
+            .mobile-why-item h4 {
+                font-size: 1rem;
+                line-height: 1.2;
+                color: var(--ink);
+            }
+
+            /* --- Mobile final CTA section --- */
+            .mobile-final-cta {
+                display: block;
+                background: var(--ink);
+                padding: 3rem 1.25rem;
+                text-align: center;
+            }
+            .mobile-final-cta h2 {
+                color: var(--ivory);
+                font-size: clamp(1.8rem, 7vw, 2.6rem);
+                line-height: 1.1;
+                margin-bottom: 0.6rem;
+            }
+            .mobile-final-cta p {
+                color: rgba(245,243,239,0.6);
+                font-size: 0.9rem;
+                margin-bottom: 2rem;
+                line-height: 1.6;
+            }
+            .mobile-final-cta-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .mobile-final-cta-buttons a {
+                display: block;
+                padding: 1.1rem;
+                font-size: 0.8rem;
+                font-weight: 500;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .mobile-final-cta-buttons .btn-primary {
+                background: var(--gold);
+                color: var(--ink);
+            }
+            .mobile-final-cta-buttons .btn-secondary {
+                border: 1px solid rgba(245,243,239,0.25);
+                color: var(--ivory);
+            }
+
+            /* --- Footer compact --- */
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .footer-brand p { display: none; }
+            .footer-col:nth-child(3) { display: none; }
+            .footer-col h5 { font-size: 0.68rem; margin-bottom: 0.75rem; }
+            .footer-col li { margin-bottom: 0.5rem; }
+            .footer-meta {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+                font-size: 0.72rem;
+            }
+            .credentials { justify-content: center; gap: 0.75rem; font-size: 0.68rem; }
         }
     </style>
 </head>
@@ -271,11 +806,17 @@
     <div class="container hero-grid">
         <div class="hero-text reveal">
             <span class="eyebrow"><span class="dash"></span>Prominent General Contractors LLC · Houston, TX</span>
-            <h1>Premium construction & renovation — commercial build-outs, structural work, and residential remodeling across Houston.</h1>
-            <p class="lead">PGC is a Houston-area general contractor serving commercial property owners, business operators, and homeowners who expect organized execution, honest communication, and work that reflects a real standard of quality.</p>
+            <h1>
+                <span class="headline-desktop">Premium construction & renovation — commercial build-outs, structural work, and residential remodeling across Houston.</span>
+                <span class="headline-mobile">Premium Remodeling &amp; Commercial Construction</span>
+            </h1>
+            <p class="lead">
+                <span class="subhead-desktop">PGC is a Houston-area general contractor serving commercial property owners, business operators, and homeowners who expect organized execution, honest communication, and work that reflects a real standard of quality.</span>
+                <span class="subhead-mobile">Serving Houston, Kingwood, Humble, Atascocita &amp; The Woodlands.</span>
+            </p>
             <div class="hero-actions">
-                <a href="#contact" class="link-action">Request a Consultation <span class="arrow">→</span></a>
-                <a href="#commercial" class="link-action muted">View Services</a>
+                <a href="mailto:jordyv@prominentgcllc.com" class="link-action hero-cta-quote">Request a Quote <span class="arrow">→</span></a>
+                <a href="tel:+17138236513" class="link-action muted hero-cta-call">Call Now</a>
             </div>
         </div>
         <aside class="hero-aside has-image reveal" aria-hidden="true">
@@ -296,6 +837,15 @@
         <span class="strip-item"><span class="gold-dot"></span>Houston · Kingwood · The Woodlands</span>
         <span class="strip-item"><span class="gold-dot"></span>713 · 823 · 6513</span>
     </div>
+</div>
+
+<!-- ============ MOBILE TRUST BAR (mobile only) ============ -->
+<div class="mobile-trust-bar" aria-hidden="true">
+    <span>Residential &amp; Commercial</span>
+    <span>Houston-Based</span>
+    <span>Fully Insured</span>
+    <span>Free Estimates</span>
+    <span>5.0 Google</span>
 </div>
 
 <!-- ============ PRACTICE / ABOUT ============ -->
@@ -342,6 +892,20 @@
         <div class="section-head reveal">
             <span class="eyebrow"><span class="dash"></span>01 — Commercial Services</span>
             <h2>A serious commercial contractor for Houston property owners, operators, and growing businesses.</h2>
+        </div>
+
+        <!-- Mobile-only commercial intro -->
+        <div class="mobile-comm-intro reveal">
+            <p>We help businesses, offices, and property managers maintain and improve their spaces with professional construction services.</p>
+            <ul>
+                <li>Tenant improvements &amp; office build-outs</li>
+                <li>Commercial painting &amp; drywall</li>
+                <li>TPO roofing &amp; structural repairs</li>
+                <li>Demolition &amp; door installation</li>
+                <li>Restroom &amp; ADA renovations</li>
+                <li>Make-ready &amp; property turnover</li>
+            </ul>
+            <a href="commercial-improvements-maintenance.html" class="link-action">All commercial services <span class="arrow">→</span></a>
         </div>
 
         <div class="comm-intro-grid reveal">
@@ -746,6 +1310,41 @@
                 <li><span class="name">Missouri City</span><span class="zip">TX 77459</span></li>
             </ul>
         </div>
+    </div>
+</section>
+
+<!-- ============ MOBILE: WHY PGC (mobile only) ============ -->
+<section class="mobile-why-pgc" aria-label="Why choose PGC">
+    <div class="container">
+        <h2>Why Choose PGC</h2>
+        <div class="mobile-why-list">
+            <div class="mobile-why-item">
+                <span class="why-num">01</span>
+                <h4>Professional Communication</h4>
+            </div>
+            <div class="mobile-why-item">
+                <span class="why-num">02</span>
+                <h4>Clear Project Scopes</h4>
+            </div>
+            <div class="mobile-why-item">
+                <span class="why-num">03</span>
+                <h4>Quality Workmanship</h4>
+            </div>
+            <div class="mobile-why-item">
+                <span class="why-num">04</span>
+                <h4>Residential &amp; Commercial</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ MOBILE: FINAL CTA (mobile only) ============ -->
+<section class="mobile-final-cta" aria-label="Start a project">
+    <h2>Planning a Project?</h2>
+    <p>Get a quote from PGC today. No pressure, no sales call.</p>
+    <div class="mobile-final-cta-buttons">
+        <a href="mailto:jordyv@prominentgcllc.com" class="btn-primary">Request a Quote</a>
+        <a href="tel:+17138236513" class="btn-secondary">Call Now — 713 · 823 · 6513</a>
     </div>
 </section>
 
