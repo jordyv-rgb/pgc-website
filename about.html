@@ -472,53 +472,56 @@
     .about-cta { display: none; }
   }
 
-  /* ─── FLOATING MOBILE CTA BAR ─── */
+  /* ─── FLOATING CTA BAR — always visible ─── */
   .mobile-float-bar {
-    display: none;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    border-top: 1px solid rgba(0,0,0,0.10);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
   }
 
-  @media (max-width: 640px) {
-    .mobile-float-bar {
-      display: flex;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 200;
-      border-top: 1px solid rgba(0,0,0,0.1);
-      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
-    }
-
-    .float-call {
-      flex: 3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 12px;
-      background: var(--gold);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    .float-email {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 12px;
-      background: var(--dark);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+  .float-call {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 12px;
+    background: var(--gold);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.2s;
   }
+
+  .float-call:hover { background: #b8903f; }
+
+  .float-email {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 12px;
+    background: var(--dark);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.10em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+
+  .float-email:hover { background: #333; }
+
+  /* On all screens: give bottom padding so content isn't hidden by bar */
+  body { padding-bottom: 52px; }
 </style>
 </head>
 <body>
@@ -844,7 +847,7 @@
 <!-- ─── FLOATING MOBILE CTA ─── -->
 <div class="mobile-float-bar">
   <a href="tel:7138236513" class="float-call">Call Now · (713) 823-6513</a>
-  <a href="mailto:jordyv@prominentgcllc.com" class="float-email">Email</a>
+  <a href="mailto:jordyv@prominentgcllc.com" class="float-email">Email Us</a>
 </div>
 
 <script>
