@@ -425,37 +425,99 @@
 
   /* ─── MOBILE ─── */
   @media (max-width: 480px) {
-    .about-section { padding: 40px 0 52px; }
+    .about-section { padding: 32px 0 100px; } /* bottom pad = float bar height */
     .about-container { padding: 0 18px; }
 
-    .section-eyebrow { margin-bottom: 28px; gap: 12px; }
-    .section-eyebrow::before { width: 32px; }
+    .section-eyebrow { margin-bottom: 24px; gap: 12px; }
+    .section-eyebrow::before { width: 28px; }
 
     .portrait-frame img {
       aspect-ratio: 3 / 4;
       height: auto;
-      max-height: 420px;
+      max-height: 380px;
     }
 
     .portrait-frame::before { display: none; }
-
-    .portrait-caption { margin-top: 14px; }
+    .portrait-caption { margin-top: 12px; }
     .portrait-name { font-size: 20px; }
 
     .about-headline {
-      font-size: clamp(24px, 7vw, 32px);
+      font-size: clamp(22px, 6.5vw, 30px);
       line-height: 1.15;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
-    .about-bio { font-size: 15px; line-height: 1.75; margin-bottom: 16px; }
-    .about-bio:last-of-type { margin-bottom: 36px; }
+    .about-bio { font-size: 15px; line-height: 1.70; margin-bottom: 14px; }
+    .about-bio:last-of-type { margin-bottom: 28px; }
 
-    .trust-item { padding: 18px 0; }
-    .trust-item-label { font-size: 10px; }
-    .trust-item-desc { font-size: 13px; }
+    /* 2-col compact trust grid on mobile */
+    .trust-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
 
-    .cta-phone, .cta-email { font-size: 13px; padding: 14px 20px; }
+    .trust-item {
+      padding: 14px 10px 14px 0;
+    }
+
+    .trust-item:nth-child(even) {
+      padding-left: 12px;
+      border-left: 1px solid #ece7e0;
+    }
+
+    .trust-item-label { font-size: 10px; margin-bottom: 4px; }
+    .trust-item-desc { font-size: 12px; line-height: 1.45; }
+
+    /* Hide CTA buttons on mobile — float bar handles it */
+    .about-cta { display: none; }
+  }
+
+  /* ─── FLOATING MOBILE CTA BAR ─── */
+  .mobile-float-bar {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    .mobile-float-bar {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+
+    .float-call {
+      flex: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 12px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .float-email {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 12px;
+      background: var(--dark);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
   }
 </style>
 </head>
@@ -533,15 +595,11 @@
         <div class="about-divider"></div>
 
         <p class="about-bio">
-          Prominent General Contractors was founded on a straightforward belief: homeowners deserve a contractor who shows up, communicates clearly, and takes pride in their work. Jordy Villegas started PGC to be exactly that — a company built around craftsmanship, accountability, and a real relationship with every client.
+          PGC was built on one belief: homeowners deserve a contractor who shows up, communicates clearly, and takes pride in their work. As owner-operator, Jordy is on the job — not just behind a desk. You're working directly with the person making decisions, walking the site, and holding the standard.
         </p>
 
         <p class="about-bio">
-          As owner-operator, Jordy is on the job — not just behind a desk. That means you're not handing your home over to a crew you've never met. You're working directly with the person swinging the decisions, walking the site, and holding the standard. From the first estimate to the final walkthrough, Jordy is there.
-        </p>
-
-        <p class="about-bio">
-          Serving the Greater Houston area — including Kingwood, Atascocita, and Humble — PGC takes on residential and commercial work across flooring, renovations, and specialty concrete services. Every project, large or small, gets the same level of care.
+          Serving Houston, Kingwood, Atascocita, and Humble across residential remodels, commercial work, flooring, and concrete services. Every project gets the same level of care.
         </p>
 
         <!-- Trust indicators -->
@@ -610,10 +668,7 @@
 
       <!-- Body copy -->
       <p class="commitment-body">
-        At Prominent General Contractors, we understand that every project is an investment in your home, business, and future. Our commitment is to provide quality workmanship, clear communication, and a professional experience from the initial consultation through project completion.
-      </p>
-      <p class="commitment-body">
-        We take pride in building lasting relationships with our clients and delivering results that stand the test of time.
+        Every project is an investment in your home or business. We commit to quality workmanship, clear communication, and a professional experience from the first conversation to the final walkthrough.
       </p>
 
       <!-- Signature block -->
@@ -761,36 +816,36 @@
   }
 
   @media (max-width: 480px) {
-    .commitment-section { padding: 44px 0 52px; }
+    .commitment-section { padding: 36px 0 100px; } /* bottom pad = float bar */
     .commitment-container { padding: 0 18px; }
 
     .commitment-quote {
-      font-size: clamp(17px, 5vw, 20px);
-      margin-bottom: 28px;
+      font-size: clamp(16px, 5vw, 19px);
+      margin-bottom: 24px;
     }
 
-    .commitment-rule { margin-bottom: 32px; }
+    .commitment-rule { margin-bottom: 28px; }
+    .commitment-header { margin-bottom: 16px; }
 
-    .commitment-body { font-size: 15px; line-height: 1.80; }
-    .commitment-body:last-of-type { margin-bottom: 36px; }
+    .commitment-body { font-size: 15px; line-height: 1.75; margin-bottom: 0; }
+    .commitment-body:last-of-type { margin-bottom: 28px; }
 
+    .commitment-sig { padding-top: 28px; }
     .sig-name { font-size: 26px; }
 
-    .sig-title {
-      font-size: 10px;
-      letter-spacing: 0.12em;
-    }
+    .sig-title { font-size: 10px; letter-spacing: 0.12em; }
 
-    .sig-contact {
-      flex-direction: column;
-      gap: 6px;
-    }
-
+    .sig-contact { flex-direction: column; gap: 6px; }
     .sig-sep { display: none; }
-
     .sig-link { font-size: 13px; }
   }
 </style>
+
+<!-- ─── FLOATING MOBILE CTA ─── -->
+<div class="mobile-float-bar">
+  <a href="tel:7138236513" class="float-call">Call Now · (713) 823-6513</a>
+  <a href="mailto:jordyv@prominentgcllc.com" class="float-email">Email</a>
+</div>
 
 <script>
   const toggle = document.getElementById('menuToggle');
