@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Prominent General Contractors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c9a561;
+    --gold-light: #dfc08a;
+    --gold-muted: #c9a56140;
+    --dark: #1a1a1a;
+    --mid: #3a3530;
+    --muted: #7a6e64;
+    --light: #f5f0eb;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── SECTION WRAPPER ─── */
+  .about-section {
+    padding: 100px 0 110px;
+    background: var(--white);
+  }
+
+  .about-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ─── SECTION HEADER ─── */
+  .section-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 72px;
+  }
+
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .section-eyebrow-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ─── MAIN LAYOUT ─── */
+  .about-layout {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* ─── PORTRAIT ─── */
+  .portrait-col {
+    position: sticky;
+    top: 80px;
+  }
+
+  .portrait-frame {
+    position: relative;
+  }
+
+  .portrait-frame::before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    right: 16px;
+    bottom: 16px;
+    border: 1.5px solid var(--gold-muted);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .portrait-frame img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .portrait-caption {
+    margin-top: 20px;
+    padding-left: 2px;
+  }
+
+  .portrait-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--dark);
+    letter-spacing: 0.01em;
+  }
+
+  .portrait-title {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 5px;
+  }
+
+  /* ─── CONTENT ─── */
+  .content-col {
+    padding-top: 4px;
+  }
+
+  .about-headline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.10;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+  }
+
+  .about-divider {
+    width: 56px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  .about-bio {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.80;
+    color: var(--mid);
+    margin-bottom: 20px;
+  }
+
+  .about-bio:last-of-type {
+    margin-bottom: 48px;
+  }
+
+  /* ─── TRUST GRID ─── */
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid #ece7e0;
+    margin-bottom: 52px;
+  }
+
+  .trust-item {
+    padding: 24px 24px 24px 0;
+    border-bottom: 1px solid #ece7e0;
+  }
+
+  .trust-item:nth-child(even) {
+    padding-left: 32px;
+    border-left: 1px solid #ece7e0;
+  }
+
+  .trust-item-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .trust-item-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  /* ─── CTA ─── */
+  .about-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .cta-phone:hover {
+    background: var(--gold-light);
+  }
+
+  .cta-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cta-email:hover {
+    background: var(--gold);
+    color: var(--white);
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 900px) {
+    .about-section {
+      padding: 72px 0 80px;
+    }
+
+    .about-container {
+      padding: 0 24px;
+    }
+
+    .section-eyebrow {
+      margin-bottom: 40px;
+    }
+
+    .about-layout {
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+
+    .portrait-col {
+      position: static;
+    }
+
+    .portrait-frame::before {
+      top: -10px;
+      left: -10px;
+      right: 10px;
+      bottom: 10px;
+    }
+
+    .portrait-frame img {
+      height: 440px;
+    }
+
+    .about-headline {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .trust-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .trust-item:nth-child(even) {
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .about-cta {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .cta-phone,
+    .cta-email {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portrait-frame img {
+      height: 360px;
+    }
+
+    .about-headline {
+      font-size: 30px;
+    }
+
+    .about-bio {
+      font-size: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT US SECTION — Prominent General Contractors
+     Drop this section into the main site or use standalone
+     ═══════════════════════════════════════════════ -->
+
+<section class="about-section">
+  <div class="about-container">
+
+    <!-- Eyebrow -->
+    <div class="section-eyebrow">
+      <span class="section-eyebrow-text">About Prominent General Contractors</span>
+    </div>
+
+    <!-- Main two-column layout -->
+    <div class="about-layout">
+
+      <!-- Portrait column -->
+      <div class="portrait-col">
+        <div class="portrait-frame">
+          <img
+            src="Images/team/jordy-villegas.jpg"
+            alt="Jordy Villegas — Founder, Prominent General Contractors"
+            loading="lazy"
+          >
+        </div>
+        <div class="portrait-caption">
+          <div class="portrait-name">Jordy Villegas</div>
+          <div class="portrait-title">Founder &amp; Owner</div>
+        </div>
+      </div>
+
+      <!-- Content column -->
+      <div class="content-col">
+
+        <h2 class="about-headline">Built on Quality,<br>Communication,<br>and Trust.</h2>
+
+        <div class="about-divider"></div>
+
+        <p class="about-bio">
+          Prominent General Contractors was founded on a straightforward belief: homeowners deserve a contractor who shows up, communicates clearly, and takes pride in their work. Jordy Villegas started PGC to be exactly that — a company built around craftsmanship, accountability, and a real relationship with every client.
+        </p>
+
+        <p class="about-bio">
+          As founder and owner, Jordy is personally involved in every project. That means you're not handing your home over to a crew you've never met — you're working directly with the person who built this company and cares about the outcome. From the first estimate to the final walkthrough, Jordy manages each job with the same attention and standards he'd expect in his own home.
+        </p>
+
+        <p class="about-bio">
+          Serving the Greater Houston area — including Kingwood, Atascocita, and Humble — PGC takes on residential and commercial work across flooring, renovations, and specialty concrete services. Every project, large or small, gets the same level of care.
+        </p>
+
+        <!-- Trust indicators -->
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-item-label">Locally Owned</div>
+            <div class="trust-item-desc">Houston-based, rooted in this community — not a franchise or out-of-state operation.</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-label">Residential &amp; Commercial</div>
+            <div class="trust-item-desc">From single-family homes to commercial spaces — the same standard applies.</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-label">Clear Communication</div>
+            <div class="trust-item-desc">You'll always know where your project stands. No surprises, no runaround.</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-label">Quality Craftsmanship</div>
+            <div class="trust-item-desc">We don't cut corners. Every finish, every detail is done the way it should be.</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-label">One-Year Warranty</div>
+            <div class="trust-item-desc">We stand behind our work with a one-year workmanship warranty on every project.</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-label">Serving Greater Houston</div>
+            <div class="trust-item-desc">Kingwood, Atascocita, Humble, and surrounding areas.</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="about-cta">
+          <a href="tel:7138236513" class="cta-phone">
+            (713) 823-6513
+          </a>
+          <a href="mailto:jordyv@prominentgcllc.com" class="cta-email">
+            jordyv@prominentgcllc.com
+          </a>
+        </div>
+
+      </div><!-- /content-col -->
+    </div><!-- /about-layout -->
+
+  </div><!-- /about-container -->
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOUNDER COMMITMENT SECTION
+     ═══════════════════════════════════════════════ -->
+<section class="commitment-section">
+  <div class="commitment-container">
+    <div class="commitment-inner">
+
+      <!-- Opening quote -->
+      <blockquote class="commitment-quote">
+        "Our goal is simple: deliver quality work, communicate clearly, and treat every project with the attention and care it deserves."
+      </blockquote>
+
+      <!-- Gold rule -->
+      <div class="commitment-rule"></div>
+
+      <!-- Eyebrow label -->
+      <div class="commitment-header">
+        <span class="commitment-eyebrow">A Personal Commitment</span>
+      </div>
+
+      <!-- Body copy -->
+      <p class="commitment-body">
+        At Prominent General Contractors, we understand that every project is an investment in your home, business, and future. Our commitment is to provide quality workmanship, clear communication, and a professional experience from the initial consultation through project completion.
+      </p>
+      <p class="commitment-body">
+        We take pride in building lasting relationships with our clients and delivering results that stand the test of time.
+      </p>
+
+      <!-- Signature block -->
+      <div class="commitment-sig">
+        <div class="sig-name">Jordy Villegas</div>
+        <div class="sig-title">Founder &amp; Owner — Prominent General Contractors LLC</div>
+        <div class="sig-contact">
+          <a href="tel:7138236513" class="sig-link">(713) 823-6513</a>
+          <span class="sig-sep">·</span>
+          <a href="mailto:jordyv@prominentgcllc.com" class="sig-link">jordyv@prominentgcllc.com</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ─── COMMITMENT SECTION ─── */
+  .commitment-section {
+    padding: 100px 0 110px;
+    background: var(--light);
+  }
+
+  .commitment-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .commitment-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Quote */
+  .commitment-quote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 26px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--mid);
+    letter-spacing: 0.01em;
+    margin: 0 0 52px;
+    padding: 0;
+    border: none;
+  }
+
+  /* Gold rule */
+  .commitment-rule {
+    width: 48px;
+    height: 1.5px;
+    background: var(--gold);
+    margin: 0 auto 48px;
+  }
+
+  /* Eyebrow */
+  .commitment-header {
+    margin-bottom: 24px;
+  }
+
+  .commitment-eyebrow {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* Body */
+  .commitment-body {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--mid);
+    margin-bottom: 18px;
+  }
+
+  .commitment-body:last-of-type {
+    margin-bottom: 52px;
+  }
+
+  /* Signature block */
+  .commitment-sig {
+    border-top: 1px solid #ddd8d0;
+    padding-top: 36px;
+  }
+
+  .sig-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--dark);
+    letter-spacing: 0.01em;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .sig-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+
+  .sig-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .sig-link {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+  }
+
+  .sig-link:hover {
+    color: var(--gold-light);
+  }
+
+  .sig-sep {
+    color: #c4bdb3;
+    font-size: 16px;
+  }
+
+  /* ─── COMMITMENT MOBILE ─── */
+  @media (max-width: 900px) {
+    .commitment-section {
+      padding: 72px 0 80px;
+    }
+
+    .commitment-container {
+      padding: 0 24px;
+    }
+
+    .commitment-quote {
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+
+    .sig-name {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .commitment-quote {
+      font-size: 20px;
+    }
+
+    .sig-contact {
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sig-sep {
+      display: none;
+    }
+  }
+</style>
+
+</body>
+</html>
