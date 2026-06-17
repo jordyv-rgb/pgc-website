@@ -9,6 +9,153 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  /* ─── NAV ─── */
+  #site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #ece7e0;
+  }
+
+  .pgc-nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.1rem 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .pgc-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+
+  .pgc-brand-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+  }
+
+  .pgc-brand-rule {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: #c4bdb3;
+    transform: translateY(2px);
+  }
+
+  .pgc-brand-tagline {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #7a6e64;
+  }
+
+  .pgc-nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .pgc-nav-links a {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #7a6e64;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .pgc-nav-links a:hover,
+  .pgc-nav-links a.pgc-nav-active { color: #1a1a1a; }
+
+  .pgc-nav-action {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 2px;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .pgc-nav-action:hover { color: #c9a561; border-color: #c9a561; }
+
+  .pgc-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+  }
+
+  .pgc-menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+  }
+
+  .pgc-mobile-nav {
+    display: none;
+    padding: 20px 24px 28px;
+    border-top: 1px solid #ece7e0;
+  }
+
+  .pgc-mobile-nav ul { list-style: none; margin-bottom: 20px; }
+
+  .pgc-mobile-nav ul li + li { border-top: 1px solid #ece7e0; }
+
+  .pgc-mobile-nav ul a {
+    display: block;
+    padding: 13px 0;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .pgc-mobile-cta {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    background: #c9a561;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  @media (max-width: 860px) {
+    .pgc-nav {
+      grid-template-columns: auto auto;
+      padding: 1rem 20px;
+    }
+    .pgc-nav-links, .pgc-nav-action { display: none; }
+    .pgc-menu-toggle { display: flex; }
+    #site-header.menu-open .pgc-mobile-nav { display: block; }
+  }
+
   :root {
     --gold: #c9a561;
     --gold-light: #dfc08a;
@@ -243,85 +390,113 @@
     color: var(--white);
   }
 
-  /* ─── MOBILE ─── */
+  /* ─── TABLET ─── */
   @media (max-width: 900px) {
-    .about-section {
-      padding: 72px 0 80px;
-    }
-
-    .about-container {
-      padding: 0 24px;
-    }
-
-    .section-eyebrow {
-      margin-bottom: 40px;
-    }
+    .about-section { padding: 56px 0 64px; }
+    .about-container { padding: 0 24px; }
+    .section-eyebrow { margin-bottom: 36px; }
 
     .about-layout {
       grid-template-columns: 1fr;
-      gap: 44px;
+      gap: 36px;
     }
 
-    .portrait-col {
-      position: static;
-    }
+    .portrait-col { position: static; }
 
     .portrait-frame::before {
-      top: -10px;
-      left: -10px;
-      right: 10px;
-      bottom: 10px;
+      top: -8px; left: -8px;
+      right: 8px; bottom: 8px;
     }
 
     .portrait-frame img {
-      height: 440px;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      max-height: 520px;
     }
 
-    .about-headline {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
+    .about-headline { font-size: clamp(28px, 6vw, 40px); margin-bottom: 16px; }
 
-    .trust-grid {
-      grid-template-columns: 1fr;
-    }
+    .trust-grid { grid-template-columns: 1fr; }
+    .trust-item:nth-child(even) { padding-left: 0; border-left: none; }
 
-    .trust-item:nth-child(even) {
-      padding-left: 0;
-      border-left: none;
-    }
-
-    .about-cta {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .cta-phone,
-    .cta-email {
-      justify-content: center;
-    }
+    .about-cta { flex-direction: column; align-items: stretch; }
+    .cta-phone, .cta-email { justify-content: center; text-align: center; }
   }
 
+  /* ─── MOBILE ─── */
   @media (max-width: 480px) {
+    .about-section { padding: 40px 0 52px; }
+    .about-container { padding: 0 18px; }
+
+    .section-eyebrow { margin-bottom: 28px; gap: 12px; }
+    .section-eyebrow::before { width: 32px; }
+
     .portrait-frame img {
-      height: 360px;
+      aspect-ratio: 3 / 4;
+      height: auto;
+      max-height: 420px;
     }
+
+    .portrait-frame::before { display: none; }
+
+    .portrait-caption { margin-top: 14px; }
+    .portrait-name { font-size: 20px; }
 
     .about-headline {
-      font-size: 30px;
+      font-size: clamp(24px, 7vw, 32px);
+      line-height: 1.15;
+      margin-bottom: 14px;
     }
 
-    .about-bio {
-      font-size: 15px;
-    }
+    .about-bio { font-size: 15px; line-height: 1.75; margin-bottom: 16px; }
+    .about-bio:last-of-type { margin-bottom: 36px; }
+
+    .trust-item { padding: 18px 0; }
+    .trust-item-label { font-size: 10px; }
+    .trust-item-desc { font-size: 13px; }
+
+    .cta-phone, .cta-email { font-size: 13px; padding: 14px 20px; }
   }
 </style>
 </head>
 <body>
 
 <!-- ═══════════════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════════════ -->
+<header id="site-header">
+  <nav class="pgc-nav">
+    <a href="./" class="pgc-brand">
+      <span class="pgc-brand-mark">PGC</span>
+      <span class="pgc-brand-rule"></span>
+      <span class="pgc-brand-tagline">General Contractors</span>
+    </a>
+    <ul class="pgc-nav-links">
+      <li><a href="about.html" class="pgc-nav-active">About</a></li>
+      <li><a href="index.html#commercial">Commercial</a></li>
+      <li><a href="index.html#capabilities">Residential</a></li>
+      <li><a href="kingwood-contractor/">Kingwood</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="pgc-nav-action">Begin a Project →</a>
+    <button class="pgc-menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="pgc-mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#commercial">Commercial</a></li>
+      <li><a href="index.html#capabilities">Residential</a></li>
+      <li><a href="kingwood-contractor/">Kingwood</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="tel:7138236513" class="pgc-mobile-cta">(713) 823-6513</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════
      ABOUT US SECTION — Prominent General Contractors
-     Drop this section into the main site or use standalone
      ═══════════════════════════════════════════════ -->
 
 <section class="about-section">
@@ -579,27 +754,31 @@
 
   /* ─── COMMITMENT MOBILE ─── */
   @media (max-width: 900px) {
-    .commitment-section {
-      padding: 72px 0 80px;
-    }
-
-    .commitment-container {
-      padding: 0 24px;
-    }
-
-    .commitment-quote {
-      font-size: 22px;
-      margin-bottom: 40px;
-    }
-
-    .sig-name {
-      font-size: 30px;
-    }
+    .commitment-section { padding: 56px 0 64px; }
+    .commitment-container { padding: 0 24px; }
+    .commitment-quote { font-size: 22px; margin-bottom: 36px; }
+    .sig-name { font-size: 30px; }
   }
 
   @media (max-width: 480px) {
+    .commitment-section { padding: 44px 0 52px; }
+    .commitment-container { padding: 0 18px; }
+
     .commitment-quote {
-      font-size: 20px;
+      font-size: clamp(17px, 5vw, 20px);
+      margin-bottom: 28px;
+    }
+
+    .commitment-rule { margin-bottom: 32px; }
+
+    .commitment-body { font-size: 15px; line-height: 1.80; }
+    .commitment-body:last-of-type { margin-bottom: 36px; }
+
+    .sig-name { font-size: 26px; }
+
+    .sig-title {
+      font-size: 10px;
+      letter-spacing: 0.12em;
     }
 
     .sig-contact {
@@ -607,11 +786,19 @@
       gap: 6px;
     }
 
-    .sig-sep {
-      display: none;
-    }
+    .sig-sep { display: none; }
+
+    .sig-link { font-size: 13px; }
   }
 </style>
 
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const header = document.getElementById('site-header');
+  toggle.addEventListener('click', () => {
+    const open = header.classList.toggle('menu-open');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+</script>
 </body>
 </html>
