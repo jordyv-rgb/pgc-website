@@ -8,7 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="assets/styles.css">
     <style>
         /* ===== Homeowner / Client Trust ===== */
@@ -45,7 +47,7 @@
             padding: clamp(1.25rem, 2.4vw, 2rem);
             background: var(--ivory);
         }
-        .trust-item span { color: var(--gold); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+        .trust-item span { color: var(--gold-deep); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
         .trust-item h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); margin-bottom: 0.55rem; }
         .trust-item p { color: var(--slate); line-height: 1.7; }
 
@@ -123,7 +125,7 @@
             font-weight: 500;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: rgba(245,243,239,0.45);
+            color: rgba(245,243,239,0.6);
         }
 
         /* ===== Commercial Section ===== */
@@ -381,7 +383,7 @@
             }
             .mobile-trust-bar span::before {
                 content: '✓  ';
-                color: var(--gold);
+                color: var(--gold-deep);
                 font-weight: 700;
             }
 
@@ -435,7 +437,7 @@
                 content: '—';
                 position: absolute;
                 left: 0;
-                color: var(--gold);
+                color: var(--gold-deep);
             }
             /* Commercial service cards — show only 4 on mobile */
             .comm-services-grid {
@@ -560,8 +562,8 @@
                 padding: 1.35rem 1.1rem;
                 background: var(--ivory);
             }
-            .phase-num { font-size: 0.62rem; letter-spacing: 0.16em; margin-bottom: 0.5rem; }
-            .phase h4 { font-size: 1rem; margin-bottom: 0.4rem; }
+            .phase-num { font-size: 0.62rem; letter-spacing: 0.16em; margin-bottom: 0.5rem; color: var(--gold-deep); }
+            .phase h3 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--ink); }
             .phase p { font-size: 0.78rem; line-height: 1.55; color: var(--slate); }
 
             /* --- Work tiles --- */
@@ -699,10 +701,10 @@
                 font-weight: 500;
                 letter-spacing: 0.18em;
                 text-transform: uppercase;
-                color: var(--gold);
+                color: var(--gold-deep);
                 margin-bottom: 0.5rem;
             }
-            .mobile-why-item h4 {
+            .mobile-why-item h3 {
                 font-size: 1rem;
                 line-height: 1.2;
                 color: var(--ink);
@@ -757,7 +759,7 @@
             }
             .footer-brand p { display: none; }
             .footer-col:nth-child(3) { display: none; }
-            .footer-col h5 { font-size: 0.68rem; margin-bottom: 0.75rem; }
+            .footer-col h3 { font-size: 0.68rem; margin-bottom: 0.75rem; }
             .footer-col li { margin-bottom: 0.5rem; }
             .footer-meta {
                 flex-direction: column;
@@ -801,6 +803,8 @@
     </nav>
 </header>
 
+<main>
+
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
     <div class="container hero-grid">
@@ -820,9 +824,14 @@
             </div>
         </div>
         <aside class="hero-aside has-image reveal" aria-hidden="true">
-            <img src="assets/stock/hero_interior.jpg"
-                 alt="Premium open-concept living room and kitchen remodel — Houston general contractor"
-                 width="1400" height="933" loading="eager" decoding="async">
+            <picture>
+                <source type="image/webp" srcset="assets/stock/hero_interior-480w.webp 480w, assets/stock/hero_interior-720w.webp 720w, assets/stock/hero_interior-900w.webp 900w, assets/stock/hero_interior-1400w.webp 1400w" sizes="(max-width: 640px) 100vw, 45vw">
+                <img src="assets/stock/hero_interior-900w.jpg"
+                     srcset="assets/stock/hero_interior-480w.jpg 480w, assets/stock/hero_interior-720w.jpg 720w, assets/stock/hero_interior-900w.jpg 900w, assets/stock/hero_interior-1400w.jpg 1400w"
+                     sizes="(max-width: 640px) 100vw, 45vw"
+                     alt="Premium open-concept living room and kitchen remodel — Houston general contractor"
+                     width="1400" height="933" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
             <p class="caption">Commercial + Residential · Houston Area · Licensed & Insured</p>
         </aside>
     </div>
@@ -1229,22 +1238,22 @@
         <div class="phases reveal">
             <div class="phase">
                 <span class="phase-num">— Phase 01</span>
-                <h4>Site Walk & Scope</h4>
+                <h3>Site Walk & Scope</h3>
                 <p>An on-site visit, a clear conversation about scope, materials and timeline, and a written proposal before anything is signed or paid.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 02</span>
-                <h4>Initial Deposit</h4>
+                <h3>Initial Deposit</h3>
                 <p>A modest deposit reserves your project window and begins material specification. Schedule and prep work are confirmed in writing.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 03</span>
-                <h4>Active Work</h4>
+                <h3>Active Work</h3>
                 <p>Materials arrive, the workspace is prepared, and work begins per the schedule. Progress payments are tied to clear milestones — never to a calendar date.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 04</span>
-                <h4>Final Walk & Closeout</h4>
+                <h3>Final Walk & Closeout</h3>
                 <p>A walk-through, punch list, clean handover and final invoice. Documentation is provided and the relationship continues for future work.</p>
             </div>
         </div>
@@ -1320,19 +1329,19 @@
         <div class="mobile-why-list">
             <div class="mobile-why-item">
                 <span class="why-num">01</span>
-                <h4>Professional Communication</h4>
+                <h3>Professional Communication</h3>
             </div>
             <div class="mobile-why-item">
                 <span class="why-num">02</span>
-                <h4>Clear Project Scopes</h4>
+                <h3>Clear Project Scopes</h3>
             </div>
             <div class="mobile-why-item">
                 <span class="why-num">03</span>
-                <h4>Quality Workmanship</h4>
+                <h3>Quality Workmanship</h3>
             </div>
             <div class="mobile-why-item">
                 <span class="why-num">04</span>
-                <h4>Residential &amp; Commercial</h4>
+                <h3>Residential &amp; Commercial</h3>
             </div>
         </div>
     </div>
@@ -1382,6 +1391,8 @@
     </div>
 </section>
 
+</main>
+
 <!-- ============ FOOTER ============ -->
 <footer>
     <div class="container">
@@ -1396,7 +1407,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Company</h5>
+                <h3>Company</h3>
                 <ul>
                     <li><a href="#commercial">Commercial Services</a></li>
                     <li><a href="#capabilities">Residential</a></li>
@@ -1406,7 +1417,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Divisions & Areas</h5>
+                <h3>Divisions & Areas</h3>
                 <ul>
                     <li><a href="commercial-improvements-maintenance.html">PGC Commercial</a></li>
                     <li><a href="Flooring_Division/">PGC Flooring</a></li>
@@ -1417,7 +1428,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Contact</h5>
+                <h3>Contact</h3>
                 <ul>
                     <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
                     <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>

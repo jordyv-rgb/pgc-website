@@ -14,7 +14,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="../assets/styles.css">
 
     <style>
@@ -144,7 +146,7 @@
         }
         .why-card { padding: clamp(1.75rem, 3vw, 2.5rem); border-right: 1px solid rgba(245,243,239,0.1); border-bottom: 1px solid rgba(245,243,239,0.1); }
         .why-num { display: block; font-family: 'Inter', sans-serif; font-size: 0.64rem; font-weight: 500; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.25rem; }
-        .why-card h4 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 1.8vw, 1.5rem); font-weight: 400; color: var(--ivory); margin-bottom: 0.75rem; line-height: 1.15; }
+        .why-card h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 1.8vw, 1.5rem); font-weight: 400; color: var(--ivory); margin-bottom: 0.75rem; line-height: 1.15; }
         .why-card p { font-size: 0.86rem; color: rgba(245,243,239,0.55); line-height: 1.75; }
 
         /* ── Areas grid ── */
@@ -239,6 +241,8 @@
     </nav>
 </header>
 
+
+<main>
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
     <div class="container hero-grid">
@@ -252,9 +256,14 @@
             </div>
         </div>
         <aside class="hero-aside has-image reveal" aria-hidden="true">
-            <img src="../assets/stock/hero_interior.jpg"
-                 alt="Premium open-concept living and kitchen remodel by a Houston general contractor"
-                 width="1500" height="1020" loading="eager" decoding="async">
+            <picture>
+                <source type="image/webp" srcset="../assets/stock/hero_interior-480w.webp 480w, ../assets/stock/hero_interior-720w.webp 720w, ../assets/stock/hero_interior-900w.webp 900w, ../assets/stock/hero_interior-1400w.webp 1400w" sizes="(max-width: 640px) 100vw, 45vw">
+                <img src="../assets/stock/hero_interior-900w.jpg"
+                     srcset="../assets/stock/hero_interior-480w.jpg 480w, ../assets/stock/hero_interior-720w.jpg 720w, ../assets/stock/hero_interior-900w.jpg 900w, ../assets/stock/hero_interior-1400w.jpg 1400w"
+                     sizes="(max-width: 640px) 100vw, 45vw"
+                     alt="Premium open-concept living and kitchen remodel by a Houston general contractor"
+                     width="1500" height="1020" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
             <p class="caption">Premium residential remodeling — Greater Houston.</p>
         </aside>
     </div>
@@ -508,32 +517,32 @@
         <div class="why-grid reveal">
             <div class="why-card">
                 <span class="why-num">01</span>
-                <h4>Clear, Written Scopes</h4>
+                <h3>Clear, Written Scopes</h3>
                 <p>You get a written proposal — what's included, what isn't, materials, timeline and cost — before you write a single check. No surprises after demo starts.</p>
             </div>
             <div class="why-card">
                 <span class="why-num">02</span>
-                <h4>Professional Communication</h4>
+                <h3>Professional Communication</h3>
                 <p>The person you call is the person overseeing the work. One point of contact, straight answers, and updates throughout — from the first site visit to the final walk-through.</p>
             </div>
             <div class="why-card">
                 <span class="why-num">03</span>
-                <h4>Quality Materials</h4>
+                <h3>Quality Materials</h3>
                 <p>We guide you to materials that perform and last, then install them correctly. No cutting corners on prep, substrate or the details that determine how long the work holds up.</p>
             </div>
             <div class="why-card">
                 <span class="why-num">04</span>
-                <h4>Residential &amp; Commercial Experience</h4>
+                <h3>Residential &amp; Commercial Experience</h3>
                 <p>From kitchen remodels to commercial build-outs and make-ready turnovers, we bring the same organized process to homes and businesses across Greater Houston.</p>
             </div>
             <div class="why-card">
                 <span class="why-num">05</span>
-                <h4>Clean Worksites, Respectful Access</h4>
+                <h3>Clean Worksites, Respectful Access</h3>
                 <p>We work in occupied homes and businesses. Spaces get protected, work areas get contained, and the site gets cleaned up — every day, not just at the end.</p>
             </div>
             <div class="why-card">
                 <span class="why-num">06</span>
-                <h4>Licensed, Insured, Accountable</h4>
+                <h3>Licensed, Insured, Accountable</h3>
                 <p>Fully licensed and insured on every project, residential or commercial. No workarounds, no unlicensed subs, no liability left sitting on the property owner.</p>
             </div>
         </div>
@@ -691,6 +700,7 @@
     </div>
 </section>
 
+</main>
 <!-- ============ FOOTER ============ -->
 <footer>
     <div class="container">
@@ -705,7 +715,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Residential</h5>
+                <h3>Residential</h3>
                 <ul>
                     <li><a href="#flooring">Flooring Installation</a></li>
                     <li><a href="../Kitchen_Remodels/">Kitchen Remodels</a></li>
@@ -716,7 +726,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Commercial</h5>
+                <h3>Commercial</h3>
                 <ul>
                     <li><a href="../commercial-improvements-maintenance.html">Commercial Overview</a></li>
                     <li><a href="#commercial">Property Maintenance</a></li>
@@ -727,7 +737,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Contact</h5>
+                <h3>Contact</h3>
                 <ul>
                     <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
                     <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>

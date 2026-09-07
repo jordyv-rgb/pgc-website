@@ -13,9 +13,10 @@
     --ink:          #1c1a17;
     --ink-soft:     #2a2823;
     --graphite:     #4a463f;
-    --slate:        #6e6a61;
+    --slate:        #5f5b53;
     --gold:         #c9a561;
     --gold-warm:    #b08e4a;
+    --gold-deep:    #7a5f2e;
     --hairline:     rgba(28, 26, 23, 0.10);
     --hairline-soft:rgba(28, 26, 23, 0.06);
     --ease:         cubic-bezier(0.22, 1, 0.36, 1);
@@ -753,7 +754,7 @@ section { position: relative; }
     display: block;
 }
 
-.phase h4 {
+.phase h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.45rem;
     font-weight: 400;
@@ -990,7 +991,7 @@ footer {
     color: rgba(245, 243, 239, 0.55);
 }
 
-.footer-col h5 {
+.footer-col h3 {
     font-family: 'Inter', sans-serif;
     font-size: 0.72rem;
     letter-spacing: 0.22em;
@@ -1019,7 +1020,7 @@ footer {
     font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(245, 243, 239, 0.45);
+    color: rgba(245, 243, 239, 0.6);
     flex-wrap: wrap;
     gap: 1.25rem;
 }

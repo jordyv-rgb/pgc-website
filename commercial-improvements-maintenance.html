@@ -8,7 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="assets/styles.css">
 
     <style>
@@ -138,7 +140,7 @@
             margin-bottom: 0.85rem;
         }
 
-        .who-card h4 {
+        .who-card h3 {
             font-size: 1.12rem;
             margin-bottom: 0.5rem;
             line-height: 1.2;
@@ -374,7 +376,7 @@
             line-height: 1.4;
         }
 
-        .mscope h4 {
+        .mscope h3 {
             font-size: 1.18rem;
             margin-bottom: 0.4rem;
             line-height: 1.25;
@@ -805,6 +807,8 @@
 </header>
 
 
+
+<main>
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
     <div class="container hero-grid">
@@ -890,42 +894,42 @@
         <div class="who-grid reveal">
             <div class="who-card">
                 <span class="who-label">Offices</span>
-                <h4>Professional office spaces</h4>
+                <h3>Professional office spaces</h3>
                 <p>Suite refreshes, reception buildouts, partition walls, conference room updates and ongoing maintenance for professional offices and co-working environments.</p>
             </div>
             <div class="who-card">
                 <span class="who-label">Retail</span>
-                <h4>Retail and storefront tenants</h4>
+                <h3>Retail and storefront tenants</h3>
                 <p>Interior refreshes, display and fixture changes, flooring replacement and exterior facade work — scheduled around operating hours and coordinated with landlord requirements.</p>
             </div>
             <div class="who-card">
                 <span class="who-label">Salons & Studios</span>
-                <h4>Service business environments</h4>
+                <h3>Service business environments</h3>
                 <p>Salon and studio buildouts, shampoo bowl areas, cabinetry, surface work and finish details for service businesses that need a polished, professional-looking space to open in.</p>
             </div>
             <div class="who-card">
                 <span class="who-label">Restaurants & Cafés</span>
-                <h4>Food and hospitality spaces</h4>
+                <h3>Food and hospitality spaces</h3>
                 <p>Interior refreshes, flooring, surface repair, booth carpentry and exterior improvements for restaurants and cafés — work phased around service hours and kitchen access.</p>
             </div>
             <div class="who-card">
                 <span class="who-label">Medical Clinics</span>
-                <h4>Small clinics and care practices</h4>
+                <h3>Small clinics and care practices</h3>
                 <p>Organized improvements for small medical offices, dental suites and allied health practices. Work is phased to avoid disrupting active patient schedules.</p>
             </div>
             <div class="who-card">
                 <span class="who-label">Property Managers</span>
-                <h4>Multi-suite and multi-property</h4>
+                <h3>Multi-suite and multi-property</h3>
                 <p>Make-ready, tenant turnover prep, repairs and recurring maintenance for property managers who need a reliable, documented contractor they can call without re-qualifying each time.</p>
             </div>
             <div class="who-card">
                 <span class="who-label">Small Business</span>
-                <h4>Owner-operated properties</h4>
+                <h3>Owner-operated properties</h3>
                 <p>Practical improvements for business owners who need work done correctly the first time — without the overhead of managing multiple subcontractors independently.</p>
             </div>
             <div class="who-card">
                 <span class="who-label">Hospitality</span>
-                <h4>Hotels, inns and event spaces</h4>
+                <h3>Hotels, inns and event spaces</h3>
                 <p>Interior updates, flooring, carpentry and surface work for hospitality properties — coordinated around guest occupancy and scheduled during low-occupancy windows where possible.</p>
             </div>
         </div>
@@ -1255,56 +1259,56 @@
                 <article class="mscope">
                     <span class="mscope-label">Make-Ready</span>
                     <div>
-                        <h4>Suite and space turnover preparation.</h4>
+                        <h3>Suite and space turnover preparation.</h3>
                         <p>Refreshing commercial suites between tenants — paint, patch, flooring assessment, hardware check and final walk before re-lease. Documented on every scope.</p>
                     </div>
                 </article>
                 <article class="mscope">
                     <span class="mscope-label">Repairs</span>
                     <div>
-                        <h4>Surface repairs, patch work and finish corrections.</h4>
+                        <h3>Surface repairs, patch work and finish corrections.</h3>
                         <p>Drywall repairs, flooring damage, trim replacement, door adjustments and surface defect correction that keep a property looking maintained between major improvement cycles.</p>
                     </div>
                 </article>
                 <article class="mscope">
                     <span class="mscope-label">Paint</span>
                     <div>
-                        <h4>Scheduled paint refresh and touch-up programs.</h4>
+                        <h3>Scheduled paint refresh and touch-up programs.</h3>
                         <p>Periodic painting for high-traffic commercial spaces that show wear — coordinated around business hours and scoped to minimize disruption to tenants or customers.</p>
                     </div>
                 </article>
                 <article class="mscope">
                     <span class="mscope-label">Flooring</span>
                     <div>
-                        <h4>Commercial flooring assessment and replacement.</h4>
+                        <h3>Commercial flooring assessment and replacement.</h3>
                         <p>Identifying worn or damaged flooring early and replacing it on schedule — before it becomes a liability issue or a reflection on the property.</p>
                     </div>
                 </article>
                 <article class="mscope">
                     <span class="mscope-label">Upgrades</span>
                     <div>
-                        <h4>Planned property upgrades between tenant cycles.</h4>
+                        <h3>Planned property upgrades between tenant cycles.</h3>
                         <p>Using vacancy windows to upgrade surfaces, hardware, lighting and finish details that improve the lease value of a suite and reduce wear in the next cycle.</p>
                     </div>
                 </article>
                 <article class="mscope">
                     <span class="mscope-label">Roofing</span>
                     <div>
-                        <h4>TPO roof replacements and ongoing membrane maintenance.</h4>
+                        <h3>TPO roof replacements and ongoing membrane maintenance.</h3>
                         <p>Full TPO replacement scopes with polyiso insulation, plus recurring membrane inspection and maintenance programs for property managers who need roof issues identified and resolved before they escalate.</p>
                     </div>
                 </article>
                 <article class="mscope">
                     <span class="mscope-label">Turnover</span>
                     <div>
-                        <h4>Property turnover and make-ready on a managed schedule.</h4>
+                        <h3>Property turnover and make-ready on a managed schedule.</h3>
                         <p>Recurring property turnover scopes for multi-unit and multi-property managers — consistent standards, documented punch-list completion and preferred scheduling windows for each property in the portfolio.</p>
                     </div>
                 </article>
                 <article class="mscope">
                     <span class="mscope-label">On-Call</span>
                     <div>
-                        <h4>Responsive contractor support for property managers.</h4>
+                        <h3>Responsive contractor support for property managers.</h3>
                         <p>A consistent contractor relationship — one call, one point of contact, consistent quality standards and written documentation on every completed scope.</p>
                     </div>
                 </article>
@@ -1346,22 +1350,22 @@
         <div class="phases reveal">
             <div class="phase">
                 <span class="phase-num">— Phase 01</span>
-                <h4>Site Walk & Written Scope</h4>
+                <h3>Site Walk & Written Scope</h3>
                 <p>An on-site walk-through with you or your property manager, a conversation about operating constraints and access requirements, and a written proposal defining scope, materials, timeline and total cost — before any commitment is made.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 02</span>
-                <h4>Scheduling & Deposit</h4>
+                <h3>Scheduling & Deposit</h3>
                 <p>A modest deposit reserves your project window. Schedule, phasing around your operations, material lead times and any permit or landlord coordination are confirmed in writing before work begins.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 03</span>
-                <h4>Active Work</h4>
+                <h3>Active Work</h3>
                 <p>Work progresses per the defined schedule. Daily cleanup, organized materials staging and regular progress updates keep the site professional and the project predictable for your team and your customers.</p>
             </div>
             <div class="phase">
                 <span class="phase-num">— Phase 04</span>
-                <h4>Punch List & Closeout</h4>
+                <h3>Punch List & Closeout</h3>
                 <p>A final walk-through against the original scope, punch list completion, complete cleanup and final invoice. Scope documentation is provided for property records and future reference.</p>
             </div>
         </div>
@@ -1435,6 +1439,7 @@
 </section>
 
 
+</main>
 <!-- ============ FOOTER ============ -->
 <footer>
     <div class="container">
@@ -1449,7 +1454,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Remodeling</h5>
+                <h3>Remodeling</h3>
                 <ul>
                     <li><a href="Flooring_Division/index.html">Flooring & Remodeling</a></li>
                     <li><a href="Kitchen_Remodels/index.html">Kitchen Remodels</a></li>
@@ -1459,7 +1464,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Commercial Services</h5>
+                <h3>Commercial Services</h3>
                 <ul>
                     <li><a href="#services">Tenant Improvements</a></li>
                     <li><a href="#framing">Framing & Layout</a></li>
@@ -1473,7 +1478,7 @@
             </div>
 
             <div class="footer-col">
-                <h5>Contact</h5>
+                <h3>Contact</h3>
                 <ul>
                     <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
                     <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>
