@@ -23,6 +23,15 @@ Free-use architectural and interior photography from Unsplash. All images are li
 
 **Rule:** Always caption as "Design and material inspiration" or similar. Never present as PGC project photography.
 
+#### Cleaning — `inspiration/cleaning/`
+Free-use photography from Pexels. Licensed under the [Pexels License](https://www.pexels.com/license/) — free for commercial use, no attribution required. Attribution listed here as a courtesy.
+
+| File | Photographer | Pexels URL |
+|------|-------------|-------------|
+| `cleaning_supplies_desk_detail.jpg` | Ron Lach | https://www.pexels.com/photo/professional-cleaning-supplies-on-desk-a-minimalist-approach/ |
+
+**Rule:** Caption as "Design and material inspiration" for Prominent Cleaners pages. Never present as an actual Prominent Cleaners job photo.
+
 #### Kitchens — `inspiration/kitchens/`
 
 | File | Photographer | Unsplash URL |
