@@ -238,6 +238,10 @@
                 display: flex; align-items: center; justify-content: center;
                 padding: 1rem 1.5rem; font-size: 0.8rem; letter-spacing: 0.14em;
                 font-weight: 500; text-transform: uppercase; text-align: center;
+                background: var(--ink); color: var(--ivory); border: none;
+            }
+            .hero-actions .link-action.muted {
+                background: transparent; border: 1px solid var(--hairline); color: var(--graphite);
             }
 
             /* --- Trust strip — compact 2-col --- */
@@ -313,7 +317,12 @@
             .contact-lead { font-size: 0.88rem; line-height: 1.65; }
             .contact-inner > div > div a.link-action {
                 display: flex; align-items: center; justify-content: center;
-                padding: 1rem; font-size: 0.78rem; text-align: center;
+                padding: 1rem; font-size: 0.78rem; letter-spacing: 0.14em;
+                font-weight: 500; text-transform: uppercase; text-align: center;
+                background: var(--ink); color: var(--ivory);
+            }
+            .contact-inner > div > div a.link-action.muted {
+                background: transparent; border: 1px solid var(--hairline); color: var(--graphite);
             }
             .contact-channels { grid-template-columns: 1fr 1fr; }
             .channel { padding: 1rem; }
