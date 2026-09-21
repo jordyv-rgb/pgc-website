@@ -202,6 +202,127 @@
             .areas-grid { grid-template-columns: repeat(2, 1fr); }
             .local-points { grid-template-columns: 1fr; }
         }
+
+        /* ============================================================
+           MOBILE-FIRST REDESIGN — max-width: 640px
+           Same pattern as the homepage: compact, lead-focused, no
+           content deleted from the HTML — only visually condensed.
+        ============================================================ */
+        @media (max-width: 640px) {
+
+            /* --- Global spacing --- */
+            .container { padding: 0 1.25rem; }
+            .section-pad { padding: clamp(2.5rem, 8vw, 3.5rem) 0; }
+
+            /* --- Header --- */
+            .brand-tagline, .brand-rule { display: none; }
+            .brand-mark { font-size: 1.3rem; }
+            .breadcrumb { font-size: 0.7rem; }
+
+            /* --- Hero — stripped to essence --- */
+            .hero { padding: 0; }
+            .hero-grid { display: flex; flex-direction: column; gap: 0; }
+            .hero-aside {
+                order: -1;
+                height: 52vw;
+                min-height: 220px;
+                max-height: 300px;
+            }
+            .hero-aside .caption { display: none; }
+            .hero-text { padding: 2rem 1.25rem 2.25rem; background: var(--ivory); }
+            .hero-text .eyebrow { font-size: 0.6rem; }
+            .hero-text h1 { font-size: clamp(1.85rem, 8vw, 2.5rem); line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+            .hero-text .lead { font-size: 0.95rem; line-height: 1.55; margin-bottom: 1.5rem; color: var(--slate); }
+            .hero-actions { display: flex; flex-direction: column; gap: 0.75rem; }
+            .hero-actions .link-action {
+                display: flex; align-items: center; justify-content: center;
+                padding: 1rem 1.5rem; font-size: 0.8rem; letter-spacing: 0.14em;
+                font-weight: 500; text-transform: uppercase; text-align: center;
+            }
+
+            /* --- Trust strip — compact 2-col --- */
+            .strip-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+            .strip-item {
+                padding: 0.85rem 1rem; font-size: 0.68rem; letter-spacing: 0.08em;
+                border-bottom: 1px solid var(--hairline); border-right: 1px solid var(--hairline);
+            }
+            .strip-item:nth-child(even) { border-right: none; }
+            .strip-item:nth-last-child(-n+2) { border-bottom: none; }
+
+            /* --- Local intro band — condensed to one paragraph --- */
+            .intro-band-grid { padding: 2rem 0; gap: 1.25rem; }
+            .intro-band .local-lead { font-size: 1.2rem; line-height: 1.35; }
+            .local-points { display: none; }
+
+            /* --- Service cards — compact, max 4 visible --- */
+            .service-card { padding: 1.25rem 1.1rem; }
+            .service-card-tag { font-size: 0.6rem; margin-bottom: 0.6rem; }
+            .service-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+            .service-card p { font-size: 0.82rem; line-height: 1.55; }
+            .service-cards .service-card:nth-child(n+5) { display: none; }
+
+            /* --- Mid-page CTA strip --- */
+            .cta-strip { padding: 2rem 1.25rem; }
+            .cta-strip-inner { gap: 1.25rem; }
+            .cta-strip h3 { font-size: 1.35rem; }
+            .cta-strip-actions { align-items: stretch; flex-direction: column; }
+            .btn-dark { justify-content: center; width: 100%; }
+
+            /* --- Feature splits (commercial / flooring / roofing) --- */
+            .feature-inner { min-height: auto; }
+            .feature-media { min-height: 220px; }
+            .feature-media .media-tag { font-size: 0.6rem; left: 1.25rem; bottom: 1rem; }
+            .feature-content { padding: 1.75rem 1.25rem; }
+            .feature-content .eyebrow { font-size: 0.6rem; margin-bottom: 1rem; }
+            .feature-content h2 { font-size: 1.5rem; line-height: 1.15; margin-bottom: 0.85rem; }
+            .feature-content p { font-size: 0.86rem; line-height: 1.65; }
+            .feature-list { grid-template-columns: 1fr 1fr; gap: 0.4rem 1rem; margin-top: 1rem; }
+            .feature-list li { font-size: 0.8rem; }
+
+            /* --- Image breaks — shorter on mobile --- */
+            .image-break img { height: 180px; }
+            .image-break-caption { font-size: 0.6rem; left: 1.25rem; bottom: 1rem; }
+
+            /* --- Why PGC — compact, max 4 visible --- */
+            .why-grid { margin-top: 1.75rem; }
+            .why-card { padding: 1.25rem 1.1rem; }
+            .why-num { margin-bottom: 0.6rem; }
+            .why-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+            .why-card p { font-size: 0.82rem; line-height: 1.55; }
+            .why-grid .why-card:nth-child(n+5) { display: none; }
+
+            /* --- Completed work gallery --- */
+            .work-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+            .work-tile { height: 220px; }
+
+            /* --- Service areas --- */
+            .areas-grid { margin-top: 1.75rem; }
+            .area-cell { padding: 1rem 1.1rem; }
+            .area-name { font-size: 1.1rem; }
+
+            /* --- Google reviews --- */
+            .reviews-card { padding: 1.5rem 1.25rem; }
+            .reviews-score { padding-bottom: 1.25rem; }
+            .reviews-score .score { font-size: 3.5rem; }
+            .reviews-body h2 { font-size: 1.4rem; }
+            .reviews-live-list { margin-top: 1.5rem; }
+
+            /* --- Contact / final CTA --- */
+            .contact-inner { padding: clamp(2.5rem, 8vw, 4rem) 1.25rem; gap: 2rem; }
+            .contact h2 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+            .contact-lead { font-size: 0.88rem; line-height: 1.65; }
+            .contact-inner > div > div a.link-action {
+                display: flex; align-items: center; justify-content: center;
+                padding: 1rem; font-size: 0.78rem; text-align: center;
+            }
+            .contact-channels { grid-template-columns: 1fr 1fr; }
+            .channel { padding: 1rem; }
+            .channel .label { font-size: 0.62rem; }
+            .channel .value { font-size: 0.86rem; }
+
+            /* --- Footer --- */
+            .footer-brand p { display: none; }
+        }
     </style>
 </head>
 <body>

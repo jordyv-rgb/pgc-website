@@ -492,8 +492,13 @@
                 line-height: 1.55;
                 color: var(--slate);
             }
-            /* Hide services 5-8 on mobile */
+            /* Hide services 5-8 on mobile, but keep Prominent Cleaners (09) visible */
             .comm-service:nth-child(n+5) { display: none; }
+            .comm-service:nth-child(9) {
+                display: flex;
+                align-items: baseline;
+                gap: 1rem;
+            }
             .comm-cta {
                 flex-direction: column;
                 align-items: flex-start;
