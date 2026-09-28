@@ -526,6 +526,31 @@
 
   /* On all screens: give bottom padding so content isn't hidden by bar */
   body { padding-bottom: 52px; }
+
+/* ===== Mobile design layer (phones) — matches the rest of the site ===== */
+@media (max-width: 640px) {
+  body .about-container,
+  body .commitment-container { padding-left: 24px; padding-right: 24px; }
+
+  /* Portrait runs edge to edge */
+  .portrait-frame { margin-left: -24px; margin-right: -24px; }
+  .portrait-frame img { aspect-ratio: 4 / 5; max-height: none; height: auto; }
+  .portrait-caption { margin-top: 18px; }
+  .portrait-name { font-size: 26px; }
+
+  /* Headline and story: larger, easier to read */
+  .about-headline { font-size: 36px; line-height: 1.08; margin-bottom: 18px; }
+  .about-bio { font-size: 16px; line-height: 1.75; }
+
+  /* Values: one clean column instead of a cramped 2x3 grid */
+  .trust-grid { grid-template-columns: 1fr; }
+  .trust-item,
+  .trust-item:nth-child(even) { padding: 20px 0; border-left: 0; }
+  .trust-item-label { font-size: 11px; line-height: 1.6; margin-bottom: 6px; }
+  .trust-item-desc { font-size: 15px; line-height: 1.65; }
+
+  .section-eyebrow-text, .sig-title { line-height: 1.6; }
+}
 </style>
 </head>
 <body>

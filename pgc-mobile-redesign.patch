@@ -1,0 +1,657 @@
+diff --git a/Bathroom_Remodels/index.html b/Bathroom_Remodels/index.html
+index ff24c9c..493050c 100644
+--- a/Bathroom_Remodels/index.html
++++ b/Bathroom_Remodels/index.html
+@@ -454,6 +454,7 @@
+             .photo-grid { grid-template-columns: 1fr; }
+         }
+     </style>
++    <link rel="stylesheet" href="../assets/mobile-fixes.css">
+ </head>
+ <body>
+ 
+diff --git a/Flooring_Division/index.html b/Flooring_Division/index.html
+index b06fafd..cdc89e9 100644
+--- a/Flooring_Division/index.html
++++ b/Flooring_Division/index.html
+@@ -22,6 +22,7 @@
+             .brand-stack .breadcrumb { font-size: 0.62rem; letter-spacing: 0.18em; }
+         }
+     </style>
++    <link rel="stylesheet" href="../assets/mobile-fixes.css">
+ </head>
+ <body>
+ 
+diff --git a/Kitchen_Remodels/index.html b/Kitchen_Remodels/index.html
+index f88be92..de0bffe 100644
+--- a/Kitchen_Remodels/index.html
++++ b/Kitchen_Remodels/index.html
+@@ -463,6 +463,7 @@
+             .photo-grid { grid-template-columns: 1fr; }
+         }
+     </style>
++    <link rel="stylesheet" href="../assets/mobile-fixes.css">
+ </head>
+ <body>
+ 
+diff --git a/about.html b/about.html
+index 37d0acb..3e1151b 100644
+--- a/about.html
++++ b/about.html
+@@ -526,6 +526,31 @@
+ 
+   /* On all screens: give bottom padding so content isn't hidden by bar */
+   body { padding-bottom: 52px; }
++
++/* ===== Mobile design layer (phones) — matches the rest of the site ===== */
++@media (max-width: 640px) {
++  body .about-container,
++  body .commitment-container { padding-left: 24px; padding-right: 24px; }
++
++  /* Portrait runs edge to edge */
++  .portrait-frame { margin-left: -24px; margin-right: -24px; }
++  .portrait-frame img { aspect-ratio: 4 / 5; max-height: none; height: auto; }
++  .portrait-caption { margin-top: 18px; }
++  .portrait-name { font-size: 26px; }
++
++  /* Headline and story: larger, easier to read */
++  .about-headline { font-size: 36px; line-height: 1.08; margin-bottom: 18px; }
++  .about-bio { font-size: 16px; line-height: 1.75; }
++
++  /* Values: one clean column instead of a cramped 2x3 grid */
++  .trust-grid { grid-template-columns: 1fr; }
++  .trust-item,
++  .trust-item:nth-child(even) { padding: 20px 0; border-left: 0; }
++  .trust-item-label { font-size: 11px; line-height: 1.6; margin-bottom: 6px; }
++  .trust-item-desc { font-size: 15px; line-height: 1.65; }
++
++  .section-eyebrow-text, .sig-title { line-height: 1.6; }
++}
+ </style>
+ </head>
+ <body>
+diff --git a/assets/mobile-fixes.css b/assets/mobile-fixes.css
+new file mode 100644
+index 0000000..66243f3
+--- /dev/null
++++ b/assets/mobile-fixes.css
+@@ -0,0 +1,501 @@
++/* ================================================================
++   PGC — MOBILE DESIGN LAYER  (phones, max-width: 640px)
++   Linked last in <head> on every page that uses styles.css, so it
++   refines each page's own phone styles. Desktop is untouched.
++
++   Direction: fewer boxes, more air, photos edge to edge, one left
++   edge for all text, larger and darker body copy, consistent
++   buttons, captions that stay readable on bright photos.
++   ================================================================ */
++@media (max-width: 640px) {
++
++    :root { --g: 1.5rem; }   /* the one side margin used everywhere */
++
++    /* ------------------------------------------------------------
++       1. PAGE FRAME — one side margin, calm vertical rhythm
++       ------------------------------------------------------------ */
++    main { overflow-x: clip; }
++    .container { padding-left: var(--g); padding-right: var(--g); }
++    nav { padding-left: var(--g); padding-right: var(--g); }
++    .section-pad { padding-top: 4.25rem; padding-bottom: 4.25rem; }
++
++    /* Section labels ("01 — Services"): same spacing above every
++       headline; a wrapped second line starts under the words. */
++    .eyebrow:has(> .dash) {
++        display: block;
++        padding-left: 2.35rem;
++        text-indent: -2.35rem;
++        margin-bottom: 1.1rem;
++        line-height: 1.7;
++    }
++    .section-head {
++        gap: 0;
++        margin-bottom: 2rem;
++        padding-bottom: 0;
++        border-bottom: 0;          /* the list below brings its own rule */
++    }
++    .section-head .eyebrow { padding-top: 0; }
++    .section-head h2 {
++        font-size: clamp(1.9rem, 8.2vw, 2.25rem);
++        line-height: 1.12;
++        letter-spacing: -0.01em;
++    }
++
++    /* ------------------------------------------------------------
++       2. HERO — big headline, full-width buttons, photo edge to edge
++       ------------------------------------------------------------ */
++    .hero { padding: 3rem 0 0; }
++    .hero h1 {
++        font-size: clamp(2.3rem, 10vw, 2.85rem);
++        line-height: 1.05;
++        letter-spacing: -0.02em;
++        margin-bottom: 1.1rem;
++    }
++    .hero .lead {
++        font-size: 1.15rem;
++        line-height: 1.55;
++        margin-bottom: 2rem;
++        max-width: none;
++    }
++    .hero-text .eyebrow { margin-bottom: 1.4rem; }
++
++    .hero-actions {
++        display: flex;
++        flex-direction: column;
++        align-items: stretch;
++        gap: 0.75rem;
++    }
++    .hero-actions .link-action {
++        display: flex;
++        align-items: center;
++        justify-content: center;
++        gap: 0.6rem;
++        padding: 1.1rem 1.25rem;
++        font-size: 0.74rem;
++        font-weight: 500;
++        letter-spacing: 0.18em;
++        text-align: center;
++        background: var(--ink);
++        color: var(--ivory);
++        border: 1px solid var(--ink);
++    }
++    .hero-actions .link-action.muted {
++        background: transparent;
++        color: var(--ink);
++        border-color: rgba(28, 26, 23, 0.28);
++    }
++
++    /* Photo below the text (service pages): full width, taller */
++    .hero .hero-aside {
++        margin: 2.75rem calc(-1 * var(--g)) 0;
++        width: auto;
++        max-width: none;
++        height: auto;
++        min-height: 0;
++        aspect-ratio: 5 / 4;
++        border: 0;
++        box-shadow: none;
++    }
++    .hero .hero-aside img { opacity: 1; filter: none; }
++    .hero .hero-aside .caption {
++        font-size: 0.95rem;
++        max-width: 280px;
++    }
++
++    /* Photo on top (home, Kingwood): straight under the header */
++    .hero.hero--photo-first { padding: 0 0 3.25rem; }
++    .hero--photo-first .hero-aside {
++        align-self: stretch;
++        margin: 0 calc(-1 * var(--g));
++        aspect-ratio: auto;
++        height: 76vw;
++        max-height: 420px;
++        padding: 0;
++    }
++    .hero--photo-first .hero-text { padding: 2.4rem 0 0; }
++
++    /* ------------------------------------------------------------
++       3. TRUST STRIP — two tidy columns, one quiet band
++       ------------------------------------------------------------ */
++    .mobile-trust-bar { display: none; }   /* repeated the strip above it */
++    .strip {
++        padding: 1.6rem 0;
++        background: var(--ivory-warm);
++        border-top: 1px solid var(--hairline);
++        border-bottom: 1px solid var(--hairline);
++    }
++    .strip .strip-inner {
++        display: grid;
++        grid-template-columns: 1fr 1fr;
++        gap: 0.95rem 1.25rem;
++        align-items: start;
++        padding: 0 var(--g);
++    }
++    .strip .strip-item {
++        padding: 0 0 0 calc(4px + 0.7rem);
++        text-indent: calc(-4px - 0.7rem);
++        font-size: 0.62rem;
++        letter-spacing: 0.16em;
++        line-height: 1.65;
++        color: var(--graphite);
++        border: 0 !important;
++    }
++    .strip .strip-item .gold-dot { margin-right: 0.7rem; }
++
++    /* ------------------------------------------------------------
++       4. LISTS INSTEAD OF BOXES — hairlines, no card frames
++       ------------------------------------------------------------ */
++    .services-grid,
++    .services-grid.three-col,
++    .comm-services-grid,
++    .trust-list,
++    .who-grid,
++    .maintenance-scopes,
++    .service-cards,
++    .mobile-why-list {
++        display: grid;
++        grid-template-columns: 1fr;
++        gap: 0;
++        border: 0;
++        border-bottom: 1px solid var(--hairline);
++        background: transparent;
++    }
++    .services-grid > .service,
++    .comm-services-grid > .comm-service,
++    .trust-list > .trust-item,
++    .who-grid > .who-card,
++    .maintenance-scopes > .mscope,
++    .service-cards > .service-card,
++    .mobile-why-list > .mobile-why-item {
++        background: transparent !important;
++        border: 0;
++        border-top: 1px solid var(--hairline);
++        padding: 1.75rem 0;
++    }
++
++    /* Service lists */
++    .service { position: relative; padding-right: 2.75rem !important; }
++    .service-icon {
++        position: absolute;
++        top: 1.95rem;
++        right: 0;
++        width: 22px;
++        height: 22px;
++        margin: 0;
++    }
++    .service h3 { font-size: 1.5rem; line-height: 1.2; margin-bottom: 0.6rem; }
++    .service p { font-size: 0.95rem; line-height: 1.7; color: var(--graphite); }
++    .service .link-action { margin-top: 1.1rem; }
++
++    /* Commercial services (home): title over text */
++    .comm-service,
++    .comm-service:nth-child(9) {
++        display: flex;
++        flex-direction: column;
++        align-items: flex-start;
++        gap: 0.5rem;
++    }
++    .comm-service h3 { min-width: 0; flex: none; font-size: 1.4rem; margin: 0; }
++    .comm-service p { font-size: 0.95rem; line-height: 1.7; color: var(--graphite); }
++    .comm-service .link-action { margin-top: 0.75rem; }
++    .mobile-comm-intro p { font-size: 1rem; }
++    .mobile-comm-intro ul li { font-size: 0.95rem; }
++
++    /* How we work (home) */
++    .trust-item h3 { font-size: 1.4rem; }
++    .trust-item p { font-size: 0.95rem; line-height: 1.7; }
++
++    /* Why choose PGC (home): number and title on one line */
++    .mobile-why-item {
++        display: flex;
++        align-items: baseline;
++        gap: 1.1rem;
++        padding: 1.2rem 0 !important;
++    }
++    .mobile-why-item h3,
++    .mobile-why-item p,
++    .mobile-why-item div { font-size: 1.3rem; }
++
++    /* Process on the dark band: one clean column */
++    .phases {
++        grid-template-columns: 1fr;
++        gap: 0;
++        border: 0;
++        background: transparent;
++    }
++    .phase {
++        background: transparent;
++        padding: 1.75rem 0;
++        border-top: 1px solid rgba(245, 243, 239, 0.16);
++    }
++    .phase-num {
++        font-family: 'Cormorant Garamond', serif;
++        font-style: italic;
++        font-size: 1rem;
++        letter-spacing: 0.04em;
++        color: var(--gold);
++        margin-bottom: 0.6rem;
++    }
++    .phase h3 { font-size: 1.5rem; color: var(--ivory); margin-bottom: 0.6rem; }
++    .phase p { font-size: 0.95rem; line-height: 1.7; color: rgba(245, 243, 239, 0.7); }
++
++    /* Service areas: one column, town left, zip right */
++    .areas-list {
++        grid-template-columns: 1fr;
++        border: 0;
++        background: transparent;
++        width: 100%;
++        align-self: stretch;
++    }
++    .areas-list li,
++    .areas-list li:nth-child(odd),
++    .areas-list li:nth-child(2n) {
++        margin: 0;
++        background: transparent;
++        flex-direction: row;
++        justify-content: space-between;
++        align-items: baseline;
++        padding: 1.05rem 0;
++        border-bottom: 1px solid var(--hairline);
++    }
++    .areas-list .name { font-size: 1.35rem; font-weight: 400; }
++    .areas-intro p { font-size: 1.3rem; }
++    .areas-intro .meta { font-size: 0.92rem; }
++
++    .areas-grid { grid-template-columns: 1fr 1fr; border: 0; }
++    .area-cell {
++        border: 0 !important;
++        border-bottom: 1px solid var(--hairline) !important;
++        background: transparent !important;
++        padding: 1rem 0 !important;
++    }
++
++    /* ------------------------------------------------------------
++       5. PHOTOS — edge to edge, gallery spacing, readable captions
++       ------------------------------------------------------------ */
++    .story-feature,
++    .story-detail,
++    .work-tile,
++    .photo-grid-item,
++    .division-image,
++    .story-media,
++    .project-media {
++        margin-left: calc(-1 * var(--g));
++        margin-right: calc(-1 * var(--g));
++        width: auto;
++        border: 0;
++    }
++    .story-layout, .story-stack { gap: 0.5rem; }
++    .story-feature { min-height: 0; height: 96vw; max-height: 460px; }
++    .story-detail { min-height: 0; height: 72vw; max-height: 360px; }
++    .story-caption { left: var(--g); right: var(--g); bottom: 1.6rem; }
++    .story-caption h3 { font-size: 1.35rem; line-height: 1.2; }
++    .work-grid { gap: 0.5rem; }
++    .work-tile { height: auto; aspect-ratio: 5 / 4; padding: 1.5rem var(--g); }
++    .work-meta .title { font-size: 1.2rem; }
++
++    .story-feature img, .story-detail img,
++    .work-tile.has-image img, .division-image.has-image img { opacity: 1; }
++    .story-feature::after,
++    .story-detail::after {
++        background: linear-gradient(to top, rgba(18, 17, 15, 0.8) 0%, rgba(18, 17, 15, 0.32) 48%, rgba(18, 17, 15, 0) 78%);
++    }
++    .work-tile.has-image::before,
++    .division-image.has-image::before,
++    .hero-aside.has-image::before {
++        background: linear-gradient(to top, rgba(18, 17, 15, 0.74) 0%, rgba(18, 17, 15, 0.22) 50%, rgba(18, 17, 15, 0) 78%);
++    }
++
++    /* Division cards (home): photo, then text — no frame */
++    .divisions-list { gap: 3.5rem; }
++    .division-card {
++        border: 0;
++        background: transparent;
++        overflow: visible;
++        box-shadow: none;
++    }
++    .division-image { height: auto; min-height: 0; aspect-ratio: 4 / 3; }
++    .division-body { padding: 1.9rem 0 0; }
++    .division-body h3 { font-size: 1.55rem; }
++    .division-body > p { font-size: 0.95rem; line-height: 1.7; }
++
++    /* Kitchen / bathroom story cards: photo, then text — no frame */
++    .service-story,
++    .project-case {
++        border: 0;
++        background: transparent;
++        overflow: visible;
++    }
++    .story-body,
++    .project-copy { padding: 1.9rem 0 0; }
++
++    /* ------------------------------------------------------------
++       6. CONTACT — label above value, no box, room to tap
++       ------------------------------------------------------------ */
++    .contact-inner { padding-left: var(--g); padding-right: var(--g); }
++    .contact h2 { font-size: clamp(2rem, 8.6vw, 2.35rem); }
++    .contact-lead { font-size: 1.12rem; line-height: 1.6; }
++    .contact-channels {
++        display: flex;
++        flex-direction: column;
++        gap: 0;
++        width: 100%;
++        align-self: stretch;
++        border: 0;
++        background: transparent;
++    }
++    .channel {
++        flex-direction: column;
++        align-items: flex-start;
++        justify-content: flex-start;
++        gap: 0.3rem;
++        padding: 1.15rem 0;
++        background: transparent;
++        border-top: 1px solid var(--hairline);
++    }
++    .channel:last-child { border-bottom: 1px solid var(--hairline); }
++    .channel .label { font-size: 0.6rem; letter-spacing: 0.2em; }
++    .channel .value {
++        font-size: 1.35rem;
++        line-height: 1.3;
++        text-align: left;
++        overflow-wrap: anywhere;
++    }
++
++    /* A link sitting inside a sentence reads as part of the sentence */
++    p .link-action,
++    #contact p .link-action,
++    section.contact p .link-action {
++        display: inline;
++        width: auto;
++        padding: 0 0 1px;
++        font-size: inherit;
++        font-weight: 500;
++        letter-spacing: 0;
++        text-transform: none;
++        background: transparent;
++        color: var(--ink);
++        border: 0;
++        border-bottom: 1px solid currentColor;
++    }
++
++    /* Footer credentials: keep each item on one line */
++    .footer-meta .credentials { flex-wrap: wrap; gap: 0.5rem 1.5rem; }
++    .footer-meta .credentials > * { white-space: nowrap; }
++
++    /* Closing call-to-action band (home) */
++    .mobile-final-cta { padding: 3.75rem var(--g); }
++
++    /* ------------------------------------------------------------
++       8. PAGE-SPECIFIC SECTIONS brought onto the same system
++       ------------------------------------------------------------ */
++    /* Text beside photos (cleaning + commercial pages) */
++    .pair-body { padding-left: var(--g); padding-right: var(--g); }
++    .pair-image { position: relative; }
++    .pair-image::after {
++        content: '';
++        position: absolute;
++        inset: 0;
++        background: linear-gradient(to top, rgba(18, 17, 15, 0.72) 0%, rgba(18, 17, 15, 0) 55%);
++        pointer-events: none;
++    }
++    .pair-image-caption {
++        left: var(--g);
++        right: var(--g);
++        z-index: 2;
++        color: rgba(245, 243, 239, 0.9);
++    }
++    /* Roof photo: the text panel on top of it repeats the section
++       below and gets cut off on phones, so show just the photo */
++    .pair-image-roof-photo .roof-content-overlay { display: none; }
++    .pair-image-roof-photo img { opacity: 1; filter: none; }
++
++    /* Kingwood feature blocks + closing strip */
++    .feature-content { padding-left: var(--g); padding-right: var(--g); }
++    .cta-strip { padding: 3.25rem 0; }
++    .cta-strip-inner { padding-left: var(--g); padding-right: var(--g); }
++    .feature-media { min-height: 260px; }
++    .feature-media .media-tag { left: var(--g); bottom: 1.25rem; }
++    .feature-media::after,
++    .image-break::after {
++        content: '';
++        position: absolute;
++        inset: 0;
++        background: linear-gradient(to top, rgba(18, 17, 15, 0.7) 0%, rgba(18, 17, 15, 0) 55%);
++        pointer-events: none;
++    }
++    .feature-media .media-tag,
++    .image-break-caption { z-index: 2; }
++    .image-break img { height: 240px; }
++
++    /* Kingwood "Why choose PGC" on the dark band: open list */
++    .why-grid {
++        grid-template-columns: 1fr;
++        gap: 0;
++        border: 0;
++        background: transparent;
++    }
++    .why-card {
++        background: transparent;
++        border: 0 !important;
++        border-top: 1px solid rgba(245, 243, 239, 0.16) !important;
++        padding: 1.75rem 0 !important;
++    }
++    .why-card h3 { font-size: 1.45rem; margin-bottom: 0.6rem; }
++    .why-card p { font-size: 0.95rem; line-height: 1.7; }
++
++    /* List item titles large enough to lead the eye */
++    .service-card h3,
++    .who-card h3,
++    .mscope h3 { font-size: 1.4rem; line-height: 1.22; }
++    .service-card p,
++    .who-card p,
++    .mscope p { font-size: 0.95rem; line-height: 1.7; }
++
++    /* Google reviews: open block instead of an inset card */
++    .reviews-card {
++        border: 0;
++        background: transparent;
++        padding: 0;
++    }
++
++    /* Kitchen + bathroom stories: breathing room between stories */
++    .service-story + .service-story,
++    .project-case + .project-case { margin-top: 3.75rem; }
++
++    /* Photos with text on top: darker at the bottom so words read */
++    .hero .hero-aside::before {
++        background: linear-gradient(to top, rgba(18, 17, 15, 0.62) 0%, rgba(18, 17, 15, 0.12) 45%, rgba(18, 17, 15, 0) 70%);
++    }
++    .material-study::after {
++        background: linear-gradient(to top, rgba(18, 17, 15, 0.85) 0%, rgba(18, 17, 15, 0.55) 55%, rgba(18, 17, 15, 0.25) 100%);
++    }
++
++    /* Contact buttons: full width, same as the hero */
++    section.contact .link-action,
++    #contact .link-action {
++        display: flex;
++        align-items: center;
++        justify-content: center;
++        width: 100%;
++        padding: 1.1rem 1.25rem;
++        font-size: 0.74rem;
++        letter-spacing: 0.18em;
++        background: var(--ink);
++        color: var(--ivory);
++        border: 1px solid var(--ink);
++    }
++    section.contact .link-action.muted,
++    #contact .link-action.muted {
++        background: transparent;
++        color: var(--ink);
++        border-color: rgba(28, 26, 23, 0.28);
++    }
++
++    /* ------------------------------------------------------------
++       7. NUMBERS BAND (home)
++       ------------------------------------------------------------ */
++    .stat-number { font-size: 3rem; }
++    .stat-item { padding: 1.75rem 0 1.75rem 0; }
++    .stat-item:nth-child(even) { padding-left: 1.5rem; }
++}
+diff --git a/commercial-cleaning/index.html b/commercial-cleaning/index.html
+index 4e2cbe9..8ca1a23 100644
+--- a/commercial-cleaning/index.html
++++ b/commercial-cleaning/index.html
+@@ -786,6 +786,7 @@
+             }
+         }
+     </style>
++    <link rel="stylesheet" href="../assets/mobile-fixes.css">
+ </head>
+ <body>
+ 
+diff --git a/commercial-improvements-maintenance.html b/commercial-improvements-maintenance.html
+index 14c2283..e455440 100644
+--- a/commercial-improvements-maintenance.html
++++ b/commercial-improvements-maintenance.html
+@@ -775,6 +775,7 @@
+             }
+         }
+     </style>
++    <link rel="stylesheet" href="assets/mobile-fixes.css">
+ </head>
+ <body>
+ 
+diff --git a/index.html b/index.html
+index 7421baf..9a180de 100644
+--- a/index.html
++++ b/index.html
+@@ -804,6 +804,7 @@
+             .credentials { justify-content: center; gap: 0.75rem; font-size: 0.68rem; }
+         }
+     </style>
++    <link rel="stylesheet" href="assets/mobile-fixes.css">
+ </head>
+ <body>
+ 
+@@ -840,7 +841,7 @@
+ <main>
+ 
+ <!-- ============ HERO ============ -->
+-<section class="hero" id="top">
++<section class="hero hero--photo-first" id="top">
+     <div class="container hero-grid">
+         <div class="hero-text reveal">
+             <span class="eyebrow"><span class="dash"></span>Prominent General Contractors LLC · Houston, TX</span>
+diff --git a/kingwood-contractor/index.html b/kingwood-contractor/index.html
+index f56e68b..b298189 100644
+--- a/kingwood-contractor/index.html
++++ b/kingwood-contractor/index.html
+@@ -333,6 +333,7 @@
+             .footer-brand p { display: none; }
+         }
+     </style>
++    <link rel="stylesheet" href="../assets/mobile-fixes.css">
+ </head>
+ <body>
+ 
+@@ -374,7 +375,7 @@
+ 
+ <main>
+ <!-- ============ HERO ============ -->
+-<section class="hero" id="top">
++<section class="hero hero--photo-first" id="top">
+     <div class="container hero-grid">
+         <div class="hero-text reveal">
+             <span class="eyebrow"><span class="dash"></span>Houston-Based General Contractor · Serving Kingwood &amp; Greater Houston</span>
+diff --git a/post-construction-cleaning/index.html b/post-construction-cleaning/index.html
+index 5d41986..420514d 100644
+--- a/post-construction-cleaning/index.html
++++ b/post-construction-cleaning/index.html
+@@ -786,6 +786,7 @@
+             }
+         }
+     </style>
++    <link rel="stylesheet" href="../assets/mobile-fixes.css">
+ </head>
+ <body>
+ 
