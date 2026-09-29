@@ -3,810 +3,832 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Post-construction final cleaning for Houston commercial and remodeling projects by Prominent Cleaners, a division of Prominent General Contractors LLC — dust removal, detail cleaning and walkthrough-ready handoff.">
-    <title>Post-Construction Cleaning Houston | Prominent Cleaners — PGC</title>
+    <meta name="description" content="Prominent General Contractors LLC — Houston's premium commercial and residential construction firm. Tenant improvements, office build-outs, structural repairs, kitchen & bathroom remodels, flooring, roofing. Insured. Serving Kingwood, The Woodlands, Katy, Sugar Land and the Houston metro.">
+    <title>Premium Commercial & Residential Contractor Houston TX — Prominent General Contractors LLC</title>
 
-    <link rel="canonical" href="https://prominentgcllc.com/post-construction-cleaning/">
+    <link rel="canonical" href="https://prominentgcllc.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://prominentgcllc.com/post-construction-cleaning/#service",
-      "name": "Prominent Cleaners — Post-Construction Cleaning",
-      "serviceType": ["Post-Construction Cleaning", "Final Detail Cleaning"],
-      "provider": { "@id": "https://prominentgcllc.com/#business" },
-      "brand": { "@type": "Brand", "name": "Prominent Cleaners" },
-      "areaServed": ["Houston", "Kingwood", "Humble", "Atascocita", "The Woodlands", "Katy", "Sugar Land", "Missouri City"]
+      "@type": "GeneralContractor",
+      "@id": "https://prominentgcllc.com/#business",
+      "name": "Prominent General Contractors LLC",
+      "url": "https://prominentgcllc.com/",
+      "telephone": "+1-713-823-6513",
+      "email": "jordyv@prominentgcllc.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Houston" },
+        { "@type": "City", "name": "Kingwood" },
+        { "@type": "City", "name": "Humble" },
+        { "@type": "City", "name": "Atascocita" },
+        { "@type": "City", "name": "The Woodlands" },
+        { "@type": "City", "name": "Katy" },
+        { "@type": "City", "name": "Sugar Land" },
+        { "@type": "City", "name": "Missouri City" }
+      ]
     }
     </script>
-<style>
-        /* ============================================================
-           COMMERCIAL PAGE — Page-specific styles
-           ============================================================ */
-
-        /* --- Trust band (Google Reviews) --- */
-        .trust-band {
-            background: var(--ink);
-            border-bottom: 1px solid rgba(245, 243, 239, 0.08);
+    <style>
+        /* ===== Homeowner / Client Trust ===== */
+        .trust-section {
+            background: var(--paper);
+            border-top: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
         }
-
-        .trust-band-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            padding-top: 1.75rem;
-            padding-bottom: 1.75rem;
-            flex-wrap: wrap;
+        .trust-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            gap: clamp(2rem, 5vw, 5rem);
+            align-items: start;
         }
-
-        .trust-rating {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .trust-rating .rating-number {
+        .trust-lead {
+            color: var(--graphite);
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 4vw, 3.35rem);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin: 1.4rem 0 0;
+        }
+        .trust-list {
+            display: grid;
+            gap: 1px;
+            background: var(--hairline);
+            border: 1px solid var(--hairline);
+        }
+        .trust-item {
+            display: grid;
+            grid-template-columns: 5.5rem 1fr;
+            gap: 1.5rem;
+            padding: clamp(1.25rem, 2.4vw, 2rem);
+            background: var(--ivory);
+        }
+        .trust-item span { color: var(--gold-deep); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+        .trust-item h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); margin-bottom: 0.55rem; }
+        .trust-item p { color: var(--slate); line-height: 1.7; }
+
+        /* ===== Remodeling Story ===== */
+        .remodeling-story { background: var(--ivory); }
+        .story-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+            gap: clamp(1.25rem, 3vw, 2rem);
+            align-items: stretch;
+        }
+        .story-feature, .story-detail {
+            position: relative; overflow: hidden;
+            border: 1px solid var(--hairline);
+            background: var(--ink);
+        }
+        .story-feature { min-height: 620px; }
+        .story-stack { display: grid; gap: clamp(1.25rem, 3vw, 2rem); }
+        .story-detail { min-height: 294px; }
+        .story-feature img, .story-detail img {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.95;
+            filter: saturate(1) contrast(1.02);
+        }
+        .story-feature::after, .story-detail::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(28,26,23,0.58), rgba(28,26,23,0.12) 62%, transparent);
+        }
+        .story-caption {
+            position: absolute;
+            left: clamp(1.3rem,3vw,2.4rem); right: clamp(1.3rem,3vw,2.4rem); bottom: clamp(1.3rem,3vw,2.4rem);
+            z-index: 1; color: var(--ivory);
+        }
+        .story-caption span {
+            display: block; color: rgba(245,243,239,0.72);
+            font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.8rem;
+        }
+        .story-caption h3 { color: var(--ivory); font-size: clamp(1.45rem,3vw,2.4rem); line-height: 1.08; max-width: 620px; }
+        .story-detail .story-caption h3 { font-size: clamp(1.25rem,2vw,1.65rem); }
+        .story-note { margin-top: 1.5rem; max-width: 680px; color: var(--slate); font-size: 0.82rem; line-height: 1.8; }
+
+        /* ===== Stats row ===== */
+        .stats-row {
+            background: var(--ink);
+            border-top: 1px solid rgba(245,243,239,0.06);
+            padding: clamp(3rem, 5vw, 4.5rem) 0;
+        }
+        .stats-inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+        .stat-item {
+            padding: 2rem 2.5rem;
+            border-right: 1px solid rgba(245,243,239,0.1);
+        }
+        .stat-item:last-child { border-right: 0; }
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
             font-weight: 300;
             color: var(--ivory);
             line-height: 1;
             letter-spacing: -0.04em;
-        }
-
-        .trust-rating .rating-stars {
-            color: var(--gold);
-            font-size: 1.05rem;
-            letter-spacing: 0.14em;
             display: block;
-            margin-bottom: 0.35rem;
         }
-
-        .trust-rating .rating-count {
+        .stat-number em { font-style: normal; color: var(--gold); }
+        .stat-label {
             display: block;
-            font-size: 0.82rem;
-            font-weight: 500;
-            color: rgba(245, 243, 239, 0.75);
-            letter-spacing: 0.04em;
-        }
-
-        .trust-rating .rating-source {
-            display: block;
-            font-size: 0.67rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: rgba(245, 243, 239, 0.35);
-            margin-top: 0.2rem;
-        }
-
-        .trust-band .link-action {
-            color: var(--ivory);
-            border-bottom-color: rgba(245, 243, 239, 0.22);
-            flex-shrink: 0;
-        }
-
-        .trust-band .link-action:hover {
-            border-bottom-color: var(--gold);
-            color: var(--gold);
-        }
-
-        /* --- Overview --- */
-        .comm-overview { background: var(--paper); }
-
-        /* --- Who We Help section --- */
-        .who-section {
-            background: var(--ivory);
-            border-top: 1px solid var(--hairline);
-        }
-
-        .who-intro {
-            display: grid;
-            grid-template-columns: 1fr 1.6fr;
-            gap: 4rem;
-            align-items: end;
-            margin-bottom: 3rem;
-        }
-
-        .who-intro h2 {
-            font-size: clamp(1.75rem, 2.6vw, 2.45rem);
-            line-height: 1.14;
-        }
-
-        .who-intro p {
-            color: var(--graphite);
-            line-height: 1.78;
-            font-size: 0.97rem;
-            max-width: 560px;
-        }
-
-        .who-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-            background: var(--hairline);
-            border: 1px solid var(--hairline);
-        }
-
-        .who-card {
-            background: var(--ivory);
-            padding: 2rem 1.75rem;
-            transition: background 0.3s var(--ease);
-        }
-
-        .who-card:hover { background: var(--paper); }
-
-        .who-label {
-            display: block;
-            font-size: 0.67rem;
+            margin-top: 0.85rem;
+            font-size: 0.72rem;
             font-weight: 500;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 0.85rem;
+            color: rgba(245,243,239,0.6);
         }
 
-        .who-card h3 {
-            font-size: 1.12rem;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-        }
-
-        .who-card p {
-            font-size: 0.86rem;
-            color: var(--slate);
-            line-height: 1.72;
-        }
-
-        /* --- Service text section (no image) --- */
-        .service-text { border-top: 1px solid var(--hairline); }
-        .service-text.on-warm { background: var(--ivory-warm); }
-
-        .service-text-inner {
-            display: grid;
-            grid-template-columns: 1fr 1.9fr;
-            gap: 5rem;
-            align-items: start;
-        }
-
-        .service-text-eyebrow { padding-top: 0.5rem; }
-
-        .service-text-body h2 {
-            font-size: clamp(1.75rem, 2.6vw, 2.45rem);
-            margin-bottom: 1.5rem;
-            line-height: 1.14;
-        }
-
-        .service-text-body p {
-            color: var(--graphite);
-            line-height: 1.78;
-            margin-bottom: 1.2rem;
-            max-width: 640px;
-            font-size: 0.97rem;
-        }
-
-        .scope-list {
-            list-style: none;
+        /* ===== Commercial Section ===== */
+        .commercial-section { background: var(--ivory-warm); }
+        .comm-intro-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0.45rem 3rem;
-            margin-top: 1.75rem;
-            max-width: 580px;
+            gap: clamp(1.5rem, 3vw, 2.5rem);
+            align-items: stretch;
+            margin-bottom: 4rem;
         }
-
-        .scope-list li {
-            display: flex;
-            align-items: baseline;
-            gap: 0.6rem;
-            font-size: 0.9rem;
-            color: var(--graphite);
-            line-height: 1.5;
-        }
-
-        .scope-list li::before {
-            content: '—';
-            color: var(--gold);
-            flex-shrink: 0;
-            font-size: 0.78rem;
-        }
-
-        /* --- Service pair (half image, half text) --- */
-        .service-pair-section { border-top: 1px solid var(--hairline); }
-
-        .service-pair {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 560px;
-        }
-
-        .service-pair.reverse { direction: rtl; }
-        .service-pair.reverse > * { direction: ltr; }
-
-        .pair-image {
+        .comm-intro-image {
             position: relative;
-            background: var(--ink);
+            min-height: 480px;
             overflow: hidden;
+            background: var(--ink);
         }
-
-        .pair-image img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
+        .comm-intro-image img {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
             object-fit: cover;
-            opacity: 0.82;
-            filter: saturate(0.78) contrast(0.93);
-            transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-                        opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .service-pair-section:hover .pair-image img {
-            transform: scale(1.03);
             opacity: 0.88;
+            filter: saturate(0.9) contrast(1.02);
         }
-
-        .pair-image::after {
+        .comm-intro-image::after {
             content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to right,
-                rgba(28, 26, 23, 0.28) 0%,
-                rgba(28, 26, 23, 0.04) 68%,
-                transparent 100%
-            );
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(28,26,23,0.62) 0%, rgba(28,26,23,0.18) 55%, transparent 100%);
         }
-
-        .service-pair.reverse .pair-image::after {
-            background: linear-gradient(
-                to left,
-                rgba(28, 26, 23, 0.28) 0%,
-                rgba(28, 26, 23, 0.04) 68%,
-                transparent 100%
-            );
-        }
-
-        .pair-image-caption {
+        .comm-intro-overlay {
             position: absolute;
-            bottom: 2rem;
-            left: 2rem;
-            right: 2rem;
+            bottom: clamp(1.5rem,3vw,2.5rem); left: clamp(1.5rem,3vw,2.5rem); right: clamp(1.5rem,3vw,2.5rem);
             z-index: 1;
+        }
+        .comm-intro-overlay span {
+            display: block;
+            font-size: 0.66rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+            color: rgba(245,243,239,0.65); margin-bottom: 0.85rem;
+        }
+        .comm-intro-overlay p {
             font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 0.88rem;
-            color: rgba(245, 243, 239, 0.62);
-            line-height: 1.5;
+            font-size: clamp(1.35rem,2.2vw,1.75rem);
+            font-style: italic; line-height: 1.3; color: var(--ivory);
         }
-
-        .pair-body {
-            padding: clamp(3.5rem, 6vw, 6rem) clamp(2.75rem, 5vw, 5.5rem);
+        .comm-intro-body {
+            padding: clamp(2rem, 4vw, 3.5rem);
             background: var(--ivory);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .pair-body.on-warm { background: var(--ivory-warm); }
-
-        .pair-body .eyebrow { margin-bottom: 1.5rem; }
-
-        .pair-body h2 {
-            font-size: clamp(1.75rem, 2.6vw, 2.45rem);
-            margin-bottom: 1.5rem;
-            line-height: 1.14;
-        }
-
-        .pair-body p {
-            color: var(--graphite);
-            line-height: 1.78;
-            font-size: 0.97rem;
-            margin-bottom: 1.15rem;
-            max-width: 500px;
-        }
-
-        .pair-body .scope-list { max-width: 500px; }
-
-        /* --- Maintenance scope grid --- */
-        .maintenance-section {
-            background: var(--ivory);
-            border-top: 1px solid var(--hairline);
-        }
-
-        .maintenance-inner {
-            display: grid;
-            grid-template-columns: 1fr 1.65fr;
-            gap: 5.5rem;
-            align-items: start;
-        }
-
-        .maintenance-sidebar {
-            position: sticky;
-            top: 7rem;
-        }
-
-        .maintenance-sidebar .eyebrow { display: block; margin-bottom: 1.5rem; }
-
-        .maintenance-sidebar h2 {
-            font-size: clamp(1.75rem, 2.6vw, 2.45rem);
-            line-height: 1.14;
-            margin-bottom: 1.5rem;
-        }
-
-        .maintenance-sidebar p {
-            color: var(--graphite);
-            line-height: 1.78;
-            font-size: 0.97rem;
-        }
-
-        .maintenance-sidebar .contact-note {
-            margin-top: 2rem;
-            padding-top: 1.75rem;
-            border-top: 1px solid var(--hairline);
-            font-size: 0.84rem;
-            color: var(--slate);
-            line-height: 1.7;
-        }
-
-        .maintenance-sidebar .contact-note a {
-            color: var(--gold-warm);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        .maintenance-scopes {
-            display: grid;
-            gap: 1px;
-            background: var(--hairline);
             border: 1px solid var(--hairline);
+            display: flex; flex-direction: column; justify-content: center;
         }
-
-        .mscope {
-            background: var(--ivory);
-            padding: 1.65rem 2rem 1.65rem 1.75rem;
+        .comm-intro-lead {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.35rem,2.2vw,1.75rem);
+            font-weight: 300; font-style: italic; line-height: 1.4;
+            color: var(--ink); margin-bottom: 1.5rem;
+        }
+        .comm-intro-body > p {
+            color: var(--graphite); line-height: 1.78; font-size: 0.97rem; margin-bottom: 1.15rem;
+        }
+        .comm-services-grid {
             display: grid;
-            grid-template-columns: 5.5rem 1fr;
-            gap: 1.25rem;
-            transition: background 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--hairline);
+            border-left: 1px solid var(--hairline);
         }
-
-        .mscope:hover { background: var(--paper); }
-
-        .mscope-label {
-            font-size: 0.66rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--gold);
-            padding-top: 0.2rem;
-            line-height: 1.4;
+        .comm-service {
+            padding: 2.5rem 2.25rem;
+            border-right: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+            background: var(--ivory-warm);
+            transition: background 0.4s var(--ease);
         }
-
-        .mscope h3 {
-            font-size: 1.18rem;
-            margin-bottom: 0.4rem;
-            line-height: 1.25;
-        }
-
-        .mscope p {
-            font-size: 0.875rem;
-            color: var(--slate);
-            line-height: 1.7;
-        }
-
-        /* --- References band (replaces portfolio placeholder) --- */
-        .refs-band {
-            background: var(--ink);
-            padding: clamp(3rem, 5vw, 4.5rem) 0;
-        }
-
-        .refs-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .refs-text { max-width: 620px; }
-
-        .refs-text .eyebrow {
-            display: block;
-            margin-bottom: 1.25rem;
-            color: var(--greige);
-        }
-
-        .refs-text .eyebrow .dash { background: var(--greige); }
-
-        .refs-text p {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-style: italic;
-            line-height: 1.55;
-            color: rgba(245, 243, 239, 0.75);
-        }
-
-        .refs-credentials {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            flex-shrink: 0;
-        }
-
-        .refs-cred {
-            display: flex;
-            align-items: center;
-            gap: 0.85rem;
-            font-size: 0.82rem;
-            font-weight: 500;
-            letter-spacing: 0.06em;
-            color: rgba(245, 243, 239, 0.65);
-        }
-
-        .refs-cred::before {
-            content: '';
-            width: 5px;
-            height: 5px;
-            background: var(--gold);
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        /* --- Contact section spacing --- */
-        .contact .eyebrow + h2 { margin-top: 1.75rem; }
-
-        /* --- Pair body division link --- */
-        .pair-body .link-action { margin-top: 1.75rem; }
-
-        /* --- Process note (dark section footer text) --- */
-        .process-note {
-            margin-top: 3.5rem;
-            padding-top: 2.25rem;
-            border-top: 1px solid rgba(245, 243, 239, 0.1);
-            font-size: 0.86rem;
-            color: rgba(245, 243, 239, 0.42);
-            max-width: 680px;
-            line-height: 1.75;
-        }
-
-        /* --- Editorial panel (dark pair-image without photo) --- */
-        .pair-image-editorial {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--ink);
-        }
-
-        .editorial-panel {
-            padding: clamp(3rem, 5vw, 5rem);
-            max-width: 400px;
-        }
-
-        .editorial-label {
-            display: block;
-            font-size: 0.66rem;
-            font-weight: 500;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 1.75rem;
-        }
-
-        .editorial-statement {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.35rem, 2vw, 1.75rem);
-            font-style: italic;
-            line-height: 1.5;
-            color: rgba(245, 243, 239, 0.85);
-            margin-bottom: 2rem;
-        }
-
-        .editorial-details {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.7rem;
-        }
-
-        .editorial-details li {
-            font-size: 0.82rem;
-            font-weight: 500;
-            letter-spacing: 0.07em;
-            color: rgba(245, 243, 239, 0.48);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .editorial-details li::before {
-            content: '';
-            width: 16px;
-            height: 1px;
-            background: var(--gold);
-            flex-shrink: 0;
-        }
-
-        .editorial-caption {
-            margin-top: 2.5rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 0.84rem;
-            color: rgba(245, 243, 239, 0.32);
-            line-height: 1.5;
-        }
-
-        /* --- CTA buttons (Contact) --- */
-        .contact-cta-buttons {
-            display: flex;
-            gap: 1.1rem;
-            flex-wrap: wrap;
-        }
-
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.9rem 1.75rem;
+        .comm-service:hover { background: var(--ivory); }
+        .comm-service .service-num {
             font-family: 'Inter', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            white-space: nowrap;
-            transition: background 0.3s var(--ease), border-color 0.3s var(--ease), color 0.3s var(--ease);
+            font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em;
+            color: var(--slate); margin-bottom: 1.25rem; display: block;
+        }
+        .comm-service h3 { font-size: 1.35rem; margin-bottom: 0.85rem; line-height: 1.25; transition: color 0.3s var(--ease); }
+        .comm-service:hover h3 { color: var(--gold-warm); }
+        .comm-service p { color: var(--graphite); line-height: 1.7; font-size: 0.88rem; }
+        .comm-cta {
+            margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--hairline);
+            display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
+        }
+        .comm-cta-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem; font-style: italic; color: var(--graphite); max-width: 480px;
         }
 
-        .cta-btn.primary {
-            background: var(--ink);
-            color: var(--ivory);
-            border: 1px solid var(--ink);
-        }
+        /* ===== Desktop: hide mobile-only elements ===== */
+        .mobile-trust-bar,
+        .mobile-comm-intro,
+        .mobile-why-pgc,
+        .mobile-final-cta { display: none; }
+        /* Headline swap helpers */
+        .headline-mobile, .subhead-mobile { display: none; }
+        .headline-desktop, .subhead-desktop { display: inline; }
 
-        .cta-btn.primary:hover {
-            background: var(--gold-warm);
-            border-color: var(--gold-warm);
-        }
-
-        .cta-btn.secondary {
-            background: transparent;
-            color: var(--ink);
-            border: 1px solid rgba(28, 26, 23, 0.22);
-        }
-
-        .cta-btn.secondary:hover {
-            border-color: var(--ink);
-        }
-
-        /* --- Responsive --- */
+        /* ===== Responsive — Tablet ===== */
         @media (max-width: 1024px) {
-            .who-intro {
+            .trust-grid, .story-layout { grid-template-columns: 1fr; }
+            .story-feature { min-height: 500px; }
+            .comm-intro-grid { grid-template-columns: 1fr; }
+            .comm-intro-image { min-height: 360px; }
+            .comm-services-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { border-bottom: 1px solid rgba(245,243,239,0.1); }
+        }
+        @media (max-width: 720px) {
+            .trust-item { grid-template-columns: 1fr; gap: 0.8rem; }
+            .story-feature, .story-detail { min-height: 340px; }
+            .comm-services-grid { grid-template-columns: 1fr; }
+            .comm-intro-body { padding: 2rem 1.5rem; }
+            .stats-inner { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* ============================================================
+           MOBILE-FIRST REDESIGN — max-width: 640px
+           Think: homeowner on phone, 15 seconds to decide.
+           Premium · Fast · Lead-focused
+        ============================================================ */
+        @media (max-width: 640px) {
+
+            /* --- Headline swap --- */
+            .headline-desktop, .subhead-desktop { display: none; }
+            .headline-mobile, .subhead-mobile { display: inline; }
+
+            /* --- Global spacing --- */
+            .container { padding: 0 1.25rem; }
+            .section-pad { padding: clamp(2.5rem, 8vw, 3.5rem) 0; }
+
+            /* --- Header --- */
+            nav { padding: 1rem 1.25rem; gap: 0; }
+            .nav-links { display: none; }
+            .nav-action { display: none; }
+            .brand-tagline { display: none; }
+            .brand-rule { display: none; }
+            .brand-mark { font-size: 1.35rem; }
+
+            /* --- Hero — stripped to essence --- */
+            .hero { padding: 0; }
+            .hero-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+            /* Image first on mobile */
+            .hero-aside {
+                order: -1;
+                height: 52vw;
+                min-height: 220px;
+                max-height: 300px;
+                position: relative;
+                overflow: hidden;
+            }
+            .hero-aside img {
+                position: absolute; inset: 0;
+                width: 100%; height: 100%;
+                object-fit: cover;
+                object-position: center 30%;
+            }
+            .hero-aside .caption { display: none; }
+            .hero-aside::after {
+                content: '';
+                position: absolute; inset: 0;
+                background: linear-gradient(to bottom, transparent 50%, rgba(28,26,23,0.45));
+            }
+            .hero-text {
+                padding: 2rem 1.25rem 2.25rem;
+                background: var(--ivory);
+            }
+            .hero-text .eyebrow { display: none; }
+            .hero-text h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+                line-height: 1.08;
+                margin-bottom: 0.75rem;
+            }
+            /* Replace h1 content on mobile via a wrapping div approach —
+               we keep h1 but override with a shorter display via CSS */
+            .hero-text h1 { letter-spacing: -0.03em; }
+            .hero-text .lead {
+                font-size: 1rem;
+                line-height: 1.55;
+                margin-bottom: 1.5rem;
+                color: var(--slate);
+            }
+            .hero-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .hero-actions .link-action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem 1.5rem;
+                font-size: 0.8rem;
+                letter-spacing: 0.14em;
+                font-weight: 500;
+                text-transform: uppercase;
+                background: var(--ink);
+                color: var(--ivory);
+                border: none;
+                text-align: center;
+            }
+            .hero-actions .link-action.muted {
+                background: transparent;
+                border: 1px solid var(--hairline);
+                color: var(--graphite);
+            }
+            .hero-actions .arrow { margin-left: 0.5rem; }
+
+            /* --- Mobile trust bar --- */
+            .strip { overflow: hidden; }
+            .strip-inner {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                padding: 0;
+            }
+            .strip-item {
+                padding: 0.85rem 1rem;
+                font-size: 0.7rem;
+                letter-spacing: 0.1em;
+                border-bottom: 1px solid var(--hairline);
+                border-right: 1px solid var(--hairline);
+            }
+            .strip-item:nth-child(even) { border-right: none; }
+            .strip-item:nth-last-child(-n+2) { border-bottom: none; }
+
+            /* --- Mobile trust badges (inline, new element) --- */
+            .mobile-trust-bar {
+                display: flex;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                gap: 0;
+                border-top: 1px solid var(--hairline);
+                border-bottom: 1px solid var(--hairline);
+                background: var(--paper);
+            }
+            .mobile-trust-bar::-webkit-scrollbar { display: none; }
+            .mobile-trust-bar span {
+                flex: 0 0 auto;
+                padding: 0.9rem 1.1rem;
+                font-size: 0.68rem;
+                font-weight: 500;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--graphite);
+                border-right: 1px solid var(--hairline);
+                white-space: nowrap;
+            }
+            .mobile-trust-bar span::before {
+                content: '✓  ';
+                color: var(--gold-deep);
+                font-weight: 700;
+            }
+
+            /* --- About section — hide on mobile (covered by hero) --- */
+            .practice { display: none; }
+
+            /* --- Stats — 2×2 compact grid --- */
+            .stats-row { padding: 0; }
+            .stats-inner { grid-template-columns: 1fr 1fr; }
+            .stat-item {
+                padding: 1.5rem 1.25rem;
+                border-bottom: 1px solid rgba(245,243,239,0.1);
+                border-right: 1px solid rgba(245,243,239,0.1);
+            }
+            .stat-item:nth-child(even) { border-right: none; }
+            .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
+            .stat-number { font-size: 2.6rem; }
+            .stat-label { font-size: 0.62rem; margin-top: 0.4rem; letter-spacing: 0.16em; }
+
+            /* --- Commercial section — 60% shorter on mobile --- */
+            .commercial-section .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            /* Hide the big intro grid */
+            .comm-intro-grid { display: none; }
+            /* Show a compact mobile commercial intro instead */
+            .mobile-comm-intro {
+                display: block;
+                margin-bottom: 1.75rem;
+            }
+            .mobile-comm-intro p {
+                color: var(--graphite);
+                line-height: 1.7;
+                margin-bottom: 1.25rem;
+                font-size: 0.95rem;
+            }
+            .mobile-comm-intro ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+                margin-bottom: 1.25rem;
+            }
+            .mobile-comm-intro ul li {
+                font-size: 0.88rem;
+                color: var(--graphite);
+                padding-left: 1.25rem;
+                position: relative;
+            }
+            .mobile-comm-intro ul li::before {
+                content: '—';
+                position: absolute;
+                left: 0;
+                color: var(--gold-deep);
+            }
+            /* Commercial service cards — show only 4 on mobile */
+            .comm-services-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
-                margin-bottom: 2.5rem;
+                border: none;
+                gap: 1px;
+                background: var(--hairline);
             }
-
-            .who-grid { grid-template-columns: repeat(2, 1fr); }
-
-            .service-text-inner {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            .comm-service {
+                padding: 1.5rem 1.25rem;
+                display: flex;
+                align-items: baseline;
+                gap: 1rem;
             }
-
-            .service-pair {
-                grid-template-columns: 1fr;
-                min-height: auto;
+            .comm-service .service-num { display: none; }
+            .comm-service h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.2rem;
+                flex: 0 0 auto;
+                min-width: 140px;
             }
-
-            .service-pair.reverse { direction: ltr; }
-            .pair-image { min-height: 340px; }
-
-            .maintenance-inner {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
+            .comm-service p {
+                font-size: 0.82rem;
+                line-height: 1.55;
+                color: var(--slate);
             }
-
-            .maintenance-sidebar { position: static; }
-
-            .trust-band-inner {
-                gap: 1.5rem;
+            /* Hide services 5-8 on mobile, but keep Prominent Cleaners (09) visible */
+            .comm-service:nth-child(n+5) { display: none; }
+            .comm-service:nth-child(9) {
+                display: flex;
+                align-items: baseline;
+                gap: 1rem;
             }
-
-            .refs-inner {
+            .comm-cta {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 1rem;
+                padding-top: 1.5rem;
+                margin-top: 1.5rem;
             }
-        }
+            .comm-cta-text { font-size: 1rem; }
 
-        @media (max-width: 720px) {
-            .who-grid { grid-template-columns: 1fr; }
-            .pair-image { min-height: 260px; }
-            .pair-body { padding: 2.75rem 1.75rem; }
-            .pair-body p { max-width: 100%; }
-
-            .scope-list {
+            /* --- How We Work — compact on mobile --- */
+            .trust-section .trust-lead {
+                font-size: 1.65rem;
+                margin-top: 0.75rem;
+                margin-bottom: 1.5rem;
+            }
+            .trust-grid { gap: 1.5rem; }
+            .trust-list { gap: 0; }
+            .trust-item {
                 grid-template-columns: 1fr;
-                gap: 0.45rem;
+                gap: 0.4rem;
+                padding: 1.25rem;
             }
+            .trust-item span { font-size: 0.62rem; }
+            .trust-item h3 { font-size: 1.1rem; }
+            .trust-item p { font-size: 0.85rem; line-height: 1.6; }
 
-            .mscope {
+            /* --- Mobile services grid — clean cards --- */
+            .services .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .services-grid.three-col {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--hairline);
+                border: 1px solid var(--hairline);
+            }
+            .service {
+                padding: 1.4rem 1.1rem;
+                gap: 0.6rem;
+            }
+            .service .service-num { display: none; }
+            .service-icon { width: 22px; height: 22px; margin-bottom: 0.5rem; }
+            .service h3 { font-size: 1rem; line-height: 1.2; margin-bottom: 0.3rem; }
+            .service p { font-size: 0.78rem; line-height: 1.55; color: var(--slate); }
+            .service .link-action { font-size: 0.72rem; margin-top: 0.75rem; }
+
+            /* --- Project section — full-width images --- */
+            .remodeling-story .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .story-layout { gap: 0.75rem; }
+            .story-stack { gap: 0.75rem; }
+            .story-feature { min-height: 260px; }
+            .story-detail { min-height: 200px; }
+            .story-caption h3 { font-size: 1.1rem; }
+            .story-caption span { font-size: 0.6rem; letter-spacing: 0.15em; }
+            .story-note { display: none; }
+
+            /* --- Divisions — stack single column, compact --- */
+            .divisions .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .divisions-list { gap: 1.5rem; }
+            .division-card {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid var(--hairline);
+            }
+            .division-image {
+                height: 200px;
+                flex: none;
+            }
+            .division-body {
+                padding: 1.5rem 1.25rem;
+            }
+            .division-body h3 { font-size: 1.25rem; }
+            .division-body > p { font-size: 0.85rem; line-height: 1.65; }
+            .division-meta { display: none; }
+
+            /* --- Process — compact --- */
+            .approach .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .approach-intro { display: none; }
+            .phases {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--hairline);
+                border: 1px solid var(--hairline);
+            }
+            .phase {
+                padding: 1.35rem 1.1rem;
+                background: var(--ivory);
+            }
+            .phase-num { font-size: 0.62rem; letter-spacing: 0.16em; margin-bottom: 0.5rem; color: var(--gold-deep); }
+            .phase h3 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--ink); }
+            .phase p { font-size: 0.78rem; line-height: 1.55; color: var(--slate); }
+
+            /* --- Work tiles --- */
+            .work .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .work-grid {
                 grid-template-columns: 1fr;
-                gap: 0.5rem;
+                gap: 0.75rem;
+            }
+            .work-tile {
+                height: 240px;
+            }
+            .work-meta { padding: 1rem 1.1rem; }
+            .work-meta .title { font-size: 0.85rem; }
+
+            /* --- Service areas — ultra compact --- */
+            .areas .section-head h2 {
+                font-size: clamp(1.55rem, 6vw, 2rem);
+            }
+            .areas-layout {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .areas-intro p {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.25rem;
+                font-style: italic;
+                color: var(--ink);
+                line-height: 1.4;
+                margin-bottom: 0.6rem;
+            }
+            .areas-intro .meta { font-size: 0.82rem; line-height: 1.65; }
+            .areas-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                border: 1px solid var(--hairline);
+                background: var(--hairline);
+            }
+            .areas-list li {
+                background: var(--ivory);
+                padding: 0.9rem 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.15rem;
+            }
+            .areas-list .name { font-size: 0.88rem; font-weight: 500; color: var(--ink); }
+            .areas-list .zip { font-size: 0.7rem; color: var(--slate); letter-spacing: 0.08em; }
+
+            /* --- Contact section --- */
+            .contact .section-head, .contact h2 {
+                font-size: clamp(1.7rem, 7vw, 2.4rem);
+            }
+            .contact-inner {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: clamp(2.5rem, 8vw, 4rem) 1.25rem;
+            }
+            .contact-lead { font-size: 0.9rem; line-height: 1.7; }
+            .contact-inner > div > div {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .contact-channels {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--hairline);
+                border: 1px solid var(--hairline);
+            }
+            .channel {
+                padding: 1.1rem 1rem;
+                background: var(--ivory);
+                min-width: 0;
+            }
+            .channel .label { font-size: 0.62rem; letter-spacing: 0.16em; }
+            .channel .value { font-size: 0.88rem; overflow-wrap: anywhere; }
+
+            /* --- Contact CTA buttons --- */
+            .contact-inner > div > div a.link-action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                font-size: 0.78rem;
+                letter-spacing: 0.14em;
+                font-weight: 500;
+                text-transform: uppercase;
+                background: var(--ink);
+                color: var(--ivory);
+                text-align: center;
+            }
+            .contact-inner > div > div a.link-action.muted {
+                background: transparent;
+                border: 1px solid var(--hairline);
+                color: var(--graphite);
             }
 
-            .contact-cta-buttons { flex-direction: column; }
-        }
+            /* --- Section heads --- */
+            .section-head { margin-bottom: 1.75rem; }
+            .section-head h2 em { font-size: inherit; }
 
-        /* --- Commercial imagery strip --- */
-        .comm-imagery-strip {
-            overflow: hidden;
-            background: var(--ink);
-            border-top: 1px solid rgba(245,243,239,0.06);
-            border-bottom: 1px solid rgba(245,243,239,0.06);
-        }
-
-        .imagery-strip-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            height: 310px;
-        }
-
-        .imagery-tile {
-            position: relative;
-            overflow: hidden;
-            background: #18160f;
-        }
-
-        .imagery-tile img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: saturate(0.62) brightness(0.76);
-            transition: transform 0.95s cubic-bezier(0.22,1,0.36,1),
-                        filter 0.55s ease;
-        }
-
-        .imagery-tile:hover img {
-            transform: scale(1.07);
-            filter: saturate(0.84) brightness(0.9);
-        }
-
-        .imagery-tile::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to top,
-                rgba(28,26,23,0.85) 0%,
-                rgba(28,26,23,0.12) 55%,
-                transparent 100%
-            );
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .imagery-tile-divider {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 1px;
-            height: 100%;
-            background: rgba(245,243,239,0.07);
-            z-index: 2;
-        }
-
-        .imagery-tile-label {
-            position: absolute;
-            bottom: 1.5rem;
-            left: 1.6rem;
-            z-index: 3;
-        }
-
-        .imagery-tile-label .label-dash {
-            display: block;
-            width: 16px;
-            height: 1px;
-            background: var(--gold);
-            margin-bottom: 0.55rem;
-        }
-
-        .imagery-tile-label .label-text {
-            display: block;
-            font-size: 0.62rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: rgba(245,243,239,0.82);
-        }
-
-        /* --- Roofing section — real photo with overlay --- */
-        .pair-image-roof-photo {
-            position: relative;
-        }
-
-        .pair-image-roof-photo img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.7;
-            filter: saturate(0.65) contrast(0.92);
-            transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-                        opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .service-pair-section:hover .pair-image-roof-photo img {
-            transform: scale(1.03);
-            opacity: 0.78;
-        }
-
-        .pair-image-roof-photo::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(28,26,23,0.86) 0%,
-                rgba(28,26,23,0.6) 50%,
-                rgba(28,26,23,0.22) 100%
-            );
-            z-index: 1;
-        }
-
-        .roof-content-overlay {
-            position: absolute;
-            inset: 0;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: clamp(2.5rem, 4vw, 4.5rem);
-        }
-
-        /* --- Responsive for imagery strip --- */
-        @media (max-width: 900px) {
-            .imagery-strip-grid {
-                grid-template-columns: repeat(2, 1fr);
-                height: 420px;
+            /* --- Mobile-only Why PGC section --- */
+            .mobile-why-pgc {
+                display: block;
+                background: var(--paper);
+                border-top: 1px solid var(--hairline);
+                border-bottom: 1px solid var(--hairline);
             }
-        }
-
-        @media (max-width: 480px) {
-            .imagery-strip-grid {
-                grid-template-columns: repeat(2, 1fr);
-                height: 360px;
+            .mobile-why-pgc .container {
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
             }
+            .mobile-why-pgc h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.1;
+            }
+            .mobile-why-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                background: var(--hairline);
+                border: 1px solid var(--hairline);
+            }
+            .mobile-why-item {
+                background: var(--ivory);
+                padding: 1.25rem 1.1rem;
+            }
+            .mobile-why-item .why-num {
+                display: block;
+                font-size: 0.62rem;
+                font-weight: 500;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--gold-deep);
+                margin-bottom: 0.5rem;
+            }
+            .mobile-why-item h3 {
+                font-size: 1rem;
+                line-height: 1.2;
+                color: var(--ink);
+            }
+
+            /* --- Mobile final CTA section --- */
+            .mobile-final-cta {
+                display: block;
+                background: var(--ink);
+                padding: 3rem 1.25rem;
+                text-align: center;
+            }
+            .mobile-final-cta h2 {
+                color: var(--ivory);
+                font-size: clamp(1.8rem, 7vw, 2.6rem);
+                line-height: 1.1;
+                margin-bottom: 0.6rem;
+            }
+            .mobile-final-cta p {
+                color: rgba(245,243,239,0.6);
+                font-size: 0.9rem;
+                margin-bottom: 2rem;
+                line-height: 1.6;
+            }
+            .mobile-final-cta-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .mobile-final-cta-buttons a {
+                display: block;
+                padding: 1.1rem;
+                font-size: 0.8rem;
+                font-weight: 500;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .mobile-final-cta-buttons .btn-primary {
+                background: var(--gold);
+                color: var(--ink);
+            }
+            .mobile-final-cta-buttons .btn-secondary {
+                border: 1px solid rgba(245,243,239,0.25);
+                color: var(--ivory);
+            }
+
+            /* --- Footer compact --- */
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .footer-brand p { display: none; }
+            .footer-col:nth-child(3) { display: none; }
+            .footer-col h3 { font-size: 0.68rem; margin-bottom: 0.75rem; }
+            .footer-col li { margin-bottom: 0.5rem; }
+            .footer-meta {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+                font-size: 0.72rem;
+            }
+            .credentials { justify-content: center; gap: 0.75rem; font-size: 0.68rem; }
         }
     </style>
-    <link rel="stylesheet" href="../assets/mobile-fixes.css">
+    <link rel="stylesheet" href="/mobile-fixes.css">
 </head>
 <body>
 
+<!-- ============ HEADER ============ -->
 <header id="site-header">
     <nav>
-        <a href="../index.html" class="brand" aria-label="Prominent General Contractors — home">
+        <a href="./" class="brand" aria-label="Prominent General Contractors — home">
             <span class="brand-mark">PGC</span>
             <span class="brand-rule" aria-hidden="true"></span>
-            <span class="brand-tagline">Prominent Cleaners</span>
+            <span class="brand-tagline">General Contractors</span>
         </a>
 
         <ul class="nav-links">
-            <li><a href="../index.html">← PGC Home</a></li>
-            <li><a href="#scope">Scope</a></li>
-            <li><a href="../commercial-cleaning/">All Cleaning Services</a></li>
+            <li><a href="#commercial">Commercial</a></li>
+            <li><a href="#capabilities">Residential</a></li>
+            <li><a href="kingwood-contractor/">Kingwood</a></li>
+            <li><a href="#approach">Process</a></li>
+            <li><a href="#areas">Service Areas</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
 
         <a href="#contact" class="nav-action">
-            Request a Cleaning Quote
+            Begin a Project
             <span aria-hidden="true">→</span>
         </a>
 
@@ -819,150 +841,573 @@
 <main>
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="top">
+<section class="hero hero--photo-first" id="top">
     <div class="container hero-grid">
         <div class="hero-text reveal">
-            <span class="eyebrow"><span class="dash"></span>Prominent Cleaners · Post-Construction · Houston, TX</span>
-            <h1>Post-construction cleaning — <em>the last step before anyone calls a project finished.</em></h1>
-            <p class="lead">Construction dust settles into ductwork, light fixtures, window tracks, cabinet interiors and every horizontal surface a job touches. Prominent Cleaners provides the detailed final clean that gets a newly built or remodeled Houston commercial space genuinely ready for occupancy — not just swept.</p>
+            <span class="eyebrow"><span class="dash"></span>Prominent General Contractors LLC · Houston, TX</span>
+            <h1>
+                <span class="headline-desktop">Premium construction & renovation — commercial build-outs, structural work, and residential remodeling across Houston.</span>
+                <span class="headline-mobile">Premium Remodeling &amp; Commercial Construction</span>
+            </h1>
+            <p class="lead">
+                <span class="subhead-desktop">PGC is a Houston-area general contractor serving commercial property owners, business operators, and homeowners who expect organized execution, honest communication, and work that reflects a real standard of quality.</span>
+                <span class="subhead-mobile">Serving Houston, Kingwood, Humble, Atascocita &amp; The Woodlands.</span>
+            </p>
             <div class="hero-actions">
-                <a href="#contact" class="link-action">Request a Cleaning Quote <span class="arrow">→</span></a>
-                <a href="#scope" class="link-action muted">View Scope</a>
+                <a href="mailto:jordyv@prominentgcllc.com" class="link-action hero-cta-quote">Request a Quote <span class="arrow">→</span></a>
+                <a href="tel:+17138236513" class="link-action muted hero-cta-call">Call Now</a>
             </div>
         </div>
-
-        <figure class="hero-aside has-image reveal">
-            <img
-                src="../assets/stock/office_buildout.jpg"
-                alt="Finished commercial office interior after construction, ready for final detail cleaning"
-                width="1400" height="933"
-                loading="eager"
-                decoding="async">
-            <figcaption class="caption">Finished commercial interior reference — final-clean stage.</figcaption>
-        </figure>
+        <aside class="hero-aside has-image reveal" aria-hidden="true">
+            <picture>
+                <source type="image/webp" srcset="assets/stock/hero_interior-480w.webp 480w, assets/stock/hero_interior-720w.webp 720w, assets/stock/hero_interior-900w.webp 900w, assets/stock/hero_interior-1400w.webp 1400w" sizes="(max-width: 720px) calc(100vw - 48px), (max-width: 1024px) min(520px, calc(100vw - 64px)), 45vw">
+                <img src="assets/stock/hero_interior-900w.jpg"
+                     srcset="assets/stock/hero_interior-480w.jpg 480w, assets/stock/hero_interior-720w.jpg 720w, assets/stock/hero_interior-900w.jpg 900w, assets/stock/hero_interior-1400w.jpg 1400w"
+                     sizes="(max-width: 720px) calc(100vw - 48px), (max-width: 1024px) min(520px, calc(100vw - 64px)), 45vw"
+                     alt="Premium open-concept living room and kitchen remodel — Houston general contractor"
+                     width="1400" height="933" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
+            <p class="caption">Commercial + Residential · Houston Area · Insured</p>
+        </aside>
     </div>
 </section>
-
 
 <!-- ============ STRIP ============ -->
 <div class="strip">
     <div class="container strip-inner">
         <span class="strip-item"><span class="gold-dot"></span>Insured</span>
-        <span class="strip-item"><span class="gold-dot"></span>A Division of Prominent General Contractors LLC</span>
+        <span class="strip-item"><span class="gold-dot"></span>Commercial & Residential</span>
         <span class="strip-item"><span class="gold-dot"></span>5.0 on Google</span>
-        <span class="strip-item"><span class="gold-dot"></span>Final-Clean Before Handoff</span>
-        <span class="strip-item"><span class="gold-dot"></span>Serving Greater Houston</span>
+        <span class="strip-item"><span class="gold-dot"></span>Houston · Kingwood · The Woodlands</span>
         <span class="strip-item"><span class="gold-dot"></span>713 · 823 · 6513</span>
     </div>
 </div>
 
+<!-- ============ MOBILE TRUST BAR (mobile only) ============ -->
+<div class="mobile-trust-bar" aria-hidden="true">
+    <span>Residential &amp; Commercial</span>
+    <span>Houston-Based</span>
+    <span>Fully Insured</span>
+    <span>Free Estimates</span>
+    <span>5.0 Google</span>
+</div>
 
-<!-- ============ OVERVIEW ============ -->
-<section class="practice section-pad comm-overview" id="overview">
+<!-- ============ PRACTICE / ABOUT ============ -->
+<section class="practice section-pad" id="practice">
     <div class="container">
         <div class="practice-grid">
-            <span class="eyebrow reveal"><span class="dash"></span>Why a Dedicated Final Clean</span>
+            <span class="eyebrow reveal"><span class="dash"></span>About PGC</span>
             <div class="practice-body reveal">
-                <p>A finished build and a move-in-ready space are not the same thing. Framing dust, drywall residue, sawdust and adhesive overspray settle into places a general sweep never reaches — and they show up fastest on the surfaces a project just spent money finishing.</p>
-                <p>Prominent Cleaners, the cleaning division of Prominent General Contractors LLC, provides the detailed final clean that closes out a construction or remodeling project properly. For PGC clients, it can be added directly to the project scope. For other contractors and property owners, it's available as a standalone service.</p>
+                <p>Prominent General Contractors LLC is a Houston general contracting firm built for clients who need real construction done right — commercial improvements, structural work, and residential remodeling handled under one organized contractor.</p>
+                <p>We work with commercial property owners, business operators, property managers, and homeowners who value clear scopes, accountable scheduling, and professional execution over the cheapest available bid. Every engagement is contractor-led, with a written scope before any deposit is taken.</p>
+                <p>Our commercial scope covers tenant improvements, office build-outs, commercial painting and drywall, demolition, door installation, TPO roofing, structural repairs, restroom renovations, ADA improvements, and property maintenance. Our residential work spans kitchens, bathrooms, flooring, cabinetry, tile, carpentry, and full interior remodels — delivered through the same organized process we bring to every commercial project.</p>
             </div>
         </div>
     </div>
 </section>
 
-
-<!-- ============ SCOPE ============ -->
-<section class="service-pair-section" id="scope">
-    <div class="service-pair reverse reveal">
-        <div class="pair-image">
-            <img
-                src="../assets/inspiration/cleaning/cleaning_supplies_desk_detail.jpg"
-                alt="Clean, organized workspace after a professional detail clean"
-                width="1400" height="1867"
-                loading="lazy"
-                decoding="async">
-            <p class="pair-image-caption">Design and material inspiration — final-detail cleaning reference.</p>
+<!-- ============ STATS ============ -->
+<div class="stats-row">
+    <div class="container">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-number">5.<em>0</em></span>
+                <span class="stat-label">Google Rating</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">8<em>+</em></span>
+                <span class="stat-label">Years Serving Houston</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2<em>×</em></span>
+                <span class="stat-label">Commercial + Residential</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Point of Contact, Always</span>
+            </div>
         </div>
-        <div class="pair-body">
-            <span class="eyebrow"><span class="dash"></span>What's Included</span>
-            <h2>A final clean scoped to what construction actually leaves behind.</h2>
-            <p>This isn't a general janitorial visit — it's a detail pass built around what a construction or remodeling project generates: fine dust, finish residue, protective-film adhesive and debris in places standard cleaning skips.</p>
-            <ul class="scope-list">
-                <li>Full dust and debris removal, all surfaces</li>
-                <li>Window, sill and track detailing</li>
-                <li>Cabinet and drawer interior wipe-down</li>
-                <li>Light fixture and HVAC vent detailing</li>
-                <li>Floor detail cleaning by surface type</li>
-                <li>Baseboard, trim and door casing wipe-down</li>
-                <li>Bathroom and fixture detailing</li>
-                <li>Protective film and label/adhesive removal</li>
-                <li>Final walkthrough-ready presentation</li>
+    </div>
+</div>
+
+<!-- ============ COMMERCIAL ============ -->
+<section class="commercial-section section-pad" id="commercial">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>01 — Commercial Services</span>
+            <h2>A serious commercial contractor for Houston property owners, operators, and growing businesses.</h2>
+        </div>
+
+        <!-- Mobile-only commercial intro -->
+        <div class="mobile-comm-intro reveal">
+            <p>We help businesses, offices, and property managers maintain and improve their spaces with professional construction services.</p>
+            <ul>
+                <li>Tenant improvements &amp; office build-outs</li>
+                <li>Commercial painting &amp; drywall</li>
+                <li>TPO roofing &amp; structural repairs</li>
+                <li>Demolition &amp; door installation</li>
+                <li>Restroom &amp; ADA renovations</li>
+                <li>Make-ready &amp; property turnover</li>
+            </ul>
+            <a href="commercial-improvements-maintenance.html" class="link-action">All commercial services <span class="arrow">→</span></a>
+        </div>
+
+        <div class="comm-intro-grid reveal">
+            <div class="comm-intro-image">
+                <img src="assets/stock/commercial_office.jpg"
+                     alt="Modern commercial office interior — PGC tenant improvement and buildout reference"
+                     width="1400" height="933" loading="lazy" decoding="async">
+                <div class="comm-intro-overlay">
+                    <span>Commercial Construction · Houston, TX</span>
+                    <p>Professional construction solutions without the chaos — built for businesses and property managers who need organized execution.</p>
+                </div>
+            </div>
+            <div class="comm-intro-body">
+                <p class="comm-intro-lead">"Commercial renovations executed with planning, communication, and accountability."</p>
+                <p>PGC handles commercial construction that requires a real contractor — not a handyman and not an oversized firm that doesn't return calls. We work with tenants, landlords, property managers, and business owners who need commercial improvements done on schedule and done correctly.</p>
+                <p>From a single office refresh to a full TPO roof replacement with polyiso insulation, every commercial scope begins with a written proposal, realistic schedule, and clear definition of what the work includes — before any deposit is taken.</p>
+                <a href="commercial-improvements-maintenance.html" class="link-action" style="margin-top: 1.75rem; display: inline-flex;">View all commercial services <span class="arrow">→</span></a>
+            </div>
+        </div>
+
+        <div class="comm-services-grid reveal">
+            <article class="comm-service">
+                <span class="service-num">— 01</span>
+                <h3>Tenant Improvements</h3>
+                <p>Office build-outs, suite expansions, and retail improvements planned around your lease and your operations. Scoped in writing from the first site walk.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 02</span>
+                <h3>Commercial Painting & Drywall</h3>
+                <p>Interior and exterior commercial painting, framing modifications, sheetrock, texture matching and surface refinishing for commercial properties across Houston.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 03</span>
+                <h3>Demolition Services</h3>
+                <p>Selective interior demolition, framing tear-out and site prep for commercial renovation scopes — clean, safely staged and logistically coordinated.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 04</span>
+                <h3>Door Installation & Hardware</h3>
+                <p>Commercial door installation, hardware, door closers, ADA-compliant configurations and storefront coordination across Houston commercial properties.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 05</span>
+                <h3>Commercial Roofing</h3>
+                <p>Full TPO roof replacements with polyiso insulation systems, membrane repairs, seam welding, flashing and leak remediation for flat and low-slope commercial roofs.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 06</span>
+                <h3>Structural Repairs</h3>
+                <p>Structural and exterior repairs handled with the same organized process as finish work — inspected, scoped in writing, and executed with proper coordination.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 07</span>
+                <h3>Restroom & ADA Renovations</h3>
+                <p>Commercial restroom renovations, ADA-related improvements and accessible design upgrades for offices, retail, medical suites and hospitality properties.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 08</span>
+                <h3>Make-Ready & Property Turnover</h3>
+                <p>Suite assessments, damage documentation, punch-list corrections and re-lease readiness programs for property managers and commercial landlords.</p>
+            </article>
+            <article class="comm-service">
+                <span class="service-num">— 09</span>
+                <h3>Prominent Cleaners</h3>
+                <p>Commercial and post-construction cleaning for offices, tenant improvements, property turnovers and completed construction projects — from build to final clean, one accountable team.</p>
+                <a href="commercial-cleaning/" class="link-action" style="margin-top: 0.85rem; display: inline-flex; font-size: 0.85rem;">Explore Cleaning Services <span class="arrow">→</span></a>
+            </article>
+        </div>
+
+        <div class="comm-cta reveal">
+            <p class="comm-cta-text">Commercial project photography and scope references available to qualified prospects on request.</p>
+            <a href="commercial-improvements-maintenance.html" class="link-action">Full commercial services page <span class="arrow">→</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HOW WE WORK ============ -->
+<section class="trust-section section-pad" id="how-we-work">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="reveal">
+                <span class="eyebrow"><span class="dash"></span>How We Work</span>
+                <p class="trust-lead">Every project — commercial or residential — starts with a clear scope and ends with a clean handover.</p>
+            </div>
+
+            <div class="trust-list reveal">
+                <article class="trust-item">
+                    <span>Scope</span>
+                    <div>
+                        <h3>Written scope before any deposit.</h3>
+                        <p>We define what is included, what is not, and what decisions need to be made — in writing — before you commit to anything.</p>
+                    </div>
+                </article>
+                <article class="trust-item">
+                    <span>Schedule</span>
+                    <div>
+                        <h3>Realistic timelines and steady communication.</h3>
+                        <p>Clients know when crews are expected, when materials arrive, and what milestone comes next. No surprises, no chasing the contractor.</p>
+                    </div>
+                </article>
+                <article class="trust-item">
+                    <span>Closeout</span>
+                    <div>
+                        <h3>Clean sites and documented final walkthroughs.</h3>
+                        <p>We close every project with a walk-through, a punch list, and documentation — residential or commercial, small scope or large.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ RESIDENTIAL CAPABILITIES ============ -->
+<section class="services section-pad" id="capabilities">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>02 — Residential Remodeling</span>
+            <h2>Premium residential remodeling for the rooms Kingwood and Houston homeowners use every day.</h2>
+        </div>
+
+        <div class="services-grid three-col reveal">
+            <article class="service">
+                <span class="service-num">— 01</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18"/><path d="M3 10h18M10 3v18"/></svg>
+                <h3>Kitchen Remodels</h3>
+                <p>Kitchen renovations with cabinetry, countertops, flooring, hardware, backsplash tile and finish work coordinated as one clear project.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 02</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg>
+                <h3>Shower & Bathroom Remodels</h3>
+                <p>Shower remodels, bathroom updates, tile, vanities, tubs, glass, waterproofing and clean transitions built around daily use.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 03</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                <h3>Cabinets & Countertops</h3>
+                <p>Cabinet installation, upgrades, hardware, countertop coordination and the finish details that make kitchens and baths feel resolved.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 04</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 6h16v12H4z"/><path d="M4 10h16"/></svg>
+                <h3>Tile, Carpentry & Interiors</h3>
+                <p>Tile work, trim, casing, finish carpentry, doors, paint coordination and interior updates that connect one room to the next.</p>
+            </article>
+
+            <article class="service">
+                <span class="service-num">— 05</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14.7 6.3a4 4 0 1 1-3 6.7L4 21l-1-1 7-7.7a4 4 0 0 1 4.7-6Z"/></svg>
+                <h3>Specialty Flooring</h3>
+                <p>Waterproof LVP, tile flooring and flooring scopes delivered through PGC Flooring with proper subfloor prep and clean finish transitions.</p>
+            </article>
+
+            <article class="service" style="background: rgba(201,165,97,0.04);">
+                <span class="service-num">— 06</span>
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 20h20M4 20V10l8-6 8 6v10"/></svg>
+                <h3>Roofing & Exterior</h3>
+                <p>Residential and commercial roofing repairs, roof coatings, exterior structural work and building envelope improvements across Houston.</p>
+                <a href="commercial-improvements-maintenance.html#roofing" class="link-action" style="margin-top: 1.5rem;">Commercial roofing <span class="arrow">→</span></a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ REMODELING STORY ============ -->
+<section class="remodeling-story section-pad" id="remodeling-story">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>03 — Project Work</span>
+            <h2>Kitchens, bathrooms, cabinetry, tile and finish carpentry — delivered as one organized project.</h2>
+        </div>
+
+        <div class="story-layout reveal">
+            <article class="story-feature">
+                <img src="assets/stock/kitchen_white_island.jpg" alt="Kitchen island and open-concept living area — modern kitchen remodel — Houston general contractor" width="1400" height="933" loading="lazy" decoding="async">
+                <div class="story-caption">
+                    <span>Kitchen · Cabinetry · Countertops</span>
+                    <h3>The kitchen is planned as a room people live in, not just a set of finishes.</h3>
+                </div>
+            </article>
+
+            <div class="story-stack">
+                <article class="story-detail">
+                    <img src="assets/stock/bathroom_modern.jpg" alt="Bathroom shower remodel — modern walk-in shower with glass enclosure" width="1400" height="933" loading="lazy" decoding="async">
+                    <div class="story-caption">
+                        <span>Shower · Bathroom · Tile</span>
+                        <h3>Wet areas need layout, waterproofing, glass and material transitions handled together.</h3>
+                    </div>
+                </article>
+
+                <article class="story-detail">
+                    <img src="assets/stock/interior_living.jpg" alt="Interior hall detail and finish carpentry — modern kitchen remodel — Houston general contractor" width="1400" height="933" loading="lazy" decoding="async">
+                    <div class="story-caption">
+                        <span>Carpentry · Trim · Interior Finish</span>
+                        <h3>The finish details are what make the remodel feel settled and well built.</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <p class="story-note reveal">Photography from a completed PGC residential remodel — kitchen, bathroom and interior finish work delivered for a Northeast Houston homeowner.</p>
+    </div>
+</section>
+
+<!-- ============ DIVISIONS ============ -->
+<section class="divisions section-pad" id="divisions">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>04 — Divisions & Service Areas</span>
+            <h2>Specialty divisions and dedicated service pages operating under the Prominent General Contractors name.</h2>
+        </div>
+
+        <div class="divisions-list reveal">
+            <a href="commercial-improvements-maintenance.html" class="division-card">
+                <div class="division-image has-image">
+                    <img src="assets/stock/office_buildout.jpg"
+                         alt="Professional commercial office interior — PGC commercial improvements Houston"
+                         width="1400" height="933" loading="lazy" decoding="async">
+                    <div class="division-mark">
+                        <span class="mark">PGC</span>
+                        <span class="rule" aria-hidden="true"></span>
+                        <span class="label">Commercial</span>
+                    </div>
+                </div>
+                <div class="division-body">
+                    <span class="eyebrow"><span class="dash"></span>Commercial Services — Houston TX</span>
+                    <h3>Commercial improvements and renovations for Houston property owners and business operators.</h3>
+                    <p>Tenant improvements, office build-outs, commercial painting, drywall, demolition, door installation, structural repairs, TPO roofing, ADA improvements, and property maintenance programs — handled as a complete, organized commercial scope.</p>
+                    <div class="division-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span class="meta-value">Commercial GC</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Clients</span>
+                            <span class="meta-value">Tenants · Landlords · PM Firms</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Coverage</span>
+                            <span class="meta-value">Houston Metro</span>
+                        </div>
+                    </div>
+                    <span class="link-action">Commercial services page <span class="arrow">→</span></span>
+                </div>
+            </a>
+
+            <a href="Flooring_Division/" class="division-card">
+                <div class="division-image has-image">
+                    <img src="assets/stock/lvp_flooring.jpg" alt="Premium luxury vinyl plank flooring — PGC Flooring Division" width="1400" height="933" loading="lazy" decoding="async">
+                    <div class="division-mark">
+                        <span class="mark">PGC</span>
+                        <span class="rule" aria-hidden="true"></span>
+                        <span class="label">Flooring</span>
+                    </div>
+                </div>
+                <div class="division-body">
+                    <span class="eyebrow"><span class="dash"></span>Division — Flooring</span>
+                    <h3>PGC Flooring — premium waterproof LVP, residential and commercial.</h3>
+                    <p>Our specialty division for focused flooring projects. Premium waterproof luxury vinyl plank, proper subfloor preparation, and clean installation across kitchens, baths, mudrooms and commercial spaces throughout Greater Houston.</p>
+                    <div class="division-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span class="meta-value">Waterproof LVP</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Sectors</span>
+                            <span class="meta-value">Residential · Commercial</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Coverage</span>
+                            <span class="meta-value">Greater Houston</span>
+                        </div>
+                    </div>
+                    <span class="link-action">Visit the Flooring Division <span class="arrow">→</span></span>
+                </div>
+            </a>
+
+            <a href="kingwood-contractor/" class="division-card">
+                <div class="division-image has-image">
+                    <img src="assets/stock/kitchen_modern.jpg"
+                         alt="Completed PGC kitchen and open-concept living remodel — Kingwood TX"
+                         width="1400" height="933" loading="lazy" decoding="async">
+                    <div class="division-mark">
+                        <span class="mark">PGC</span>
+                        <span class="rule" aria-hidden="true"></span>
+                        <span class="label">Kingwood</span>
+                    </div>
+                </div>
+                <div class="division-body">
+                    <span class="eyebrow"><span class="dash"></span>Service Area — Kingwood TX</span>
+                    <h3>Kingwood homeowners and businesses trust PGC for quality renovations, repairs, and flooring done right.</h3>
+                    <p>We know these homes. The character of the neighborhoods, the age of the construction, and what it takes to do this work correctly in Kingwood — from kitchen and bathroom remodels to flooring, roofing and commercial renovations in the Kingwood business corridor.</p>
+                    <div class="division-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Zip Codes</span>
+                            <span class="meta-value">77345 · 77339 · 77346</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Services</span>
+                            <span class="meta-value">Full Scope</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Homes Built</span>
+                            <span class="meta-value">1970 — 1999</span>
+                        </div>
+                    </div>
+                    <span class="link-action">Kingwood service page <span class="arrow">→</span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ APPROACH / PROCESS ============ -->
+<section class="approach section-pad" id="approach">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>05 — Process</span>
+            <h2>A clear, phased process — <em>and a payment structure that follows the work.</em></h2>
+        </div>
+
+        <p class="approach-intro reveal">Commercial or residential — every project is organized around defined milestones rather than open-ended billing. You see exactly what is happening, when it is happening, and what is being paid for at each step. Payments accepted via Zelle, ACH, and credit or debit card through Stripe.</p>
+
+        <div class="phases reveal">
+            <div class="phase">
+                <span class="phase-num">— Phase 01</span>
+                <h3>Site Walk & Scope</h3>
+                <p>An on-site visit, a clear conversation about scope, materials and timeline, and a written proposal before anything is signed or paid.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 02</span>
+                <h3>Initial Deposit</h3>
+                <p>A modest deposit reserves your project window and begins material specification. Schedule and prep work are confirmed in writing.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 03</span>
+                <h3>Active Work</h3>
+                <p>Materials arrive, the workspace is prepared, and work begins per the schedule. Progress payments are tied to clear milestones — never to a calendar date.</p>
+            </div>
+            <div class="phase">
+                <span class="phase-num">— Phase 04</span>
+                <h3>Final Walk & Closeout</h3>
+                <p>A walk-through, punch list, clean handover and final invoice. Documentation is provided and the relationship continues for future work.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SELECTED WORK ============ -->
+<section class="work section-pad" id="work">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>06 — Project Reference</span>
+            <h2>Material and finish references from completed PGC projects.</h2>
+        </div>
+
+        <div class="work-grid reveal">
+            <a href="Flooring_Division/" class="work-tile has-image">
+                <img src="assets/stock/kitchen_living_open.jpg" alt="Open-concept interior with warm wood flooring — Houston remodeling" width="1400" height="933" loading="lazy" decoding="async">
+                <div class="work-meta">
+                    <span class="place">Flooring · LVP Installation</span>
+                    <span class="title">Warm natural oak LVP — open plan continuity, premium material</span>
+                </div>
+            </a>
+            <a href="Bathroom_Remodels/" class="work-tile has-image">
+                <img src="assets/stock/bath_marble_double.jpg" alt="Modern double-vanity bathroom with marble finish — Houston remodel" width="900" height="600" loading="lazy" decoding="async">
+                <div class="work-meta">
+                    <span class="place">Bathroom · Vanity & Tile</span>
+                    <span class="title">Vanity, countertop and tile finish — completed project</span>
+                </div>
+            </a>
+            <a href="Bathroom_Remodels/" class="work-tile has-image">
+                <img src="assets/stock/shower_modern.jpg" alt="Modern bathroom with walk-in shower and tile — Houston remodel" width="900" height="600" loading="lazy" decoding="async">
+                <div class="work-meta">
+                    <span class="place">Bathroom · Tub & Wet Area</span>
+                    <span class="title">Tub surround, tile and wet-area finish — completed project</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICE AREAS ============ -->
+<section class="areas section-pad" id="areas">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow"><span class="dash"></span>07 — Service Areas</span>
+            <h2>Commercial and residential service across the Houston metro.</h2>
+        </div>
+
+        <div class="areas-layout">
+            <div class="areas-intro reveal">
+                <p>"We work where we can show up consistently — and travel for commercial projects of the right scope."</p>
+                <span class="meta">Primary radius: Northeast Harris County, Kingwood, Atascocita, Humble and the surrounding communities. Commercial work extends across the Houston metro on request — including The Woodlands, Katy, Sugar Land and Missouri City.</span>
+            </div>
+
+            <ul class="areas-list reveal">
+                <li><span class="name">Kingwood</span><span class="zip">TX 77345</span></li>
+                <li><span class="name">The Woodlands</span><span class="zip">TX 77380</span></li>
+                <li><span class="name">Atascocita</span><span class="zip">TX 77346</span></li>
+                <li><span class="name">Katy</span><span class="zip">TX 77450</span></li>
+                <li><span class="name">Humble</span><span class="zip">TX 77338</span></li>
+                <li><span class="name">Sugar Land</span><span class="zip">TX 77479</span></li>
+                <li><span class="name">Northeast Houston</span><span class="zip">Harris County</span></li>
+                <li><span class="name">Missouri City</span><span class="zip">TX 77459</span></li>
             </ul>
         </div>
     </div>
 </section>
 
-
-<!-- ============ WHO THIS IS FOR ============ -->
-<section class="who-section section-pad" id="who">
+<!-- ============ MOBILE: WHY PGC (mobile only) ============ -->
+<section class="mobile-why-pgc" aria-label="Why choose PGC">
     <div class="container">
-        <div class="who-intro reveal">
-            <h2>Who calls for a post-construction clean.</h2>
-            <p>Anyone closing out a build in Greater Houston who needs the space to actually look finished before someone else sees it.</p>
-        </div>
-
-        <div class="who-grid reveal">
-            <div class="who-card">
-                <span class="who-label">PGC Clients</span>
-                <h3>Remodels &amp; commercial build-outs</h3>
-                <p>Add final cleaning to your existing PGC project scope — one contractor, one point of contact, no second vendor to schedule around the finish date.</p>
+        <h2>Why Choose PGC</h2>
+        <div class="mobile-why-list">
+            <div class="mobile-why-item">
+                <span class="why-num">01</span>
+                <h3>Professional Communication</h3>
             </div>
-            <div class="who-card">
-                <span class="who-label">Other Contractors</span>
-                <h3>A reliable final-clean partner</h3>
-                <p>General contractors who need a dependable final clean before a client walkthrough, without adding it to their own crew's workload.</p>
+            <div class="mobile-why-item">
+                <span class="why-num">02</span>
+                <h3>Clear Project Scopes</h3>
             </div>
-            <div class="who-card">
-                <span class="who-label">Property Owners</span>
-                <h3>Newly finished or renovated space</h3>
-                <p>Business owners and landlords preparing a newly built or renovated space for tenants, staff or opening day.</p>
+            <div class="mobile-why-item">
+                <span class="why-num">03</span>
+                <h3>Quality Workmanship</h3>
             </div>
-            <div class="who-card">
-                <span class="who-label">Property Managers</span>
-                <h3>Post-renovation turnover</h3>
-                <p>Suites coming out of a renovation scope, ready to combine with make-ready work for a single, coordinated turnover.</p>
+            <div class="mobile-why-item">
+                <span class="why-num">04</span>
+                <h3>Residential &amp; Commercial</h3>
             </div>
         </div>
     </div>
 </section>
 
-
-<!-- ============ CROSS-SELL ============ -->
-<section class="service-text on-warm section-pad" id="more-services">
-    <div class="container">
-        <div class="service-text-inner reveal">
-            <div class="service-text-eyebrow">
-                <span class="eyebrow"><span class="dash"></span>Beyond the Final Clean</span>
-            </div>
-            <div class="service-text-body">
-                <h2>Need ongoing cleaning, not just a one-time final clean?</h2>
-                <p>Prominent Cleaners also provides recurring commercial office cleaning, tenant turnover and make-ready cleaning, and move-in / move-out cleaning across Greater Houston — see the full <a href="../commercial-cleaning/" class="link-action" style="font-size:inherit">Prominent Cleaners service menu</a> for details.</p>
-            </div>
-        </div>
+<!-- ============ MOBILE: FINAL CTA (mobile only) ============ -->
+<section class="mobile-final-cta" aria-label="Start a project">
+    <h2>Planning a Project?</h2>
+    <p>Get a quote from PGC today. No pressure, no sales call.</p>
+    <div class="mobile-final-cta-buttons">
+        <a href="mailto:jordyv@prominentgcllc.com" class="btn-primary">Request a Quote</a>
+        <a href="tel:+17138236513" class="btn-secondary">Call Now — 713 · 823 · 6513</a>
     </div>
 </section>
-
 
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
     <div class="container contact-inner">
         <div class="reveal">
-            <span class="eyebrow"><span class="dash"></span>Request a Cleaning Quote</span>
-            <h2>Tell us about the <em>project, the finish date, and what's left to clean.</em></h2>
-            <p class="contact-lead">Most post-construction cleaning conversations start with a short call and a target completion date. We provide a clear scope before any deposit and schedule the final clean around your finish date.</p>
-            <div class="contact-cta-buttons">
-                <a href="tel:+17138236513" class="cta-btn primary">Call or Text 713-823-6513</a>
-                <a href="mailto:jordyv@prominentgcllc.com" class="cta-btn secondary">Email a Cleaning Inquiry</a>
+            <span class="eyebrow"><span class="dash"></span>08 — Begin a Project</span>
+            <h2>Tell us about your <em>project, your timeline, and what you need built.</em></h2>
+            <p class="contact-lead">Commercial or residential — most conversations start with a short call or text, followed by an on-site visit. There is no quote pressure and no sales call. Just a clear conversation about scope, timeline and what the work actually involves.</p>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                <a href="tel:+17138236513" class="link-action">Call or Text <span class="arrow">→</span></a>
+                <a href="commercial-improvements-maintenance.html" class="link-action muted">Commercial Services <span class="arrow">→</span></a>
             </div>
         </div>
 
@@ -981,7 +1426,7 @@
             </div>
             <div class="channel">
                 <span class="label">Service Area</span>
-                <span class="value">Greater Houston, TX</span>
+                <span class="value">Houston Metro · TX</span>
             </div>
         </div>
     </div>
@@ -989,6 +1434,7 @@
 
 </main>
 
+<!-- ============ FOOTER ============ -->
 <footer>
     <div class="container">
         <div class="footer-grid">
@@ -996,30 +1442,30 @@
                 <div class="brand">
                     <span class="brand-mark">PGC</span>
                     <span class="brand-rule" aria-hidden="true"></span>
-                    <span class="brand-tagline">Prominent Cleaners</span>
+                    <span class="brand-tagline">General Contractors</span>
                 </div>
-                <p>Prominent Cleaners is the commercial and post-construction cleaning service of Prominent General Contractors LLC — insured and serving Greater Houston.</p>
+                <p>Prominent General Contractors LLC — a Houston commercial and residential general contracting firm. Insured and serving the Houston metro area.</p>
             </div>
 
             <div class="footer-col">
-                <h3>Cleaning Services</h3>
+                <h3>Company</h3>
                 <ul>
-                    <li><a href="#scope">Post-Construction Cleaning</a></li>
-                    <li><a href="../commercial-cleaning/#office-cleaning">Commercial Office Cleaning</a></li>
-                    <li><a href="../commercial-cleaning/#turnover">Tenant Turnover Cleaning</a></li>
-                    <li><a href="../commercial-cleaning/#movein">Move-In / Move-Out Cleaning</a></li>
-                    <li><a href="../commercial-cleaning/">All Cleaning Services</a></li>
+                    <li><a href="#commercial">Commercial Services</a></li>
+                    <li><a href="#capabilities">Residential</a></li>
+                    <li><a href="#approach">Process</a></li>
+                    <li><a href="about.html">About PGC</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h3>Prominent General Contractors</h3>
+                <h3>Divisions & Areas</h3>
                 <ul>
-                    <li><a href="../index.html">PGC Home</a></li>
-                    <li><a href="../commercial-improvements-maintenance.html">Commercial Improvements</a></li>
-                    <li><a href="../Flooring_Division/index.html">Flooring &amp; Remodeling</a></li>
-                    <li><a href="../Kitchen_Remodels/index.html">Kitchen Remodels</a></li>
-                    <li><a href="../Bathroom_Remodels/index.html">Bathroom Remodels</a></li>
+                    <li><a href="commercial-improvements-maintenance.html">PGC Commercial</a></li>
+                    <li><a href="commercial-cleaning/">Prominent Cleaners</a></li>
+                    <li><a href="Flooring_Division/">PGC Flooring</a></li>
+                    <li><a href="Kitchen_Remodels/">Kitchen Remodels</a></li>
+                    <li><a href="Bathroom_Remodels/">Bathroom Remodels</a></li>
+                    <li><a href="kingwood-contractor/">Kingwood TX</a></li>
                 </ul>
             </div>
 
@@ -1028,7 +1474,7 @@
                 <ul>
                     <li><a href="tel:+17138236513">713 · 823 · 6513</a></li>
                     <li><a href="mailto:jordyv@prominentgcllc.com">jordyv@prominentgcllc.com</a></li>
-                    <li><a href="#contact">Request a cleaning quote</a></li>
+                    <li><a href="#contact">Schedule a visit</a></li>
                     <li><a href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc" target="_blank" rel="noopener">Google Reviews</a></li>
                 </ul>
             </div>
@@ -1046,24 +1492,21 @@
 </footer>
 
 <script>
-    /* Header scroll state */
     const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 24);
     }, { passive: true });
 
-    /* Mobile menu */
     const toggle = document.getElementById('menuToggle');
     if (toggle) toggle.addEventListener('click', () => header.classList.toggle('menu-open'));
 
-    /* Reveal on scroll */
     const revealEls = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
         const io = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
                 if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
         revealEls.forEach(el => io.observe(el));
         window.setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 1400);
     } else {
