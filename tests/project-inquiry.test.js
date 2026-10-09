@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { handler } = require('./project-inquiry');
+const { handler } = require('../netlify/functions/project-inquiry');
 
 const valid = {
   division: 'COMMERCIAL', name: 'Pat Rivera', email: 'pat@example.com', location: 'Houston, TX',
