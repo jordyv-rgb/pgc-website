@@ -10,9 +10,17 @@ const TIMELINES = ['ASAP', 'ONE_TO_THREE_MONTHS', 'THREE_TO_SIX_MONTHS', 'PLANNI
 const DIVISIONS = ['COMMERCIAL', 'RESIDENTIAL'];
 const SITE_URL = 'https://prominentgcllc.com/';
 
+// The site is served from GitHub Pages, so the browser calls this function cross-origin.
+const ALLOWED_ORIGINS = ['https://prominentgcllc.com', 'https://www.prominentgcllc.com'];
+let corsOrigin = '';
+
 const json = (statusCode, body) => ({
   statusCode,
-  headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
+  headers: {
+    'Content-Type': 'application/json',
+    'Cache-Control': 'no-store',
+    ...(corsOrigin ? { 'Access-Control-Allow-Origin': corsOrigin, Vary: 'Origin' } : {}),
+  },
   body: JSON.stringify(body),
 });
 
@@ -54,6 +62,21 @@ function validate(p) {
 }
 
 exports.handler = async (event) => {
+  const origin = (event.headers && (event.headers.origin || event.headers.Origin)) || '';
+  corsOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : '';
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: corsOrigin ? 204 : 403,
+      headers: corsOrigin ? {
+        'Access-Control-Allow-Origin': corsOrigin,
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Max-Age': '86400',
+        Vary: 'Origin',
+      } : {},
+      body: '',
+    };
+  }
   if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
 
   let input;

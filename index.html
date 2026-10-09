@@ -1516,6 +1516,10 @@
     var form = document.getElementById('inquiryForm');
     if (!form) return;
     var status = document.getElementById('inquiryStatus');
+    // prominentgcllc.com is hosted on GitHub Pages; the function lives on the Netlify site.
+    var INQUIRY_ENDPOINT = /netlify\.app$/.test(location.hostname)
+        ? '/.netlify/functions/project-inquiry'
+        : 'https://venerable-sorbet-e234b0.netlify.app/.netlify/functions/project-inquiry';
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         var data = new FormData(form);
@@ -1526,7 +1530,7 @@
         var button = form.querySelector('button');
         button.disabled = true;
         status.textContent = 'Sending…';
-        fetch('/.netlify/functions/project-inquiry', {
+        fetch(INQUIRY_ENDPOINT, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
