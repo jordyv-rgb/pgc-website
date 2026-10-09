@@ -55,3 +55,15 @@ test('unconfigured server returns 503', async () => {
   delete process.env.BOT_API_SECRET_INTAKE;
   assert.strictEqual((await post(valid)).statusCode, 503);
 });
+
+test('CORS: preflight and responses allow only the site origins', async () => {
+  const ok = await handler({ httpMethod: 'OPTIONS', headers: { origin: 'https://prominentgcllc.com' } });
+  assert.strictEqual(ok.statusCode, 204);
+  assert.strictEqual(ok.headers['Access-Control-Allow-Origin'], 'https://prominentgcllc.com');
+  const bad = await handler({ httpMethod: 'OPTIONS', headers: { origin: 'https://evil.example' } });
+  assert.strictEqual(bad.statusCode, 403);
+  assert.strictEqual(bad.headers['Access-Control-Allow-Origin'], undefined);
+  global.fetch = async () => ({ ok: true, status: 200 });
+  const res = await handler({ httpMethod: 'POST', headers: { origin: 'https://www.prominentgcllc.com' }, body: JSON.stringify(valid) });
+  assert.strictEqual(res.headers['Access-Control-Allow-Origin'], 'https://www.prominentgcllc.com');
+});
