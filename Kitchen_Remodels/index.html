@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     <link rel="preload" as="image" href="../assets/stock/kitchen_white_island.jpg">
-    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/styles.css?v=20261016-1">
 
     <style>
         .brand-stack { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -876,21 +876,17 @@
         <div class="reviews-card reveal"
              data-google-place-id="ChIJ6wq3LKzdYIgRQVXqE8ZoKxY"
              data-google-reviews-url="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc">
-            <div class="reviews-score" aria-label="Google rating">
-                <span class="score" data-google-rating>5.0</span>
-                <span class="stars" aria-hidden="true">★★★★★</span>
-                <span class="count" data-google-review-count>12 Google reviews</span>
-            </div>
+            <div class="reviews-score"><span class="review-label">Google<br>Reviews</span></div>
             <div class="reviews-body">
                 <span class="eyebrow"><span class="dash"></span>Google Reviews</span>
                 <h2>Real client feedback from the verified Google profile.</h2>
                 <p>Prominent General Contractors LLC is listed on Google with the same website, phone number and business name used here. We do not publish invented testimonials. The button below opens the live Google profile where visitors can read every review directly.</p>
                 <div class="reviews-actions">
                     <a class="link-action" data-google-reviews-link href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc" target="_blank" rel="noopener">View all Google reviews <span class="arrow">→</span></a>
-                    <span class="reviews-note">Rating and review count from the verified Google Maps listing for Prominent General Contractors LLC.</span>
+                    <span class="reviews-note">See the current rating and review count on Google Maps.</span>
                 </div>
             </div>
-            <div class="reviews-live-list" data-google-reviews-list aria-live="polite"></div>
+
         </div>
     </div>
 </section>
@@ -988,7 +984,21 @@
     }, { passive: true });
 
     const toggle = document.getElementById('menuToggle');
-    if (toggle) toggle.addEventListener('click', () => header.classList.toggle('menu-open'));
+    if (toggle) {
+        const setMenuOpen = (open) => {
+            header.classList.toggle('menu-open', open);
+            toggle.setAttribute('aria-expanded', String(open));
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        setMenuOpen(false);
+        toggle.addEventListener('click', () => setMenuOpen(!header.classList.contains('menu-open')));
+        header.querySelectorAll('nav a[href]').forEach((link) => {
+            link.addEventListener('click', () => setMenuOpen(false));
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setMenuOpen(false);
+        });
+    }
 
     const revealEls = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
@@ -1003,52 +1013,7 @@
         revealEls.forEach(el => el.classList.add('in'));
     }
 
-    const GOOGLE_PLACE_ID = 'ChIJ6wq3LKzdYIgRQVXqE8ZoKxY';
-    const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc';
-    const GOOGLE_REVIEWS_ENDPOINT = '/api/google-place-reviews';
 
-    document.querySelectorAll('[data-google-reviews-link]').forEach((link) => { link.href = GOOGLE_REVIEWS_URL; });
-
-    async function hydrateGoogleReviews() {
-        if (!GOOGLE_REVIEWS_ENDPOINT) return;
-        try {
-            const response = await fetch(GOOGLE_REVIEWS_ENDPOINT, { headers: { 'Accept': 'application/json' } });
-            if (!response.ok) throw new Error('Google reviews endpoint failed');
-            const place = await response.json();
-            if (typeof place.rating === 'number') {
-                document.querySelectorAll('[data-google-rating]').forEach((el) => { el.textContent = place.rating.toFixed(1); });
-            }
-            if (typeof place.userRatingCount === 'number') {
-                document.querySelectorAll('[data-google-review-count]').forEach((el) => { el.textContent = `${place.userRatingCount} Google reviews`; });
-            }
-            if (place.googleMapsUri) {
-                document.querySelectorAll('[data-google-reviews-link]').forEach((link) => { link.href = place.googleMapsUri; });
-            }
-            const reviewsList = document.querySelector('[data-google-reviews-list]');
-            if (reviewsList && Array.isArray(place.reviews) && place.reviews.length) {
-                reviewsList.innerHTML = place.reviews
-                    .filter((r) => r && r.text).slice(0, 3)
-                    .map((review) => `
-                        <article class="google-review-card">
-                            <blockquote>"${escapeHtml(review.text)}"</blockquote>
-                            <div class="google-review-meta">
-                                <span>${escapeHtml(review.author || 'Google reviewer')}</span>
-                                <span>${escapeHtml(review.relativePublishTimeDescription || `${Number(review.rating || 5).toFixed(1)} stars`)}</span>
-                            </div>
-                        </article>`).join('');
-            }
-        } catch (error) {
-            console.warn('Google reviews could not be refreshed.', error);
-        }
-    }
-
-    function escapeHtml(value) {
-        return String(value)
-            .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
-            .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
-    }
-
-    hydrateGoogleReviews();
 </script>
 
 </body>

@@ -12,7 +12,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/styles.css?v=20261016-1">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1207,7 +1207,21 @@
 
     /* Mobile menu */
     const toggle = document.getElementById('menuToggle');
-    if (toggle) toggle.addEventListener('click', () => header.classList.toggle('menu-open'));
+    if (toggle) {
+        const setMenuOpen = (open) => {
+            header.classList.toggle('menu-open', open);
+            toggle.setAttribute('aria-expanded', String(open));
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        setMenuOpen(false);
+        toggle.addEventListener('click', () => setMenuOpen(!header.classList.contains('menu-open')));
+        header.querySelectorAll('nav a[href]').forEach((link) => {
+            link.addEventListener('click', () => setMenuOpen(false));
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setMenuOpen(false);
+        });
+    }
 
     /* Reveal on scroll */
     const revealEls = document.querySelectorAll('.reveal');

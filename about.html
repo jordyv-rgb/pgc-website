@@ -153,6 +153,7 @@
   @media (max-width: 860px) {
     .pgc-nav {
       grid-template-columns: auto auto;
+      justify-content: space-between;
       padding: 1rem 20px;
     }
     .pgc-nav-links, .pgc-nav-action { display: none; }
@@ -624,7 +625,7 @@
       <!-- Content column -->
       <div class="content-col">
 
-        <h2 class="about-headline">Built on Quality,<br>Communication,<br>and Trust.</h2>
+        <h1 class="about-headline">Built on Quality,<br>Communication,<br>and Trust.</h1>
 
         <div class="about-divider"></div>
 
@@ -886,9 +887,20 @@
 <script>
   const toggle = document.getElementById('menuToggle');
   const header = document.getElementById('site-header');
-  toggle.addEventListener('click', () => {
-    const open = header.classList.toggle('menu-open');
+  const setMenuOpen = (open) => {
+    header.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  setMenuOpen(false);
+  toggle.addEventListener('click', () => {
+    setMenuOpen(!header.classList.contains('menu-open'));
+  });
+  header.querySelectorAll('.pgc-mobile-nav a').forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMenuOpen(false);
   });
 </script>
 </body>

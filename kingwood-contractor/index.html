@@ -17,7 +17,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/styles.css?v=20261016-1">
 
     <style>
         .brand-stack { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -388,11 +388,11 @@
         </div>
         <aside class="hero-aside has-image reveal" aria-hidden="true">
             <picture>
-                <source type="image/webp" srcset="../assets/stock/hero_interior-480w.webp 480w, ../assets/stock/hero_interior-720w.webp 720w, ../assets/stock/hero_interior-900w.webp 900w, ../assets/stock/hero_interior-1400w.webp 1400w" sizes="(max-width: 720px) calc(100vw - 48px), (max-width: 1024px) min(520px, calc(100vw - 64px)), 45vw">
+                <source type="image/webp" srcset="../assets/stock/hero_interior-720w.webp 720w, ../assets/stock/hero_interior-900w.webp 900w, ../assets/stock/hero_interior-1400w.webp 1400w" sizes="(max-width: 720px) 100vw, (max-width: 1024px) min(520px, calc(100vw - 64px)), 45vw">
                 <img src="../assets/stock/hero_interior-900w.jpg"
-                     srcset="../assets/stock/hero_interior-480w.jpg 480w, ../assets/stock/hero_interior-720w.jpg 720w, ../assets/stock/hero_interior-900w.jpg 900w, ../assets/stock/hero_interior-1400w.jpg 1400w"
-                     sizes="(max-width: 720px) calc(100vw - 48px), (max-width: 1024px) min(520px, calc(100vw - 64px)), 45vw"
-                     alt="Premium open-concept living and kitchen remodel by a Houston general contractor"
+                     srcset="../assets/stock/hero_interior-720w.jpg 720w, ../assets/stock/hero_interior-900w.jpg 900w, ../assets/stock/hero_interior-1400w.jpg 1400w"
+                     sizes="(max-width: 720px) 100vw, (max-width: 1024px) min(520px, calc(100vw - 64px)), 45vw"
+                     alt="Open-concept living and kitchen design inspiration"
                      width="1500" height="1020" loading="eager" fetchpriority="high" decoding="async">
             </picture>
             <p class="caption">Premium residential remodeling — Greater Houston.</p>
@@ -680,12 +680,12 @@
     </div>
 </section>
 
-<!-- ============ COMPLETED WORK ============ -->
+<!-- ============ DESIGN REFERENCES ============ -->
 <section class="work section-pad" style="background:var(--ivory);">
     <div class="container">
         <div class="section-head reveal">
-            <span class="eyebrow"><span class="dash"></span>Completed Work</span>
-            <h2>Finished projects from homes and properties across the Houston area.</h2>
+            <span class="eyebrow"><span class="dash"></span>Design References</span>
+            <h2>Finish and layout ideas for homes across the Houston area.</h2>
         </div>
 
         <div class="work-grid reveal">
@@ -717,6 +717,7 @@
                 </div>
             </a>
         </div>
+        <p class="story-note reveal" style="margin-top:1.5rem;color:var(--slate);font-size:.82rem;line-height:1.8;">These images show design and finish inspiration, not completed PGC projects.</p>
     </div>
 </section>
 
@@ -779,11 +780,7 @@
         <div class="reviews-card reveal"
              data-google-place-id="ChIJ6wq3LKzdYIgRQVXqE8ZoKxY"
              data-google-reviews-url="https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z">
-            <div class="reviews-score" aria-label="Google rating">
-                <span class="score" data-google-rating>5.0</span>
-                <span class="stars" aria-hidden="true">★★★★★</span>
-                <span class="count" data-google-review-count>12 Google reviews</span>
-            </div>
+            <div class="reviews-score"><span class="review-label">Google<br>Reviews</span></div>
             <div class="reviews-body">
                 <span class="eyebrow"><span class="dash"></span>Verified Google Reviews</span>
                 <h2>Real feedback from real clients — no invented testimonials.</h2>
@@ -792,7 +789,7 @@
                     <a class="link-action" data-google-reviews-link href="https://www.google.com/maps/place/Prominent+General+Contractors+LLC" target="_blank" rel="noopener">Read all Google reviews <span class="arrow">→</span></a>
                 </div>
             </div>
-            <div class="reviews-live-list" data-google-reviews-list aria-live="polite"></div>
+
         </div>
     </div>
 </section>
@@ -896,7 +893,21 @@
     }, { passive: true });
 
     const toggle = document.getElementById('menuToggle');
-    if (toggle) toggle.addEventListener('click', () => header.classList.toggle('menu-open'));
+    if (toggle) {
+        const setMenuOpen = (open) => {
+            header.classList.toggle('menu-open', open);
+            toggle.setAttribute('aria-expanded', String(open));
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        setMenuOpen(false);
+        toggle.addEventListener('click', () => setMenuOpen(!header.classList.contains('menu-open')));
+        header.querySelectorAll('nav a[href]').forEach((link) => {
+            link.addEventListener('click', () => setMenuOpen(false));
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setMenuOpen(false);
+        });
+    }
 
     const revealEls = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
@@ -911,41 +922,7 @@
         revealEls.forEach(el => el.classList.add('in'));
     }
 
-    // Google Reviews
-    const GOOGLE_REVIEWS_ENDPOINT = '/api/google-place-reviews';
-    const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/place/Prominent+General+Contractors+LLC/@29.6890811,-95.6284628,17z/data=!3m1!4b1!4m6!3m5!1s0x8640ddac2c7b0aeb:0x162b68c613ea5541!8m2!3d29.6890811!4d-95.6284628!16s%2Fg%2F11wx8dqcbc';
-    document.querySelectorAll('[data-google-reviews-link]').forEach(l => { l.href = GOOGLE_REVIEWS_URL; });
 
-    async function hydrateGoogleReviews() {
-        try {
-            const res = await fetch(GOOGLE_REVIEWS_ENDPOINT, { headers: { 'Accept': 'application/json' } });
-            if (!res.ok) throw new Error('failed');
-            const place = await res.json();
-            if (typeof place.rating === 'number')
-                document.querySelectorAll('[data-google-rating]').forEach(el => { el.textContent = place.rating.toFixed(1); });
-            if (typeof place.userRatingCount === 'number')
-                document.querySelectorAll('[data-google-review-count]').forEach(el => { el.textContent = `${place.userRatingCount} Google reviews`; });
-            if (place.googleMapsUri)
-                document.querySelectorAll('[data-google-reviews-link]').forEach(l => { l.href = place.googleMapsUri; });
-            const list = document.querySelector('[data-google-reviews-list]');
-            if (list && Array.isArray(place.reviews) && place.reviews.length) {
-                list.innerHTML = place.reviews.filter(r => r?.text).slice(0, 3).map(r => `
-                    <article class="google-review-card">
-                        <blockquote>"${esc(r.text)}"</blockquote>
-                        <div class="google-review-meta">
-                            <span>${esc(r.author || 'Google reviewer')}</span>
-                            <span>${esc(r.relativePublishTimeDescription || `${Number(r.rating||5).toFixed(1)} stars`)}</span>
-                        </div>
-                    </article>`).join('');
-            }
-        } catch(e) { console.warn('Google reviews unavailable.', e); }
-    }
-
-    function esc(v) {
-        return String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;");
-    }
-
-    hydrateGoogleReviews();
 </script>
 
 </body>
